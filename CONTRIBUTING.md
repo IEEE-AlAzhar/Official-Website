@@ -19,6 +19,8 @@ To add a new component, think about it and its functionality. Is this component 
 
 The component should consists of `index.js` & `style.module.css` files.
 
+If the component is a page, add its route on the [routes.js](src/globals/routes.js) and it'll be registered directly and if you want to make it appears on the navbar add a `label` property to the route object.
+
 ### Add a new service
 
 If you found that there's a module lacks for integration with back-end or some functionality that depends on something outside the module, add it to the `services` folder in that module.
