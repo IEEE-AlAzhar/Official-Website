@@ -1,6 +1,6 @@
 # IEEE Al-Azhar Official Website
 
-The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it.
+The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
 
 ![IEEE Logo](https://drive.google.com/uc?export=view&id=13B3rIyyKX-lOjcal7xADfYKL27qXH9qf)
 
@@ -8,7 +8,6 @@ The source code of `IEEE Al-Azhar` student activity's website. The website built
 
 1. [Installation](#install)
 1. [Usage](#use)
-1. [Dependencies](#dependencies)
 1. [Style Guide](#style-guide)
 1. [Contribution](#contribution)
 1. [License](#license)
