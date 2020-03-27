@@ -40,9 +40,11 @@ This app uses some dependencies:
 
 1. [Materia UI](https://material-ui.com/) - to add visual designs to the app and helps making css better and easier.
 
-1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results.
+1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results. See [this](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) for simplified explanation and how we use it in our app.
 
 ## Structure
+
+The folder structure of the application. The app is modular, every module encapsulates its own components and services. Each module contains `components` folder which has the presentational components and also pages, also the module contains the `services` folder if it's dynamic which has all the services that integrate with the `API`.
 
 ```
 src/
@@ -63,6 +65,7 @@ src/
 │   │   │       ├── index.js
 │   │   │       └── style.css
 │   │   └── services
+│   │       └── blog.service.js
 │   ├── contact
 │   │   ├── components
 │   │   │   ├── contactPage
@@ -72,6 +75,7 @@ src/
 │   │   │       ├── index.js
 │   │   │       └── style.css
 │   │   └── services
+│   │       └── contact.service.js
 │   ├── events
 │   │   ├── components
 │   │   │   ├── eventCard
@@ -87,6 +91,7 @@ src/
 │   │   │       ├── index.js
 │   │   │       └── style.css
 │   │   └── services
+│   │       └── events.service.js
 │   ├── static-pages
 │   │   ├── About
 │   │   │   ├── page
@@ -107,6 +112,7 @@ src/
 │   │       │       ├── index.js
 │   │       │       └── style.css
 │   │       └── services
+│   │           └── members.service.js
 │   ├── teamServices
 │   │   ├── components
 │   │   │   ├── serviceCard
@@ -129,6 +135,7 @@ src/
 │       │       ├── index.js
 │       │       └── style.css
 │       └── services
+│           └── vlog.service.js
 ├── serviceWorker.js
 ├── shared
 │   ├── footer
