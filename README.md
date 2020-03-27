@@ -152,6 +152,8 @@ src/
 
 ## Contribution
 
+Follow the guides mentioned in the [CONTRIBUTING.md](CONTRIBUTING.md)
+
 <a name="license"></a>
 
 ## License
