@@ -2,7 +2,7 @@
 
 The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it.
 
-![IEEE Logo](https://drive.google.com/file/d/13B3rIyyKX-lOjcal7xADfYKL27qXH9qf/view?usp=sharing)
+![IEEE Logo](https://drive.google.com/uc?export=view&id=13B3rIyyKX-lOjcal7xADfYKL27qXH9qf)
 
 ## Table of contents
 
