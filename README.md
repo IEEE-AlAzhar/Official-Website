@@ -45,9 +45,10 @@ This app uses some dependencies:
 ## Structure
 
 ```
-.
+src/
 ├── App.js
 ├── globals
+│   └── routes.js
 ├── index.js
 ├── modules
 │   ├── blog
@@ -86,7 +87,6 @@ This app uses some dependencies:
 │   │   │       ├── index.js
 │   │   │       └── style.css
 │   │   └── services
-│   ├── handbooks
 │   ├── static-pages
 │   │   ├── About
 │   │   │   ├── page
@@ -116,15 +116,34 @@ This app uses some dependencies:
 │   │   │       ├── index.js
 │   │   │       └── style.css
 │   │   └── store
+│   │       └── services.json
 │   └── vlog
+│       ├── components
+│       │   ├── blogCard
+│       │   │   ├── index.js
+│       │   │   └── style.css
+│       │   ├── blogListPage
+│       │   │   ├── index.js
+│       │   │   └── style.css
+│       │   └── singleBlogPage
+│       │       ├── index.js
+│       │       └── style.css
+│       └── services
 ├── serviceWorker.js
 ├── shared
+│   ├── footer
+│   │   ├── index.js
+│   │   └── style.css
+│   ├── header
+│   │   ├── index.js
+│   │   └── style.css
+│   └── layout
+│       ├── index.js
+│       └── style.css
 └── styles.css
 ```
 
 ## Contribution
-
-
 
 <a name="license"></a>
 
