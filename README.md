@@ -11,7 +11,6 @@ The source code of `IEEE Al-Azhar` student activity's website. The website built
 1. [Dependencies](#dependencies)
 1. [Structure](#structure)
 1. [Contribution](#contribution)
-1. [Style Guide](#style-guide)
 1. [License](#license)
 
 <a name="install"></a>
