@@ -13,8 +13,6 @@ The source code of `IEEE Al-Azhar` student activity's website. The website built
 1. [Contribution](#contribution)
 1. [License](#license)
 
-<a name="install"></a>
-
 ## Installation
 
 Make sure to have [Node.js](https://nodejs.org/en/download/) & [yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
@@ -152,8 +150,6 @@ src/
 ## Contribution
 
 Follow the guides mentioned in the [CONTRIBUTING.md](CONTRIBUTING.md)
-
-<a name="license"></a>
 
 ## License
 
