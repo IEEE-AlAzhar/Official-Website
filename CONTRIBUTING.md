@@ -2,6 +2,8 @@
 
 We are very grateful for your contribution and your time you spend to help us enhance the application and we are excited to welcome you. Make sure to understand the file structure before any edit.
 
+If you're new to open source, read [this article](https://dvmhmdsd.me/blog/open-source/) to get involved.
+
 ## Here are the ways you can help
 
 1. Improve existing features.
