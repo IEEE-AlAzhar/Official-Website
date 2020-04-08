@@ -13,6 +13,18 @@ If you're new to open source, read [this article](https://dvmhmdsd.me/blog/open-
 
 ## Required Steps to follow to make your PR accepted and merged
 
+### General requirements
+
+1. Take care about `semantics` rules.
+1. Take care about `accessibility` rules.
+1. The names of functions, variables, components and css classes should be descriptive.
+1. No unnecessary comments.
+1. The maximum numbers of arguments is 3, it's preferred to minimize the number of arguments.
+1. No global css classes names.
+1. Match the rules specified in [style-guide.md](style-guide.md) file.
+
+> If u installed a new package add it in the [README.md](README.md) file in the `dependencies` section and mention it in the description of your pull request.
+
 Here are some cases you'll encounter while contributing:
 
 ### Add a new component

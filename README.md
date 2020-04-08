@@ -35,7 +35,7 @@ This app uses some dependencies:
 
 1. [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) - to implement routing in the app.
 
-1. [Materia UI](https://material-ui.com/) - to add visual designs to the app and helps making css better and easier.
+1. [Bootstrap](https://getbootstrap.com/) - to add visual designs to the app and helps making css better and easier.
 
 1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results. See [this](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) for simplified explanation and how we use it in our app.
 
