@@ -21,6 +21,7 @@ If you're new to open source, read [this article](https://dvmhmdsd.me/blog/open-
 1. No unnecessary comments.
 1. The maximum numbers of arguments is 3, it's preferred to minimize the number of arguments.
 1. No global css classes names.
+1. You should apply the `dark-mode` option specified in the [style-guide.md](style-guide.md) file
 1. Match the rules specified in [style-guide.md](style-guide.md) file.
 
 > If u installed a new package add it in the [README.md](README.md) file in the `dependencies` section and mention it in the description of your pull request.

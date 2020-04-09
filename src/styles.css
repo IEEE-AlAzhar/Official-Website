@@ -20,7 +20,7 @@
   --heading-font-family: "Rubik", sans-serif;
   --body-font-family: "PT Sans", sans-serif;
 
-  --main-font-size: 1.3rem;
+  --main-font-size: 1.2rem;
   --heading-2-font-size: 2rem;
   --heading-3-font-size: 1.8rem;
 }
@@ -39,6 +39,17 @@
   --text-primary: #242627;
   --text-secondary: #0a111a;
   --btn-hover: #1c7fd0;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-size: var(--main-font-size);
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 0.12rem;
+  word-spacing: 0.16rem;
 }
 
 p + p {

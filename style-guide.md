@@ -1,6 +1,6 @@
 # Our Style Guide
 
-Make sure to read these guidelines to be in sync with us in our process and to make a great experience.
+Make sure to read these guidelines to be in sync with us in our process and to make a great experience. We're using [css variables](https://www.w3schools.com/css/css3_variables.asp).
 
 ## Table of contents
 
@@ -36,6 +36,8 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - `--text-secondary`: #1c7fd0; `// used for headings and side notes text`
 - `--btn-hover`: #fff; `// used for hover on buttons`
 
+> To test the dark mode, add `dark_theme` class to the container of the component you are working on and use the above variables.
+
 ## Typography
 
 ### Family
@@ -45,7 +47,7 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 
 ### Size
 
-- `--main-font-size`: 1.3rem; `// used for paragraphs, buttons`
+- `--main-font-size`: 1.2rem; `// used for paragraphs, buttons`
 - `--heading-2-font-size`: 2rem;
 - `--heading-3-font-size`: 1.8rem;
 
@@ -54,6 +56,16 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - Paragraphs `line-height`: 1.5;
 - `letter-spacing`: 0.12rem;
 - `word-spacing`: 0.16rem;
+- All styles should have one line space between each other
+```
+.class1 {
+  some: style;
+}
+// There should a space here
+.class2 {
+  some: style;
+}
+```
 
 ## Naming Conventions
 
