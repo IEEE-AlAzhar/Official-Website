@@ -1,1 +1,46 @@
-/* Add the global styles here */
+/* Here are the global styles */
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"),
+    url(./assets/fonts/Rubik/Rubik-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+    url(./assets/fonts/PT/PTSans-Regular.ttf) format("truetype");
+}
+
+:root {
+  --section-top-spacing: 8rem;
+  --section-bottom-spacing: 8rem;
+  --section-heading-spacing: 5rem;
+
+  --heading-font-family: "Rubik", sans-serif;
+  --body-font-family: "PT Sans", sans-serif;
+
+  --main-font-size: 1.3rem;
+  --heading-2-font-size: 2rem;
+  --heading-3-font-size: 1.8rem;
+}
+
+.dark_theme {
+  --layout-primary: #0a111a;
+  --layout-secondary: #1c7fd0;
+  --text-primary: #fff;
+  --text-secondary: #1c7fd0;
+  --btn-hover: #fff;
+}
+
+.light_theme {
+  --layout-primary: #fff;
+  --layout-secondary: #0a111a;
+  --text-primary: #242627;
+  --text-secondary: #0a111a;
+  --btn-hover: #1c7fd0;
+}
+
+p + p {
+  margin-top: 2rem;
+}
