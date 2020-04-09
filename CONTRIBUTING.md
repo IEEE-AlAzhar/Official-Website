@@ -23,6 +23,7 @@ If you're new to open source, read [this article](https://dvmhmdsd.me/blog/open-
 1. No global css classes names.
 1. You should apply the `dark-mode` option specified in the [style-guide.md](style-guide.md) file
 1. Match the rules specified in [style-guide.md](style-guide.md) file.
+1. No warnings on the console or the terminal (always lint your code).
 
 > If u installed a new package add it in the [README.md](README.md) file in the `dependencies` section and mention it in the description of your pull request.
 
