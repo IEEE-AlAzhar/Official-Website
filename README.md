@@ -41,6 +41,10 @@ This app uses some dependencies:
 
 1. [react-helmet](https://github.com/nfl/react-helmet) - to add titles and meta tags to the pages and improve seo of the page.
 
+1. [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
+
+1. [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
+
 ## Structure
 
 The folder structure of the application. The app is modular, every module encapsulates its own components and services. Each module contains `components` folder which has the presentational components and also pages, also the module contains the `services` folder if it's dynamic which has all the services that integrate with the `API`.

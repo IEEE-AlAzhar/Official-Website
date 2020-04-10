@@ -6,6 +6,9 @@ import routes from "globals/routes";
 
 import { NavLink } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 import styles from "./style.module.css";
 
 export default class Header extends Component {
@@ -67,7 +70,7 @@ export default class Header extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <FontAwesomeIcon icon={faBars} />
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ml-auto">{this.renderNavbarLinks()}</ul>

@@ -22,7 +22,6 @@
 
   --main-font-size: 1.3rem;
   --heading-2-font-size: 2rem;
-  --heading-3-font-size: 1.8rem;
 }
 
 .light-theme {
@@ -46,6 +45,15 @@ body {
   font-size: var(--main-font-size) !important;
   color: var(--text-primary) !important;
   background-color: var(--layout-primary) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
 }
 
 p {
