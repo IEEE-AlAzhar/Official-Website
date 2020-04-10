@@ -44,107 +44,109 @@ This app uses some dependencies:
 The folder structure of the application. The app is modular, every module encapsulates its own components and services. Each module contains `components` folder which has the presentational components and also pages, also the module contains the `services` folder if it's dynamic which has all the services that integrate with the `API`.
 
 ```
-src/
-├── App.js
-├── globals
-│   └── routes.js
-├── index.js
-├── modules
-│   ├── blog
-│   │   ├── components
-│   │   │   ├── blogCard
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   ├── blogListPage
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   └── singleBlogPage
-│   │   │       ├── index.js
-│   │   │       └── style.css
-│   │   └── services
-│   │       └── blog.service.js
-│   ├── contact
-│   │   ├── components
-│   │   │   ├── contactPage
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   └── form
-│   │   │       ├── index.js
-│   │   │       └── style.css
-│   │   └── services
-│   │       └── contact.service.js
-│   ├── events
-│   │   ├── components
-│   │   │   ├── eventCard
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   ├── eventForm
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   ├── eventsListPage
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   └── singleEventPage
-│   │   │       ├── index.js
-│   │   │       └── style.css
-│   │   └── services
-│   │       └── events.service.js
-│   ├── static-pages
-│   │   ├── About
-│   │   │   ├── page
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   └── section
-│   │   │       ├── index.js
-│   │   │       └── style.css
-│   │   └── Home
-│   │       ├── components
-│   │       │   ├── bestMembers
-│   │       │   │   ├── index.js
-│   │       │   │   └── style.css
-│   │       │   ├── intro
-│   │       │   │   ├── index.js
-│   │       │   │   └── style.css
-│   │       │   └── page
-│   │       │       ├── index.js
-│   │       │       └── style.css
-│   │       └── services
-│   │           └── members.service.js
-│   ├── teamServices
-│   │   ├── components
-│   │   │   ├── serviceCard
-│   │   │   │   ├── index.js
-│   │   │   │   └── style.css
-│   │   │   └── servicesList
-│   │   │       ├── index.js
-│   │   │       └── style.css
-│   │   └── store
-│   │       └── services.json
-│   └── vlog
-│       ├── components
-│       │   ├── blogCard
-│       │   │   ├── index.js
-│       │   │   └── style.css
-│       │   ├── blogListPage
-│       │   │   ├── index.js
-│       │   │   └── style.css
-│       │   └── singleBlogPage
-│       │       ├── index.js
-│       │       └── style.css
-│       └── services
-│           └── vlog.service.js
-├── serviceWorker.js
-├── shared
-│   ├── footer
-│   │   ├── index.js
-│   │   └── style.css
-│   ├── header
-│   │   ├── index.js
-│   │   └── style.css
-│   └── layout
-│       ├── index.js
-│       └── style.css
-└── styles.css
+.
+├── CONTRIBUTING.md
+├── jsconfig.json
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── README.md
+├── src
+│   ├── App.js
+│   ├── assets
+│   │   └── fonts
+│   │       ├── PT
+│   │       │   └── PTSans-Regular.ttf
+│   │       └── Rubik
+│   │           └── Rubik-Medium.ttf
+│   ├── globals
+│   │   └── routes.js
+│   ├── index.js
+│   ├── modules
+│   │   ├── blog
+│   │   │   ├── components
+│   │   │   │   ├── blogCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── blogListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleBlogPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       └── blog.service.js
+│   │   ├── contact
+│   │   │   ├── components
+│   │   │   │   ├── form
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── page
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       └── contact.service.js
+│   │   ├── events
+│   │   │   ├── components
+│   │   │   │   ├── eventCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── eventsListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleEventPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       └── events.service.js
+│   │   ├── static-pages
+│   │   │   ├── about
+│   │   │   │   └── components
+│   │   │   │       ├── page
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── style.module.css
+│   │   │   │       └── section
+│   │   │   │           ├── index.js
+│   │   │   │           └── style.module.css
+│   │   │   └── home
+│   │   │       ├── components
+│   │   │       │   ├── bestMembers
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   ├── intro
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   └── page
+│   │   │       │       ├── index.js
+│   │   │       │       └── style.module.css
+│   │   │       └── services
+│   │   │           └── members.service.js
+│   │   ├── teamServices
+│   │   │   ├── components
+│   │   │   │   ├── serviceCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── servicesList
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleServicePage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── store
+│   │   │       └── services.json
+│   ├── serviceWorker.js
+│   ├── shared
+│   │   ├── footer
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   ├── header
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   └── layout
+│   │       ├── index.js
+│   │       └── style.module.css
+│   └── styles.css
+└── style-guide.md
 ```
 
 ## Contribution

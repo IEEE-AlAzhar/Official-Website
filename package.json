@@ -17,7 +17,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "npm run lint:fix", "prettier --write"
+      "npm run lint:fix",
+      "prettier --write"
     ]
   },
   "scripts": {
@@ -46,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
