@@ -2,7 +2,7 @@
 
 The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
 
-![IEEE Logo](IEEE-final.png)
+![IEEE Logo](src/assets/logo.png)
 
 ## Table of contents
 
@@ -38,6 +38,8 @@ This app uses some dependencies:
 1. [Bootstrap](https://getbootstrap.com/) - to add visual designs to the app and helps making css better and easier.
 
 1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results. See [this](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) for simplified explanation and how we use it in our app.
+
+1. [react-helmet](https://github.com/nfl/react-helmet) - to add titles and meta tags to the pages and improve seo of the page.
 
 ## Structure
 

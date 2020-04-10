@@ -1,0 +1,36 @@
+.skip_link {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 9999;
+  background-color: #fff;
+  font-size: 1.6rem;
+}
+
+.skip_link:focus {
+  left: 0;
+}
+
+nav.navbar {
+  background-color: var(--layout-primary);
+  box-shadow: 1px 1px 2px 0px var(--layout-secondary);
+  padding: 0;
+}
+
+.navbar_link {
+  margin: 0 0.1rem;
+  padding: 2rem;
+  padding-bottom: 1.8rem;
+  transition: all 0.2s;
+  color: var(--text-secondary);
+}
+
+.navbar_link:hover {
+  text-decoration: none;
+}
+
+.active,
+.navbar_link:hover {
+  border-bottom: 3px solid;
+  color: var(--btn-hover);
+}

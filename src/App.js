@@ -6,7 +6,7 @@ import routes from "globals/routes";
 
 export default class App extends Component {
   componentDidMount() {
-    document.body.classList.add("light_theme");
+    document.body.classList.add("light-theme");
   }
 
   renderSingleRoute = (key, path, component) => (
