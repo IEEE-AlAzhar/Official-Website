@@ -47,18 +47,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/moatazalaa14/Official-Website-1.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/moatazalaa14/Official-Website-1/issues"
-  },
-  "homepage": "https://github.com/moatazalaa14/Official-Website-1#readme"
-}
+  }}
+
+  
