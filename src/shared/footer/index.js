@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { isEmailValid } from "shared/services/validation.service";
 
-import styles from "./style.module.css";
+import "./style.css";
 import { sendEmail } from "shared/services/newsletter.service";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,8 +32,8 @@ export default class Footer extends Component {
         <a
           href={socialItem.link}
           target="_blank"
-          rel="noopener nopreferer"
-          className={styles.socialList_link}
+          rel="noopener noreferrer"
+          className="socialList_link"
         >
           <FontAwesomeIcon icon={socialItem.icon} />
         </a>
@@ -81,10 +81,10 @@ export default class Footer extends Component {
     let { email, msg } = this.state;
 
     return (
-      <footer className={styles.footer}>
+      <footer className="footer">
         <div className="d-sm-flex container justify-content-between">
           <form
-            className={`${styles["subscribe-form"]} mb-2`}
+            className="subscribe-form mb-2"
             onSubmit={this.subscribeToNewsLetter}
           >
             <label htmlFor="newsletter" className="d-block">
@@ -94,7 +94,7 @@ export default class Footer extends Component {
               <input
                 type="text"
                 id="newsletter"
-                className={`form-control ${styles["subscribe-form_input"]}`}
+                className="form-control subscribe-form_input"
                 placeholder="Type your email here"
                 aria-label="Get our latest news"
                 value={email}
@@ -102,10 +102,7 @@ export default class Footer extends Component {
                 name="email"
               />
               <div className="input-group-append">
-                <button
-                  className={`btn ${styles["subscribe-form_btn"]}`}
-                  type="submit"
-                >
+                <button className="btn subscribe-form_btn" type="submit">
                   Subscribe
                 </button>
               </div>
@@ -123,7 +120,7 @@ export default class Footer extends Component {
 
           <section className="text-center">
             <h2> Follow us </h2>
-            <ul className={`list-unstyled`}>{this.renderSocialList()}</ul>
+            <ul className="list-unstyled">{this.renderSocialList()}</ul>
           </section>
         </div>
       </footer>

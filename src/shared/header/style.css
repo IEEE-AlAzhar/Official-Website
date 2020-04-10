@@ -13,16 +13,41 @@
 
 nav.navbar {
   background-color: var(--layout-primary);
-  box-shadow: 1px 1px 2px 0px var(--layout-secondary);
+  box-shadow: 1px 1px 1px 0px var(--layout-secondary);
   padding: 0;
+}
+
+.dark-theme nav.navbar .navbar-toggler {
+  color: #fff;
 }
 
 .navbar_link {
   margin: 0 0.1rem;
-  padding: 2rem;
-  padding-bottom: 1.8rem;
   transition: all 0.2s;
   color: var(--text-secondary);
+}
+
+@media (min-width: 992px) {
+  .navbar_link {
+    padding: 2rem;
+    padding-bottom: 1.8rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-item {
+    padding: 1.6rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .active,
+  .navbar_link:hover {
+    border-bottom: none;
+  }
 }
 
 .navbar_link:hover {

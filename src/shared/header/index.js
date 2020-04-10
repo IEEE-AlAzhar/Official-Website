@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import styles from "./style.module.css";
+import "./style.css";
 
 export default class Header extends Component {
   skipToMainContent = (e) => {
@@ -25,8 +25,8 @@ export default class Header extends Component {
           <li className="nav-item" key={index}>
             <NavLink
               exact
-              className={styles.navbar_link}
-              activeClassName={styles.active}
+              className="navbar_link"
+              activeClassName="active"
               to={route.path}
             >
               {route.label}
@@ -40,18 +40,15 @@ export default class Header extends Component {
 
   render() {
     return (
-      <nav
-        className={`navbar navbar-expand-lg ${styles.navbar}`}
-        aria-label="site"
-      >
+      <nav className="navbar navbar-expand-lg fixed-top" aria-label="site">
         <a
-          className={styles.skip_link}
+          className="skip_link"
           href="#mainContent"
           onClick={this.skipToMainContent}
         >
           Skip to main content
         </a>
-        <a className="navbar-brand ml-3" href="/">
+        <a className="navbar-brand ml-5" href="/">
           <img
             src={Logo}
             width="80"
@@ -62,7 +59,7 @@ export default class Header extends Component {
           <span className="sr-only"> Link to Home page </span>
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler mr-5"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavDropdown"
@@ -70,10 +67,12 @@ export default class Header extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav ml-auto">{this.renderNavbarLinks()}</ul>
+          <ul className="navbar-nav ml-auto text-right">
+            {this.renderNavbarLinks()}
+          </ul>
         </div>
       </nav>
     );
