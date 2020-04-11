@@ -13,7 +13,8 @@ footer .subscribe-form_btn {
   color: #fff;
 }
 
-footer .subscribe-form_btn:hover {
+footer .subscribe-form_btn:hover,
+footer .subscribe-form_btn:focus {
   color: #fff;
   background-color: #024b88;
 }
