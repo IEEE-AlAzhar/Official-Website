@@ -2,16 +2,19 @@ import React, { Component } from "react";
 
 import Logo from "assets/images/logo.png";
 import LogoWhite from "assets/images/logo-white.png";
+
 import routes from "globals/routes";
+import { ThemeProvider } from "globals/contexts/theme.context";
 
 import { NavLink } from "react-router-dom";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 import "./style.css";
 
 export default class Header extends Component {
+  static contextType = ThemeProvider;
+
   skipToMainContent = (e) => {
     e.preventDefault();
 
@@ -39,6 +42,7 @@ export default class Header extends Component {
     });
 
   render() {
+    const { theme, toggle } = this.context;
     return (
       <nav className="navbar navbar-expand-lg fixed-top" aria-label="site">
         <a
@@ -50,7 +54,7 @@ export default class Header extends Component {
         </a>
         <a className="navbar-brand ml-5" href="/">
           <img
-            src={Logo}
+            src={theme === "light" ? Logo : LogoWhite}
             width="80"
             height="80"
             alt="IEEE's logo"
@@ -73,6 +77,23 @@ export default class Header extends Component {
           <ul className="navbar-nav ml-auto text-right">
             {this.renderNavbarLinks()}
           </ul>
+          <div className="text-center theme-toggler">
+            <button className="btn" onClick={toggle} aria-label="Toggle theme">
+              {theme === "light" ? (
+                <FontAwesomeIcon
+                  icon={faMoon}
+                  size="2x"
+                  title="Switch to dark mode"
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faSun}
+                  size="2x"
+                  title="Back to light mode"
+                />
+              )}
+            </button>
+          </div>
         </div>
       </nav>
     );

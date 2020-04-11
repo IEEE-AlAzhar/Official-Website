@@ -4,6 +4,13 @@ import App from "./App";
 import "styles.css";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import ThemeContext from "globals/contexts/theme.context.js";
+
+ReactDOM.render(
+  <ThemeContext>
+    <App />
+  </ThemeContext>,
+  document.getElementById("root")
+);
 
 serviceWorker.register();

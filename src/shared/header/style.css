@@ -17,7 +17,7 @@ nav.navbar {
   padding: 0;
 }
 
-.dark-theme nav.navbar .navbar-toggler {
+.dark-theme nav.navbar .navbar-toggler, .dark-theme nav.navbar .theme-toggler .btn {
   color: #fff;
 }
 
