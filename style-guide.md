@@ -36,7 +36,7 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - `--text-secondary`: #1c7fd0; `// used for headings and side notes text`
 - `--btn-hover`: #fff; `// used for hover on buttons`
 
-> To test the dark mode, add `dark_theme` class to the container of the component you are working on and use the above variables.
+> To test the dark mode, add `dark-theme` class to the container of the component you are working on and use the above variables.
 
 ## Typography
 

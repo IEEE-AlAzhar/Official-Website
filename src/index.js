@@ -4,10 +4,12 @@ import App from "./App";
 import "styles.css";
 import * as serviceWorker from "./serviceWorker";
 
+import ThemeContext from "globals/contexts/theme.context.js";
+
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeContext>
     <App />
-  </React.StrictMode>,
+  </ThemeContext>,
   document.getElementById("root")
 );
 
