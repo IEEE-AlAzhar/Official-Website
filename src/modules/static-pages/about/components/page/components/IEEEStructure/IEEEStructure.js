@@ -12,7 +12,7 @@ function IEEEStructure() {
         IEEEStrImg.current.innerHTML = `<img src=${IEEEStr767} className = "structureImg"/ >`;
       } else if (entry.isIntersecting === true && window.innerWidth >= 1200) {
         IEEEStrImg.current.innerHTML = `<img src=${IEEEStr1200} className = "structureImg" / >`;
-      } else {
+      } else if (entry.isIntersecting === true && window.innerWidth >= 2500) {
         IEEEStrImg.current.innerHTML = `<img src=${IEEEStr2500} className = "structureImg" / >`;
       }
     });
