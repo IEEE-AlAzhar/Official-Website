@@ -39,9 +39,11 @@ This app uses some dependencies:
 
 1. [react-helmet](https://github.com/nfl/react-helmet) - to add titles and meta tags to the pages and improve seo of the page.
 
-1. [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
+1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results. See [this](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) for simplified explanation and how we use it in our app.
 
-1. [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
+1) [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
+
+1) [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
 
 ## Structure
 
