@@ -8,8 +8,9 @@
 }
 
 .header_about__heading{
-    color:#0a111a;
+    color:var(--text-secondary);
     text-align: center;
+    margin:8rem 0 6rem 0;
 }
 
 .header_about__video{

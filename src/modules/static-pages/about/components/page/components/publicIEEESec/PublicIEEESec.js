@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import publicSecStyles from "./PublicIEEESec.module.css";
-import IEEEPubLogo from "./../../../../../../../assets/IEEE-pub-logo.jpg";
+import IEEEPubLogolight from "./../../../../../../../assets/images/logo.png";
+import IEEEPubLogodark from "./../../../../../../../assets/images/logo-white.png";
+import { ThemeProvider } from "globals/contexts/theme.context";
+
 class PublicIEEESec extends Component {
-  componentDidMount() {
+  static contextType = ThemeProvider;
+
+  componentDidUpdate() {
+    const { theme } = this.context;
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting === true) {
-        this.publogo.current.innerHTML = `<img src=${IEEEPubLogo} class="${publicSecStyles.IEEEPubLogo__logo}" / >`;
+      if (entry.isIntersecting === true && theme === "light") {
+        this.publogo.current.innerHTML = `<img src=${IEEEPubLogolight} class="${publicSecStyles.IEEEPubLogo__logo}" / >`;
+      } else if (entry.isIntersecting === true && theme === "dark") {
+        this.publogo.current.innerHTML = `<img src=${IEEEPubLogodark} class="${publicSecStyles.IEEEPubLogo__logo}" / >`;
       }
     });
     observer.observe(this.publogo.current);
@@ -15,7 +23,7 @@ class PublicIEEESec extends Component {
     return (
       <>
         <section className={publicSecStyles.pub_IEEE_sec}>
-          <h2 className={publicSecStyles.pub_IEEE_sec__heading}>IEEE-AZAHAR</h2>
+          <h1 className={publicSecStyles.pub_IEEE_sec__heading}>IEEE-AZAHAR</h1>
           <div className={publicSecStyles.content_pubIEEE}>
             <div
               className={publicSecStyles.IEEEPubLogo}

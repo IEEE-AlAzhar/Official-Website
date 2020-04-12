@@ -1,12 +1,19 @@
 import React, { Component } from "react";
 import AZAstyle from "./IEEEAZAHARSec.module.css";
-import IEEEAZALogo from "./../../../../../../../assets/IEEE-pub-logo.jpg";
+import IEEEAZALogolight from "./../../../../../../../assets/images/logo.png";
+import IEEEAZALogodark from "./../../../../../../../assets/images/logo-white.png";
+import { ThemeProvider } from "globals/contexts/theme.context";
 
 class IEEEAZAHARSec extends Component {
-  componentDidMount() {
+  static contextType = ThemeProvider;
+
+  componentDidUpdate() {
+    const { theme } = this.context;
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting === true) {
-        this.AZAlogo.current.innerHTML = `<img src=${IEEEAZALogo} alt= "IEEE_alzaher_logo" class="${AZAstyle.IEEEAZALogo__Azalogo}"/ >`;
+      if (entry.isIntersecting === true && theme === "light") {
+        this.AZAlogo.current.innerHTML = `<img src=${IEEEAZALogolight} alt= "IEEE_alzaher_logo" class="${AZAstyle.IEEEAZALogo__Azalogo}"/ >`;
+      } else if (entry.isIntersecting === true && theme === "dark") {
+        this.AZAlogo.current.innerHTML = `<img src=${IEEEAZALogodark} alt= "IEEE_alzaher_logo" class="${AZAstyle.IEEEAZALogo__Azalogo}"/ >`;
       }
     });
     observer.observe(this.AZAlogo.current);
@@ -16,7 +23,7 @@ class IEEEAZAHARSec extends Component {
     return (
       <>
         <section className={AZAstyle.AZA_IEEE_sec}>
-          <h2 className={AZAstyle.AZA_IEEE_sec__heading}>IEEE_AZAHAR</h2>
+          <h1 className={AZAstyle.AZA_IEEE_sec__heading}>IEEE-AZAHAR</h1>
           <div className={AZAstyle.content_AZAIEEE}>
             <div className={AZAstyle.IEEEAZApara}>
               <p className={AZAstyle.IEEEAZApara__Azaparagraph}>

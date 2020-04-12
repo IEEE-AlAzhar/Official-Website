@@ -12,16 +12,20 @@
     }
 
     .IEEEPubLogo__logo{
-        width: 80vw;
+        width: 40vw;
+        
+        margin:6rem 0 6rem 0
     }
 
     .pub_IEEE_sec__heading{
         text-align: center;
         margin-bottom: 5rem;
+        color:var(--text-secondary)
     }
     
     .IEEEPubpara__pupPragraph{
-        color:#242627
+        color:var(--text-primary);
+
     }
 
 }
@@ -35,10 +39,12 @@
 .pub_IEEE_sec__heading{
     text-align: center;
     margin-bottom: 5rem;
+    color:var(--text-secondary);
 }
 
 .IEEEPubpara__pupPragraph{
-    color:#242627
+    color:var(--text-primary);
+
 }
 
 .content_pubIEEE  {
@@ -50,6 +56,8 @@
 }
 
 .IEEEPubLogo__logo{
-    width: 40vw;
+width: 30vw;
+height: 60vh;  
+margin:6rem 0 6rem 0
 }
 }

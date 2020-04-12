@@ -23,9 +23,9 @@ class IEEEStructure extends Component {
       <>
         <section className={structurestyles.IEEE_str}>
           <div className={structurestyles.IEEE_Str_content}>
-            <h2 className={structurestyles.IEEE_Str_content__heading}>
+            <h1 className={structurestyles.IEEE_Str_content__heading}>
               IEEE Structure
-            </h2>
+            </h1>
             <div
               className={structurestyles.IEEE_str_img}
               ref={this.IEEEStrImg}
