@@ -26,7 +26,7 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - `--layout-secondary`: #0a111a; `// used for buttons, borders and cards' background`
 - `--text-primary`: #242627; `// used for paragraphs text`
 - `--text-secondary`: #0a111a; `// used for headings and side notes text`
-- `--btn-hover`: #1c7fd0; `// used for hover on buttons`
+- `--btn-hover`: #024b88; `// used for hover on buttons`
 
 ### dark-theme:
 
