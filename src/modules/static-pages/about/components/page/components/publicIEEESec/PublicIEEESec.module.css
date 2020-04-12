@@ -1,57 +1,55 @@
-@media (max-width:767px){
+@media (max-width:1200px){
 
-    .AZA-IEEE-sec{
+    .pub_IEEE_sec{
         margin:8rem 0 6rem 0;
-    }
-
-    .content-AZAIEEE  {
+        }
+        
+    .content_pubIEEE  {
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(40vh , auto);
         justify-items: center;
     }
 
-    .IEEEAZALogo img{
+    .IEEEPubLogo__logo{
         width: 80vw;
     }
 
-    .AZA-IEEE-sec h2{
+    .pub_IEEE_sec__heading{
         text-align: center;
         margin-bottom: 5rem;
     }
     
-    .AZA-IEEE-sec p{
+    .IEEEPubpara__pupPragraph{
         color:#242627
     }
+
 }
 
-@media (min-width:768px){
+@media (min-width:1201px){
 
-.AZA-IEEE-sec{
+.pub_IEEE_sec{
     margin:8rem 0 6rem 0;
 }
 
-.AZA-IEEE-sec h2{
+.pub_IEEE_sec__heading{
     text-align: center;
     margin-bottom: 5rem;
 }
 
-.AZA-IEEE-sec p{
+.IEEEPubpara__pupPragraph{
     color:#242627
 }
-.content-AZAIEEE  {
+
+.content_pubIEEE  {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-auto-rows: minmax(40vh , auto);
+    justify-items: center;
     align-items: center;
 }
 
-.content-AZAIEEE > *{
-    width: 45vw;
-
-}
-
-.IEEEAZALogo img{
+.IEEEPubLogo__logo{
     width: 40vw;
 }
 }

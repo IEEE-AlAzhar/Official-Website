@@ -1,4 +1,4 @@
-.IEEE-str{
+.IEEE_str{
     margin:8rem 0 6rem 0;
 
 }
@@ -9,7 +9,7 @@
         justify-items: center;
 }
 
-.structureImg{
+.IEEE_str_img__structureImg{
     width: 100%;
     height: auto;
 }
@@ -18,7 +18,7 @@
     width: 80vw;
 }
 
-.IEEE_Str_content h2{
+.IEEE_Str_content__heading{
     text-align: center;
     margin-bottom: 5rem;
 }

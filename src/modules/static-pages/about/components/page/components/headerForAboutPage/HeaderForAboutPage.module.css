@@ -1,4 +1,4 @@
-#header-about{
+.header_about{
     width: 100%;
     height: auto;
     display:grid;
@@ -7,12 +7,12 @@
     margin:8rem 0 6rem 0;
 }
 
-#header-about #heading-about{
+.header_about__heading{
     color:#0a111a;
     text-align: center;
 }
 
-#header-about video{
+.header_about__video{
     width: 80vw;
     height: 70vh;
 }
