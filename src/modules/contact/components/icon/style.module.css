@@ -1,0 +1,11 @@
+.message-icon{
+  width: 10em;
+  fill: var(--text-secondary);
+}
+  
+@media only screen and (max-width: 991px)
+{
+  .message-icon{
+    width: 6em;
+  }
+}

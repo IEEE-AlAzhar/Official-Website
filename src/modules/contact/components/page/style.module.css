@@ -1,0 +1,13 @@
+.vertical-line {
+  border-left: 3px solid var(--layout-secondary);
+  height: 25rem;
+  margin: auto;
+}
+
+@media only screen and (max-width: 991px)
+{
+  .vertical-line {
+    border-left: 0px;
+    height: 0px;
+  }
+}
