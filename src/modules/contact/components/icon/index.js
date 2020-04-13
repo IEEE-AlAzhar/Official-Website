@@ -4,13 +4,12 @@ import styles from "./style.module.css";
 class Icon extends Component {
   render() {
     return (
-        <section className="col-md m-auto">
+        <section className="col-lg m-auto">
             <header>
                 <h1 style={{color: 'var(--text-secondary)'}}>CONTACT US</h1>
             </header>
-            {/* Message Icon */}
             <svg
-                className={`bi bi-envelope ${styles.messageIcon}`}
+                className={`bi bi-envelope ${styles['message-icon']}`}
                 viewBox="0 0 16 16"
                 >
                 <path
@@ -24,6 +23,7 @@ class Icon extends Component {
                     clipRule="evenodd"
                 />
                 <path d="M6.752 8.932l.432-.252-.504-.864-.432.252.504.864zm-6 3.5l6-3.5-.504-.864-6 3.5.504.864zm8.496-3.5l-.432-.252.504-.864.432.252-.504.864zm6 3.5l-6-3.5.504-.864 6 3.5-.504.864z" />
+                <a className="sr-only sr-only-focusable" href="#content">Skip to main content</a>
             </svg>
         </section>
     );
