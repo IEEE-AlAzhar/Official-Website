@@ -2,7 +2,7 @@
 
 The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
 
-![IEEE Logo](src/assets/logo.png)
+![IEEE Logo](./src/assets/logo.png)
 
 ## Table of contents
 
@@ -60,12 +60,11 @@ The folder structure of the application. The app is modular, every module encaps
 ├── src
 │   ├── App.js
 │   ├── assets
-│   │   └── fonts
-│   │       ├── PT
-│   │       │   └── PTSans-Regular.ttf
-│   │       └── Rubik
-│   │           └── Rubik-Medium.ttf
+│   │   ├── fonts
+│   │   └── images
 │   ├── globals
+│   │   ├── contexts
+│   │   │   └── theme.context.js
 │   │   └── routes.js
 │   ├── index.js
 │   ├── modules
@@ -87,11 +86,15 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   │   ├── form
 │   │   │   │   │   ├── index.js
 │   │   │   │   │   └── style.module.css
+│   │   │   │   ├── icon
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
 │   │   │   │   └── page
 │   │   │   │       ├── index.js
 │   │   │   │       └── style.module.css
 │   │   │   └── services
-│   │   │       └── contact.service.js
+│   │   │       ├── contact.service.js
+│   │   │       └── validation.service.js
 │   │   ├── events
 │   │   │   ├── components
 │   │   │   │   ├── eventCard
@@ -109,6 +112,19 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   ├── about
 │   │   │   │   └── components
 │   │   │   │       ├── page
+│   │   │   │       │   ├── components
+│   │   │   │       │   │   ├── header
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEEAZHARSection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEESection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   └── structure
+│   │   │   │       │   │       ├── index.js
+│   │   │   │       │   │       └── style.module.css
 │   │   │   │       │   ├── index.js
 │   │   │   │       │   └── style.module.css
 │   │   │   │       └── section
@@ -127,19 +143,19 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │       │       └── style.module.css
 │   │   │       └── services
 │   │   │           └── members.service.js
-│   │   ├── teamServices
-│   │   │   ├── components
-│   │   │   │   ├── serviceCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── servicesList
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleServicePage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── store
-│   │   │       └── services.json
+│   │   └── teamServices
+│   │       ├── components
+│   │       │   ├── serviceCard
+│   │       │   │   ├── index.js
+│   │       │   │   └── style.module.css
+│   │       │   ├── servicesList
+│   │       │   │   ├── index.js
+│   │       │   │   └── style.module.css
+│   │       │   └── singleServicePage
+│   │       │       ├── index.js
+│   │       │       └── style.module.css
+│   │       └── store
+│   │           └── services.json
 │   ├── serviceWorker.js
 │   ├── shared
 │   │   ├── footer
@@ -147,12 +163,19 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   └── style.module.css
 │   │   ├── header
 │   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── layout
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── newsletterForm
+│   │   │   ├── index.js
 │   │   │   └── style.module.css
-│   │   └── layout
-│   │       ├── index.js
-│   │       └── style.module.css
+│   │   └── services
+│   │       ├── newsletter.service.js
+│   │       └── validation.service.js
 │   └── styles.css
-└── style-guide.md
+├── style-guide.md
+└── yarn.lock
 ```
 
 ## Contribution
