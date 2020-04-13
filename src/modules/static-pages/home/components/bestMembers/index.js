@@ -13,6 +13,7 @@ export class BestMembers extends Component {
   state = {
     bestMembers: null,
   };
+
   componentDidMount() {
     getBestMembers().then((response) => {
       this.setState({
@@ -20,6 +21,7 @@ export class BestMembers extends Component {
       });
     });
   }
+
   render() {
     const responsive = {
       desktop: {
@@ -35,6 +37,7 @@ export class BestMembers extends Component {
         items: 1,
       },
     };
+
     return (
       <section className={styles["best-members_section"]}>
         <h2 className={styles["best-members-section_heading"]}>BEST MEMBERS</h2>
