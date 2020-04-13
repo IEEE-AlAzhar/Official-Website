@@ -4,6 +4,7 @@
 .best-members-section_heading {
   text-align: center;
   margin-bottom: var(--section-heading-spacing);
+  text-transform: uppercase;
 }
 .best-members img {
   display: block;
@@ -36,7 +37,7 @@
   transition: all 0.2s;
 }
 .best-members-arrow:hover,
-.best-members-arrow:focus{
+.best-members-arrow:focus {
   background-color: var(--btn-hover);
   color: var(--layout-primary);
   border: none;

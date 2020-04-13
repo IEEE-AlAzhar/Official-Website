@@ -40,7 +40,9 @@ export class BestMembers extends Component {
 
     return (
       <section className={styles["best-members_section"]}>
-        <h2 className={styles["best-members-section_heading"]}>BEST MEMBERS</h2>
+        <h2 className={styles["best-members-section_heading"]}>
+          our best members
+        </h2>
         <Carousel
           responsive={responsive}
           infinite={true}
