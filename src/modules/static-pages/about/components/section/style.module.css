@@ -13,14 +13,13 @@
 }
 
 @media (max-width: 991px) {
-    .about-home  .about-Info  {
+    .about-home-section  .about-Info  {
         padding-top: 3rem;
     } 
 }
 .about-home-section  .about-Info .about-home-lead {
     color: var( --text-secondary);
-    font-size: var(--main-font-size);
-}
+ }
 .about-home-section .about-Info  .about-home-button {
     font-size:var(--main-font-size);
     background-color:var(--layout-secondary);

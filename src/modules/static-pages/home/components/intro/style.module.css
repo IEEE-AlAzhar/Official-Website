@@ -1,14 +1,13 @@
 .intro-header {
-    background-image: url();
+    background-image: url(../../../../../assets/images/postar.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #efefef;
-    height: 200px;
     position: relative;
     z-index: -2;
     text-align: center;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +15,7 @@
   }
   .intro-header  .intro-overlay {
     background-color : #0a111a;
-    opacity: 0.6;
+    opacity: 0.8;
     position: absolute;
     top: 0;
     left: 0;
