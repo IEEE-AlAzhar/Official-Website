@@ -1,15 +1,15 @@
-.about-home {
+.about-home-section {
     margin-top: var( --section-top-spacing);
     margin-bottom: var(--section-bottom-spacing);
     background-color: var(--layout-primary);
-    padding-bottom: var(--section-bottom-spacing);
-}
-.about-home h2{
+ }
+.about-home-section .about-home-Heading{
     font-size:2rem;
     color: var( --layout-secondary);
     padding: var( --section-heading-spacing);
     letter-spacing: 0.12rem;
     font-family: var( --heading-font-family);
+    text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -17,24 +17,23 @@
         padding-top: 3rem;
     } 
 }
-.about-home  .about-Info p {
+.about-home-section  .about-Info .about-home-lead {
     color: var( --text-secondary);
     font-size: var(--main-font-size);
 }
-.about-home  .about-Info  button {
-    font-size:2rem;
+.about-home-section .about-Info  .about-home-button {
+    font-size:var(--main-font-size);
     background-color:var(--layout-secondary);
     color: var( --layout-primary);
-    margin-top: 7rem;
     padding: .6rem;
     font-family: var( --heading-font-family);
     letter-spacing: 0.12rem;
     transition: all .3s ease-in-out ;
-    width: 30%;
+    width: 40%;
     border: none;
     border-radius: .3rem;
 
 }
-.about-home  .about-Info  button:hover {
+.about-home-section .about-Info .about-home-button:hover {
     background-color:var(--btn-hover); 
 }

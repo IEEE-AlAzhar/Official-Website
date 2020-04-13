@@ -1,18 +1,16 @@
 import React, { Component } from 'react' 
-import "/style.module.css";
+import styles from "./style.module.css";
 
 export default   class Intro extends Component {
     render(){
         const {title ,subtitle } =this.props
         return ( 
-            <header>
-              <div className="jumbotron jumbotron-fluid">
-                <div className="overlay"></div>
-                    <div className="container">
-                    <h1 className="display-3">{title}</h1>
-                    <p className="lead"> {subtitle}</p>
+            <header  className={styles["intro-header"]}>
+                <div  className={styles["intro-overlay"]}></div>
+                 <div className="container">
+                    <h1 className={styles["intro-header-heading"]}>{title}</h1>
+                    <p className={styles["intro-header-subtitle"]}> {subtitle}</p>
                 </div>
-             </div>
           </header>
         );
     } 

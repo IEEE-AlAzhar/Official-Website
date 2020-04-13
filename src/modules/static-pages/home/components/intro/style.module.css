@@ -1,5 +1,5 @@
-.jumbotron {
-    background-image: url(../assets/logo.png);
+.intro-header {
+    background-image: url();
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,8 +14,8 @@
     align-items: center;
 
   }
-  .overlay {
-    background-color: #000;
+  .intro-header  .intro-overlay {
+    background-color : #0a111a;
     opacity: 0.6;
     position: absolute;
     top: 0;
@@ -23,4 +23,10 @@
     bottom: 0;
     right: 0;
     z-index: -1;
+  }
+  .intro-header-heading {
+    font-size: 3rem;
+  }
+  .intro-header-subtitle {
+    font-size: var( --heading-2-font-size);
   }

@@ -20,7 +20,9 @@
     "react-helmet": "^6.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "resolve-url-loader": "^3.1.1"
+    "redux": "^4.0.5",
+    "resolve-url-loader": "^3.1.1",
+    "video-react": "^0.14.1"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,md}": [
