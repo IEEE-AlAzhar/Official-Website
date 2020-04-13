@@ -7,16 +7,23 @@ import Structure from "./components/structure";
 
 import Layout from "shared/layout/index";
 
+import Helmet from "react-helmet";
+
 function AboutPage() {
   return (
-    <Layout>
-      <div className="container">
-        <AboutHeader />
-        <IEEESection />
-        <IEEEAZHARSection />
-        <Structure />
-      </div>
-    </Layout>
+    <>
+      <Helmet>
+        <title> About us | IEEE Al-Azhar </title>
+      </Helmet>
+      <Layout>
+        <div className="container">
+          <AboutHeader />
+          <IEEESection />
+          <IEEEAZHARSection />
+          <Structure />
+        </div>
+      </Layout>
+    </>
   );
 }
 export default AboutPage;
