@@ -14,7 +14,8 @@
     transition-duration: 0.2s;
 }
 
-.send-btn:hover {
+.send-btn:hover,
+.send-btn:focus {
     background-color: var(--btn-hover);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
