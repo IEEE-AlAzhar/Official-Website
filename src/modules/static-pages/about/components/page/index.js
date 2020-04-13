@@ -7,7 +7,7 @@ import Structure from "./components/structure";
 
 import Layout from "shared/layout/index";
 
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 
 function AboutPage() {
   return (
