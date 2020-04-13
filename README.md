@@ -2,7 +2,7 @@
 
 The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
 
-![IEEE Logo](./src/assets/logo.png)
+![IEEE Logo](./src/assets/images/logo.png)
 
 ## Table of contents
 
