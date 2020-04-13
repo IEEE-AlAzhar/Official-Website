@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Layout from "shared/layout";
+import BestMembers from "../bestMembers";
 
 import { Helmet } from "react-helmet";
 
@@ -17,6 +18,7 @@ export default class HomePage extends Component {
         </Helmet>
         <Layout>
           <h1>Home page is ready !</h1>
+          <BestMembers />
         </Layout>
       </>
     );
