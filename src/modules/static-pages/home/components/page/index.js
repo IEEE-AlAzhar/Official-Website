@@ -12,7 +12,7 @@ export default class HomePage extends Component {
 
           <meta
             name="description"
-            content="IEEE is a student activity that aims to teach students and train them on different fields"
+            content="IEEE Al-Azhar is a student activity in Al-Azhar university that aims to teach students and train them on different fields"
           />
         </Helmet>
         <Layout>
