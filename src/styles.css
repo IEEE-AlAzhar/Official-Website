@@ -13,8 +13,7 @@
 }
 
 :root {
-  --section-top-spacing: 8rem;
-  --section-bottom-spacing: 8rem;
+  --section-y-spacing: 8rem;
   --section-heading-spacing: 5rem;
 
   --heading-font-family: "Rubik", sans-serif;
