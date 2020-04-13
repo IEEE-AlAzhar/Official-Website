@@ -1,7 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class AboutPage extends Component {
-  render() {
-    return <h1> About page is ready ! </h1>;
-  }
+import AboutHeader from "./components/header";
+import IEEESection from "./components/IEEESection";
+import IEEEAZHARSection from "./components/IEEEAZHARSection";
+import Structure from "./components/structure";
+
+import Layout from "shared/layout/index";
+
+function AboutPage() {
+  return (
+    <Layout>
+      <div className="container">
+        <AboutHeader />
+        <IEEESection />
+        <IEEEAZHARSection />
+        <Structure />
+      </div>
+    </Layout>
+  );
 }
+export default AboutPage;
