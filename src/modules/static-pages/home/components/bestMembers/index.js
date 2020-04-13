@@ -47,8 +47,12 @@ export class BestMembers extends Component {
           {this.state.bestMembers ? (
             this.state.bestMembers.map((member) => {
               return (
-                <div className={styles["best-members"]}>
-                  <img alt="Best members IEEE" src={member.image} />
+                <div className={styles["best-members"]} key={member}>
+                  <img
+                    alt="Best members IEEE"
+                    src={member.image}
+                    key={member.id}
+                  />
                   <p className={styles["best-members_name"]}>{member.name}</p>
                   <p className={styles["best-members_committee"]}>
                     {member.committee}
