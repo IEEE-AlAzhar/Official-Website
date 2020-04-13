@@ -41,9 +41,11 @@ This app uses some dependencies:
 
 1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results. See [this](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) for simplified explanation and how we use it in our app.
 
-1) [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
+1. [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
 
-1) [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
+1. [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
+
+1. [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel) - to make a responsive carousel.
 
 ## Structure
 
