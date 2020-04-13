@@ -1,0 +1,40 @@
+.about-home {
+    margin-top: var( --section-top-spacing);
+    margin-bottom: var(--section-bottom-spacing);
+    background-color: var(--layout-primary);
+    padding-bottom: var(--section-bottom-spacing);
+}
+.about-home h2{
+    font-size:2rem;
+    color: var( --layout-secondary);
+    padding: var( --section-heading-spacing);
+    letter-spacing: 0.12rem;
+    font-family: var( --heading-font-family);
+}
+
+@media (max-width: 991px) {
+    .about-home  .about-Info  {
+        padding-top: 3rem;
+    } 
+}
+.about-home  .about-Info p {
+    color: var( --text-secondary);
+    font-size: var(--main-font-size);
+}
+.about-home  .about-Info  button {
+    font-size:2rem;
+    background-color:var(--layout-secondary);
+    color: var( --layout-primary);
+    margin-top: 7rem;
+    padding: .6rem;
+    font-family: var( --heading-font-family);
+    letter-spacing: 0.12rem;
+    transition: all .3s ease-in-out ;
+    width: 30%;
+    border: none;
+    border-radius: .3rem;
+
+}
+.about-home  .about-Info  button:hover {
+    background-color:var(--btn-hover); 
+}

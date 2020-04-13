@@ -1,0 +1,26 @@
+.jumbotron {
+    background-image: url(../assets/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #efefef;
+    height: 200px;
+    position: relative;
+    z-index: -2;
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .overlay {
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }

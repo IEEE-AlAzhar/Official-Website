@@ -2,6 +2,8 @@
 
 We are very grateful for your contribution and your time you spend to help us enhance the application and we are excited to welcome you. Make sure to understand the file structure before any edit.
 
+If you're new to open source, read [this article](https://dvmhmdsd.me/blog/open-source/) to get involved.
+
 ## Here are the ways you can help
 
 1. Improve existing features.
@@ -10,6 +12,20 @@ We are very grateful for your contribution and your time you spend to help us en
 1. Help in code reviewing and provide feedback.
 
 ## Required Steps to follow to make your PR accepted and merged
+
+### General requirements
+
+1. Take care about `semantics` rules.
+1. Take care about `accessibility` rules.
+1. The names of functions, variables, components and css classes should be descriptive.
+1. No unnecessary comments.
+1. The maximum numbers of arguments is 3, it's preferred to minimize the number of arguments.
+1. No global css classes names.
+1. You should apply the `dark-mode` option specified in the [style-guide.md](style-guide.md) file
+1. Match the rules specified in [style-guide.md](style-guide.md) file.
+1. No warnings on the console or the terminal (always lint your code).
+
+> If u installed a new package add it in the [README.md](README.md) file in the `dependencies` section and mention it in the description of your pull request.
 
 Here are some cases you'll encounter while contributing:
 
