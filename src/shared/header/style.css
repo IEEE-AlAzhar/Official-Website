@@ -15,10 +15,7 @@ nav.navbar {
   background-color: var(--layout-primary);
   box-shadow: 1px 1px 1px 0px var(--layout-secondary);
   padding: 0;
-<<<<<<< HEAD
-=======
   overflow: hidden;
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 }
 
 .dark-theme nav.navbar .navbar-toggler,
