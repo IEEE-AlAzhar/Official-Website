@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@fortawesome/fontawesome-free": "^5.13.0",
-=======
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
@@ -21,18 +18,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-<<<<<<< HEAD
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "resolve-url-loader": "^3.1.1",
-    "video-react": "^0.14.1"
-=======
+    "video-react": "^0.14.1",
     "react-multi-carousel": "^2.5.3",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
     "resolve-url-loader": "^3.1.1"
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,md}": [

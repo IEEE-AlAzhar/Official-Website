@@ -2,11 +2,7 @@
 
 The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
 
-<<<<<<< HEAD
-![IEEE Logo](src/assets/logo.png)
-=======
 ![IEEE Logo](./src/assets/images/logo.png)
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 
 ## Table of contents
 
@@ -45,17 +41,11 @@ This app uses some dependencies:
 
 1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results. See [this](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) for simplified explanation and how we use it in our app.
 
-<<<<<<< HEAD
-1) [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
-
-1) [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
-=======
 1. [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
 
 1. [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
 
 1. [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel) - to make a responsive carousel.
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 
 ## Structure
 
@@ -72,20 +62,11 @@ The folder structure of the application. The app is modular, every module encaps
 ├── src
 │   ├── App.js
 │   ├── assets
-<<<<<<< HEAD
-│   │   └── fonts
-│   │       ├── PT
-│   │       │   └── PTSans-Regular.ttf
-│   │       └── Rubik
-│   │           └── Rubik-Medium.ttf
-│   ├── globals
-=======
 │   │   ├── fonts
 │   │   └── images
 │   ├── globals
 │   │   ├── contexts
 │   │   │   └── theme.context.js
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 │   │   └── routes.js
 │   ├── index.js
 │   ├── modules
@@ -107,22 +88,15 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   │   ├── form
 │   │   │   │   │   ├── index.js
 │   │   │   │   │   └── style.module.css
-<<<<<<< HEAD
-=======
 │   │   │   │   ├── icon
 │   │   │   │   │   ├── index.js
 │   │   │   │   │   └── style.module.css
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 │   │   │   │   └── page
 │   │   │   │       ├── index.js
 │   │   │   │       └── style.module.css
 │   │   │   └── services
-<<<<<<< HEAD
-│   │   │       └── contact.service.js
-=======
 │   │   │       ├── contact.service.js
 │   │   │       └── validation.service.js
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 │   │   ├── events
 │   │   │   ├── components
 │   │   │   │   ├── eventCard
@@ -140,8 +114,6 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   ├── about
 │   │   │   │   └── components
 │   │   │   │       ├── page
-<<<<<<< HEAD
-=======
 │   │   │   │       │   ├── components
 │   │   │   │       │   │   ├── header
 │   │   │   │       │   │   │   ├── index.js
@@ -155,7 +127,6 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   │       │   │   └── structure
 │   │   │   │       │   │       ├── index.js
 │   │   │   │       │   │       └── style.module.css
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 │   │   │   │       │   ├── index.js
 │   │   │   │       │   └── style.module.css
 │   │   │   │       └── section
@@ -174,21 +145,6 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │       │       └── style.module.css
 │   │   │       └── services
 │   │   │           └── members.service.js
-<<<<<<< HEAD
-│   │   ├── teamServices
-│   │   │   ├── components
-│   │   │   │   ├── serviceCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── servicesList
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleServicePage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── store
-│   │   │       └── services.json
-=======
 │   │   └── teamServices
 │   │       ├── components
 │   │       │   ├── serviceCard
@@ -202,7 +158,6 @@ The folder structure of the application. The app is modular, every module encaps
 │   │       │       └── style.module.css
 │   │       └── store
 │   │           └── services.json
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 │   ├── serviceWorker.js
 │   ├── shared
 │   │   ├── footer
@@ -210,14 +165,12 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   └── style.module.css
 │   │   ├── header
 │   │   │   ├── index.js
-<<<<<<< HEAD
 │   │   │   └── style.module.css
 │   │   └── layout
 │   │       ├── index.js
 │   │       └── style.module.css
 │   └── styles.css
 └── style-guide.md
-=======
 │   │   │   └── style.css
 │   │   ├── layout
 │   │   │   ├── index.js
@@ -231,7 +184,6 @@ The folder structure of the application. The app is modular, every module encaps
 │   └── styles.css
 ├── style-guide.md
 └── yarn.lock
->>>>>>> 05793b0f91340c419163b88928c3931cfc59d873
 ```
 
 ## Contribution
