@@ -7,18 +7,8 @@ import { ThemeProvider } from "globals/contexts/theme.context";
 class IEEEAZAHARSec extends Component {
   static contextType = ThemeProvider;
 
-  componentDidUpdate() {
-    const { theme } = this.context;
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting === true && theme === "light") {
-        this.AZAlogo.current.innerHTML = `<img src=${IEEEAZALogolight} alt= "IEEE_alzaher_logo" class="${AZAstyle.IEEEAZALogo__Azalogo}"/ >`;
-      } else if (entry.isIntersecting === true && theme === "dark") {
-        this.AZAlogo.current.innerHTML = `<img src=${IEEEAZALogodark} alt= "IEEE_alzaher_logo" class="${AZAstyle.IEEEAZALogo__Azalogo}"/ >`;
-      }
-    });
-    observer.observe(this.AZAlogo.current);
-  }
   render() {
+    const { theme } = this.context;
     this.AZAlogo = React.createRef();
     return (
       <>
@@ -41,7 +31,13 @@ class IEEEAZAHARSec extends Component {
                 pariatur aliquam pharetra eget.elitelitelit
               </p>
             </div>
-            <div className={AZAstyle.IEEEAZALogo} ref={this.AZAlogo}></div>
+            <div className={AZAstyle.IEEEAZALogo} ref={this.AZAlogo}>
+              <img
+                src={theme === "light" ? IEEEAZALogolight : IEEEAZALogodark}
+                className={AZAstyle.IEEEAZALogo__Azalogo}
+                alt="IEEE - AZAHR logo"
+              />
+            </div>
           </div>
         </section>
       </>
