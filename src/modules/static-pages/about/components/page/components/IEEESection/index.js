@@ -11,9 +11,9 @@ class PublicIEEESec extends Component {
     const { theme } = this.context;
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting === true && theme === "light") {
-        this.publogo.current.innerHTML = `<img src=${LogoLight} class="${styles.IEEEPubLogo__logo}" alt="" />`;
+        this.publogo.current.innerHTML = `<img src=${LogoLight} class="${styles.IEEEPubLogo__logo}" alt="" width="300" />`;
       } else if (entry.isIntersecting === true && theme === "dark") {
-        this.publogo.current.innerHTML = `<img src=${LogoDark} class="${styles.IEEEPubLogo__logo}" alt="" />`;
+        this.publogo.current.innerHTML = `<img src=${LogoDark} class="${styles.IEEEPubLogo__logo}" alt="" width="300" />`;
       }
     });
     observer.observe(this.publogo.current);

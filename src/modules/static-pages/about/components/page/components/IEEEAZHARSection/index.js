@@ -12,11 +12,11 @@ class IEEEAZHARSection extends Component {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting === true && theme === "light") {
         this.AZAlogo.current.innerHTML = `
-          <img src=${LogoLight} alt= "" class="${styles.IEEEAZALogo__Azalogo}"/ >
+          <img src=${LogoLight} alt= "" width="300" class="${styles.IEEEAZALogo__Azalogo}"/ >
         `;
       } else if (entry.isIntersecting === true && theme === "dark") {
         this.AZAlogo.current.innerHTML = `
-          <img src=${LogoDark} alt= "" class="${styles.IEEEAZALogo__Azalogo}"/ >
+          <img src=${LogoDark} alt= "" width="300" class="${styles.IEEEAZALogo__Azalogo}"/ >
         `;
       }
     });

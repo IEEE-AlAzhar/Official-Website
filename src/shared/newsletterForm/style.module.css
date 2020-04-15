@@ -10,6 +10,10 @@ footer .subscribe-form_input {
 
 footer .subscribe-form_btn {
   background-color: #1c7fd0;
+  color: #fff;
+}
+
+footer .subscribe-form_btn:hover {
   color: #000;
 }
 

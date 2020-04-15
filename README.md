@@ -165,6 +165,12 @@ The folder structure of the application. The app is modular, every module encaps
 │   │   │   └── style.module.css
 │   │   ├── header
 │   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   └── layout
+│   │       ├── index.js
+│   │       └── style.module.css
+│   └── styles.css
+└── style-guide.md
 │   │   │   └── style.css
 │   │   ├── layout
 │   │   │   ├── index.js
