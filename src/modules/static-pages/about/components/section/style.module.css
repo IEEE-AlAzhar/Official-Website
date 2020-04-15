@@ -14,7 +14,7 @@
   background-color: var(--layout-secondary);
   color: var(--layout-primary);
   padding: 1rem 1.3rem;
-  margin-top: 1rem;
+  margin-top: 0.4rem;
   display: inline-block;
   font-family: var(--heading-font-family);
   letter-spacing: 0.12rem;
