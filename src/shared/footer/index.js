@@ -32,6 +32,7 @@ export default class Footer extends Component {
           className={styles.socialList_link}
         >
           <FontAwesomeIcon icon={socialItem.icon} />
+          <span className="sr-only">Social media icon</span>
         </a>
       </li>
     ));

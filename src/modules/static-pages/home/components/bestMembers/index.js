@@ -83,6 +83,7 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
       onClick={() => onClick()}
     >
       <FontAwesomeIcon icon={faChevronRight} />
+      <span className="sr-only"> Slide right controller </span>
     </button>
   );
 };
@@ -94,6 +95,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
       onClick={() => onClick()}
     >
       <FontAwesomeIcon icon={faChevronLeft} />
+      <span className="sr-only"> Slide left controller </span>
     </button>
   );
 };
