@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./style.module.css";
 
-import AboutVideo from "../video/index";
+import AboutVideo from "../video";
 import { Link } from "react-router-dom";
 
 export default class About extends Component {
