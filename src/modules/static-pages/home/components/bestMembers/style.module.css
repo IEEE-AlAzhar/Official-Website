@@ -1,11 +1,6 @@
 .best-members_section {
   padding: var(--section-y-spacing) 0;
 }
-.best-members-section_heading {
-  text-align: center;
-  margin-bottom: var(--section-heading-spacing);
-  text-transform: uppercase;
-}
 .best-members img {
   display: block;
   margin: auto;

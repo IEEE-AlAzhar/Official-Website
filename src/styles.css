@@ -55,6 +55,12 @@ h6 {
   font-family: var(--heading-font-family);
 }
 
+.section_heading {
+  text-align: center;
+  margin-bottom: var(--section-heading-spacing);
+  text-transform: uppercase;
+}
+
 p {
   line-height: 1.5;
   letter-spacing: 0.12rem;

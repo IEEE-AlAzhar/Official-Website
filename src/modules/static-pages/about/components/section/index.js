@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./style.module.css";
 
-import AboutVideo from "./video/index";
+import AboutVideo from "../video/index";
 import { Link } from "react-router-dom";
 
 export default class About extends Component {
@@ -9,7 +9,7 @@ export default class About extends Component {
     return (
       <section className={styles["about-home_section"]}>
         <div className="container">
-          <h2 className={styles["about-home_Heading"]}> About Us</h2>
+          <h2 className="section_heading">About Us</h2>
           <div className="row">
             <div className="col-lg-6">
               <AboutVideo />
@@ -25,7 +25,7 @@ export default class About extends Component {
                   the labor market.
                 </p>
                 <Link to="/about-us" className={styles["about-home_button"]}>
-                  Read More
+                  Know more about us
                 </Link>
               </div>
             </div>
