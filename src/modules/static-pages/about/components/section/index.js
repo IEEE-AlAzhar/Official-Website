@@ -22,7 +22,9 @@ export default class About extends Component {
                     a successful engineer from the students ,
                       so they become able to compete in the labor market.
                 </p>
-                <Link to='/about-us' className={styles["about-home_button"]}>
+                <Link to='/about-us'
+                      className={styles["about-home_button"]}
+                      aria-label='read more about us' >
                     Read More 
                 </Link>
               </div>

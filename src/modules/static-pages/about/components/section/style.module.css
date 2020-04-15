@@ -3,8 +3,9 @@
     margin-bottom: var(--section-bottom-spacing);
     background-color: var(--layout-primary);
  }
+
+
 .about-home_section .about-home_Heading{
-    font-size:var(--heading-2-font-size);
     color: var( --layout-secondary);
     padding: var( --section-heading-spacing);
     letter-spacing: 0.12rem;
@@ -17,22 +18,23 @@
         padding-top: 3rem;
     } 
 }
-.about-home_section  .about-home_Info .about-home_lead {
-    color: var( --text-secondary);
- }
+
 .about-home_section .about-home_Info .about-home_button {
     font-size:var(--main-font-size);
     background-color:var(--layout-secondary);
     color: var( --layout-primary);
-    padding: .7rem 1rem;
-    margin-top: .8rem;
+    padding: 1rem 1.3rem;
+    margin-top: 1rem;
     font-family: var( --heading-font-family);
     letter-spacing: 0.12rem;
     transition: all .3s ease-in-out ;
-    border-radius: .3rem;
+    border-radius: .5rem;
     text-decoration: none;
 
 }
-.about-home_section .about-home_Info .about-home_button:hover {
+.about-home_section .about-home_Info 
+.about-home_button:hover ,
+.about-home_button:focus {
     background-color:var(--btn-hover); 
 }
+ 

@@ -12,9 +12,12 @@ export default class AboutVideo extends Component {
      return (
          <div>
             <Player src={video} 
-                    poster={poster}          
-             >
-               <BigPlayButton position="center" />
+                    poster={poster}    
+                    preload="metadata"  >
+                  <BigPlayButton position="center"
+                                 tabindex="0"
+                                 data-state="play" 
+                                 aria-label='Play button' />
             </Player>
          </div>
            )    
