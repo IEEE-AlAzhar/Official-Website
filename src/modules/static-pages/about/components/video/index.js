@@ -8,10 +8,9 @@ export default class AboutVideo extends Component {
   render() {
     return (
       <div>
-        <Player src={video} poster={poster} preload="metadata">
+        <Player src={video} tabindex="0" poster={poster} preload="metadata">
           <BigPlayButton
             position="center"
-            tabindex="0"
             data-state="play"
             aria-label="Play button"
           />

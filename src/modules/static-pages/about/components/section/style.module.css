@@ -23,6 +23,6 @@
   text-decoration: none;
 }
 .about-home_section .about-home_Info .about-home_button:hover,
-.about-home_button:focus {
+.about-home_section .about-home_Info .about-home_button:focus {
   background-color: var(--btn-hover);
 }

@@ -13,8 +13,8 @@
 
 nav.navbar {
   background-color: var(--layout-primary);
-  box-shadow: 1px 1px 1px 0px var(--layout-secondary);
   padding: 0;
+  border-bottom: 1px solid var(--layout-secondary);
   overflow: hidden;
 }
 

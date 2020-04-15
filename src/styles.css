@@ -70,3 +70,7 @@ p {
 p + p {
   margin-top: 2rem;
 }
+
+.video-react-control-bar {
+  font-size: 1rem;
+}

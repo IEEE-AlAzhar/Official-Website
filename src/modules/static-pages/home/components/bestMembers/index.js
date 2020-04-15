@@ -57,7 +57,9 @@ export class BestMembers extends Component {
                     key={member.id}
                   />
                   <figcaption>
-                    <p className={styles["best-members_name"]}>{member.name}</p>
+                    <h3 className={styles["best-members_name"]}>
+                      {member.name}
+                    </h3>
                     <p className={styles["best-members_committee"]}>
                       {member.committee}
                     </p>
