@@ -47,6 +47,8 @@ This app uses some dependencies:
 
 1. [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel) - to make a responsive carousel.
 
+1. [react-video](https://video-react.js.org/) - to make an interactive video.
+
 ## Structure
 
 The folder structure of the application. The app is modular, every module encapsulates its own components and services. Each module contains `components` folder which has the presentational components and also pages, also the module contains the `services` folder if it's dynamic which has all the services that integrate with the `API`.
@@ -58,130 +60,130 @@ The folder structure of the application. The app is modular, every module encaps
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
+├── public
+|   └──data
+|      └── best-members.json
 ├── README.md
 ├── src
-│   ├── App.js
-│   ├── assets
-│   │   ├── fonts
-│   │   └── images
-│   ├── globals
-│   │   ├── contexts
-│   │   │   └── theme.context.js
-│   │   └── routes.js
-│   ├── index.js
-│   ├── modules
-│   │   ├── blog
-│   │   │   ├── components
-│   │   │   │   ├── blogCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── blogListPage
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleBlogPage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       └── blog.service.js
-│   │   ├── contact
-│   │   │   ├── components
-│   │   │   │   ├── form
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── icon
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── page
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       ├── contact.service.js
-│   │   │       └── validation.service.js
-│   │   ├── events
-│   │   │   ├── components
-│   │   │   │   ├── eventCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── eventsListPage
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleEventPage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       └── events.service.js
-│   │   ├── static-pages
-│   │   │   ├── about
-│   │   │   │   └── components
-│   │   │   │       ├── page
-│   │   │   │       │   ├── components
-│   │   │   │       │   │   ├── header
-│   │   │   │       │   │   │   ├── index.js
-│   │   │   │       │   │   │   └── style.module.css
-│   │   │   │       │   │   ├── IEEEAZHARSection
-│   │   │   │       │   │   │   ├── index.js
-│   │   │   │       │   │   │   └── style.module.css
-│   │   │   │       │   │   ├── IEEESection
-│   │   │   │       │   │   │   ├── index.js
-│   │   │   │       │   │   │   └── style.module.css
-│   │   │   │       │   │   └── structure
-│   │   │   │       │   │       ├── index.js
-│   │   │   │       │   │       └── style.module.css
-│   │   │   │       │   ├── index.js
-│   │   │   │       │   └── style.module.css
-│   │   │   │       └── section
-│   │   │   │           ├── index.js
-│   │   │   │           └── style.module.css
-│   │   │   └── home
-│   │   │       ├── components
-│   │   │       │   ├── bestMembers
-│   │   │       │   │   ├── index.js
-│   │   │       │   │   └── style.module.css
-│   │   │       │   ├── intro
-│   │   │       │   │   ├── index.js
-│   │   │       │   │   └── style.module.css
-│   │   │       │   └── page
-│   │   │       │       ├── index.js
-│   │   │       │       └── style.module.css
-│   │   │       └── services
-│   │   │           └── members.service.js
-│   │   └── teamServices
-│   │       ├── components
-│   │       │   ├── serviceCard
-│   │       │   │   ├── index.js
-│   │       │   │   └── style.module.css
-│   │       │   ├── servicesList
-│   │       │   │   ├── index.js
-│   │       │   │   └── style.module.css
-│   │       │   └── singleServicePage
-│   │       │       ├── index.js
-│   │       │       └── style.module.css
-│   │       └── store
-│   │           └── services.json
-│   ├── serviceWorker.js
-│   ├── shared
-│   │   ├── footer
-│   │   │   ├── index.js
-│   │   │   └── style.module.css
-│   │   ├── header
-│   │   │   ├── index.js
-│   │   │   └── style.module.css
-│   │   └── layout
-│   │       ├── index.js
-│   │       └── style.module.css
-│   └── styles.css
-└── style-guide.md
-│   │   │   └── style.css
-│   │   ├── layout
-│   │   │   ├── index.js
-│   │   │   └── style.css
-│   │   ├── newsletterForm
-│   │   │   ├── index.js
-│   │   │   └── style.module.css
-│   │   └── services
-│   │       ├── newsletter.service.js
-│   │       └── validation.service.js
-│   └── styles.css
+│   ├── App.js
+│   ├── assets
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── video
+│   ├── globals
+│   │   ├── contexts
+│   │   │   └── theme.context.js
+│   │   └── routes.js
+│   ├── index.js
+│   ├── modules
+│   │   ├── blog
+│   │   │   ├── components
+│   │   │   │   ├── blogCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── blogListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleBlogPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       └── blog.service.js
+│   │   ├── contact
+│   │   │   ├── components
+│   │   │   │   ├── form
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── icon
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── page
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       ├── contact.service.js
+│   │   │       └── validation.service.js
+│   │   ├── events
+│   │   │   ├── components
+│   │   │   │   ├── eventCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── eventsListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleEventPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       └── events.service.js
+│   │   ├── static-pages
+│   │   │   ├── about
+│   │   │   │   └── components
+│   │   │   │       ├── page
+│   │   │   │       │   ├── components
+│   │   │   │       │   │   ├── header
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEEAZHARSection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEESection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   └── structure
+│   │   │   │       │   │       ├── index.js
+│   │   │   │       │   │       └── style.module.css
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── style.module.css
+│   │   │   │       ├── section
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── style.module.css
+│   │   │   │       └── video
+│   │   │   │           └── index.js
+│   │   │   └── home
+│   │   │       ├── components
+│   │   │       │   ├── bestMembers
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   ├── intro
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   └── page
+│   │   │       │       ├── index.js
+│   │   │       │       └── style.module.css
+│   │   │       └── services
+│   │   │           └── members.service.js
+│   │   └── teamServices
+│   │       ├── components
+│   │       │   ├── serviceCard
+│   │       │   │   ├── index.js
+│   │       │   │   └── style.module.css
+│   │       │   ├── servicesList
+│   │       │   │   ├── index.js
+│   │       │   │   └── style.module.css
+│   │       │   └── singleServicePage
+│   │       │       ├── index.js
+│   │       │       └── style.module.css
+│   │       └── store
+│   │           └── services.json
+│   ├── serviceWorker.js
+│   ├── shared
+│   │   ├── footer
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   ├── header
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── layout
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── newsletterForm
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   └── services
+│   │       ├── newsletter.service.js
+│   │       └── validation.service.js
+│   └── styles.css
 ├── style-guide.md
 └── yarn.lock
 ```
