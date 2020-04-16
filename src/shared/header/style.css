@@ -1,4 +1,4 @@
-.skip_link {
+.skip__link {
   position: absolute;
   top: 0;
   left: -100%;
@@ -7,7 +7,7 @@
   font-size: 1.6rem;
 }
 
-.skip_link:focus {
+.skip__link:focus {
   left: 0;
 }
 
@@ -23,14 +23,14 @@ nav.navbar {
   color: #fff;
 }
 
-.navbar_link {
+.navbar__link {
   margin: 0 0.1rem;
   transition: all 0.2s;
   color: var(--text-secondary);
 }
 
 @media (min-width: 992px) {
-  .navbar_link {
+  .navbar__link {
     padding: 2rem;
     padding-bottom: 1.8rem;
   }
@@ -47,17 +47,17 @@ nav.navbar {
   }
 
   .active,
-  .navbar_link:hover {
+  .navbar__link:hover {
     border-bottom: none;
   }
 }
 
-.navbar_link:hover {
+.navbar__link:hover {
   text-decoration: none;
 }
 
 .active,
-.navbar_link:hover {
+.navbar__link:hover {
   border-bottom: 3px solid;
   color: var(--btn-hover);
 }

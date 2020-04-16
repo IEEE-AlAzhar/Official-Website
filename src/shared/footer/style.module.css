@@ -5,14 +5,14 @@ footer {
   border-top: 1px solid #fff;
 }
 
-footer .socialList_link {
+footer .social-list__link {
   font-size: var(--heading-2-font-size);
   color: #fff;
   margin: 0.5rem;
   transition: all 0.2s;
 }
 
-footer .socialList_link:hover,
-footer .socialList_link:focus {
+footer .social-list__link:hover,
+footer .social-list__link:focus {
   color: rgba(255, 255, 255, 0.6);
 }

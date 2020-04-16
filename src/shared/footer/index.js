@@ -29,7 +29,7 @@ export default class Footer extends Component {
           href={socialItem.link}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.socialList_link}
+          className={styles["social-list__link"]}
         >
           <FontAwesomeIcon icon={socialItem.icon} />
           <span className="sr-only">Social media icon</span>
