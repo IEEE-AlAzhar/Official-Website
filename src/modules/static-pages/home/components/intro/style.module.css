@@ -1,0 +1,30 @@
+.intro-header_section {
+  background-image: url(../../../../../assets/images/postar.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #efefef;
+  position: relative;
+  z-index: -2;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-header_section .intro-header_overlay {
+  background-color: #0a111a;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.intro-header_section .intro-header_heading {
+  font-size: 3rem;
+}
+.intro-header_section .intro-header_subtitle {
+  font-size: var(--heading-2-font-size);
+}

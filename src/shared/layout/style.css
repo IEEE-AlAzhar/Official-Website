@@ -1,3 +1,7 @@
 #mainContent {
     margin-top: 5.6rem;
 }
+
+#mainContent:focus {
+    outline: 0;
+}
