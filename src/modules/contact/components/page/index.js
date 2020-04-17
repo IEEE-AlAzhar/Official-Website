@@ -16,8 +16,6 @@ class ContactPage extends Component {
           className="text-center modal-dialog-centered px-3 py-2"
           style={{ backgroundColor: "#0a111a" }}
         >
-          {" "}
-          {/* var(--layout-scondary) is too bad at dark mode! */}
           <section
             className={`row container px-1 py-4 mx-auto rounded`}
             style={{

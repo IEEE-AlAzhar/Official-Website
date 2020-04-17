@@ -14,6 +14,14 @@ class IEEESection extends Component {
         <section className={styles.AZA_IEEE_sec}>
           <h1 className={styles.AZA_IEEE_sec__heading}>IEEE-AZHAR</h1>
           <div className={styles.content_AZAIEEE}>
+            <div className={styles.IEEEAZALogo}>
+              <img
+                src={theme === "light" ? LogoLight : LogoDark}
+                className={styles.IEEEAZALogo__Azalogo}
+                alt=""
+                width="300"
+              />
+            </div>
             <div className={styles.IEEEAZApara}>
               <p className={styles.IEEEAZApara__Azaparagraph}>
                 Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac
@@ -29,13 +37,6 @@ class IEEESection extends Component {
                 integer vivamus elit eu mauris hendrerit facilisi, mi mattis
                 pariatur aliquam pharetra eget.elitelitelit
               </p>
-            </div>
-            <div className={styles.IEEEAZALogo}>
-              <img
-                src={theme === "light" ? LogoLight : LogoDark}
-                className={styles.IEEEAZALogo__Azalogo}
-                alt="IEEE - AZAHR logo"
-              />
             </div>
           </div>
         </section>
