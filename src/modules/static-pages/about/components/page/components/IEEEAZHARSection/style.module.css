@@ -14,7 +14,7 @@
     justify-items: center;
   }
 
-  .IEEEAZALogo img {
+  .IEEEAZALogo__Azalogo {
     width: 40vw;
     margin: 6rem 0 6rem 0;
   }
@@ -43,4 +43,5 @@
   .IEEEAZALogo__Azalogo {
     margin: 6rem 0 6rem 0;
   }
+ 
 }
