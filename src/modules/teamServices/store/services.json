@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Service 1",
+    "cover": "https://via.placeholder.com/500?text=Service+1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus corporis deserunt sequi perspiciatis odio ab? Nam, voluptate dicta at unde nesciunt natus distinctio inventore!",
+    "gallery": [
+      "https://via.placeholder.com/500?text=Image+1",
+      "https://via.placeholder.com/500?text=Image+2",
+      "https://via.placeholder.com/500?text=Image+3",
+      "https://via.placeholder.com/500?text=Image+4"
+    ]
+  },
+  {
+    "title": "Service 2",
+    "cover": "https://via.placeholder.com/500?text=Service+2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus corporis deserunt sequi perspiciatis odio ab? Nam, voluptate dicta at unde nesciunt natus distinctio inventore!",
+    "gallery": [
+      "https://via.placeholder.com/500?text=Image+1",
+      "https://via.placeholder.com/500?text=Image+2",
+      "https://via.placeholder.com/500?text=Image+3",
+      "https://via.placeholder.com/500?text=Image+4"
+    ]
+  },
+  {
+    "title": "Service 3",
+    "cover": "https://via.placeholder.com/500?text=Service+3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus corporis deserunt sequi perspiciatis odio ab? Nam, voluptate dicta at unde nesciunt natus distinctio inventore!",
+    "gallery": [
+      "https://via.placeholder.com/500?text=Image+1",
+      "https://via.placeholder.com/500?text=Image+2",
+      "https://via.placeholder.com/500?text=Image+3",
+      "https://via.placeholder.com/500?text=Image+4"
+    ]
+  }
+]
