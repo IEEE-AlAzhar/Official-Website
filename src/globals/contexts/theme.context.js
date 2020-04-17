@@ -7,6 +7,8 @@ export default class ThemeContext extends Component {
     theme:
       localStorage.getItem("theme") !== null
         ? localStorage.getItem("theme")
+        : window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
         : "light",
   };
 
