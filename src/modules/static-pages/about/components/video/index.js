@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Player, BigPlayButton } from "video-react";
-import poster from "assets/images/postar.png";
+import poster from "assets/images/poster.png";
 import "video-react/dist/video-react.css";
 import video from "assets/video/anmy.mp4";
 
