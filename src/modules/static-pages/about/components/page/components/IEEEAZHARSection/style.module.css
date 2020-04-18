@@ -1,0 +1,47 @@
+@media (max-width: 1200px) {
+  .AZA_IEEE_sec {
+    margin: 8rem 1rem 6rem 1rem;
+  }
+
+  .AZA_IEEE_sec__heading {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .content_AZAIEEE {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(40vh, auto);
+    justify-items: center;
+  }
+
+  .IEEEAZALogo__Azalogo {
+    width: 40vw;
+    margin: 6rem 0 6rem 0;
+  }
+}
+
+@media (min-width: 1201px) {
+  .AZA_IEEE_sec {
+    margin: 8rem 0 6rem 0;
+  }
+
+  .AZA_IEEE_sec__heading {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .IEEEAZAparadark__Azaparagraph {
+    color: white;
+  }
+  .content_AZAIEEE {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(40vh, auto);
+    justify-items: center;
+    align-items: center;
+  }
+  .IEEEAZALogo__Azalogo {
+    margin: 6rem 0 6rem 0;
+  }
+ 
+}

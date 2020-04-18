@@ -63,7 +63,7 @@ export default class NewsletterForm extends Component {
           <input
             type="text"
             id="newsletter"
-            className={`form-control ${styles["subscribe-form_input"]}`}
+            className={`form-control ${styles["subscribe-form__input"]}`}
             placeholder="Type your email here"
             aria-label="Get our latest news"
             value={email}
@@ -72,7 +72,7 @@ export default class NewsletterForm extends Component {
           />
           <div className="input-group-append">
             <button
-              className={`btn ${styles["subscribe-form_btn"]}`}
+              className={`btn ${styles["subscribe-form__btn"]}`}
               type="submit"
             >
               Subscribe

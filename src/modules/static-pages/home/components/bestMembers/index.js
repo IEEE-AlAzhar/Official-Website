@@ -13,6 +13,7 @@ export class BestMembers extends Component {
   state = {
     bestMembers: null,
   };
+
   componentDidMount() {
     getBestMembers().then((response) => {
       this.setState({
@@ -20,6 +21,7 @@ export class BestMembers extends Component {
       });
     });
   }
+
   render() {
     const responsive = {
       desktop: {
@@ -35,9 +37,10 @@ export class BestMembers extends Component {
         items: 1,
       },
     };
+
     return (
       <section className={styles["best-members_section"]}>
-        <h2 className={styles["best-members-section_heading"]}>BEST MEMBERS</h2>
+        <h2 className="section_heading">our best members</h2>
         <Carousel
           responsive={responsive}
           infinite={true}
@@ -47,17 +50,21 @@ export class BestMembers extends Component {
           {this.state.bestMembers ? (
             this.state.bestMembers.map((member) => {
               return (
-                <div className={styles["best-members"]} key={member}>
+                <figure className={styles["best-members"]} key={member}>
                   <img
-                    alt="Best members IEEE"
+                    alt={`One of ${member.committee}'s best members`}
                     src={member.image}
                     key={member.id}
                   />
-                  <p className={styles["best-members_name"]}>{member.name}</p>
-                  <p className={styles["best-members_committee"]}>
-                    {member.committee}
-                  </p>
-                </div>
+                  <figcaption>
+                    <h3 className={styles["best-members_name"]}>
+                      {member.name}
+                    </h3>
+                    <p className={styles["best-members_committee"]}>
+                      {member.committee}
+                    </p>
+                  </figcaption>
+                </figure>
               );
             })
           ) : (
@@ -75,8 +82,8 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
       className={`${styles["best-members-arrow"]} ${styles["best-members-arrow_right"]}`}
       onClick={() => onClick()}
     >
-      {" "}
       <FontAwesomeIcon icon={faChevronRight} />
+      <span className="sr-only"> Slide right controller </span>
     </button>
   );
 };
@@ -88,6 +95,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
       onClick={() => onClick()}
     >
       <FontAwesomeIcon icon={faChevronLeft} />
+      <span className="sr-only"> Slide left controller </span>
     </button>
   );
 };

@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const getBestMembers = async () => {
-  return await axios.get("./best-members.json");
+  return await axios.get("./data/best-members.json");
 };

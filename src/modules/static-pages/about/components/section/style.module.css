@@ -1,0 +1,28 @@
+.about-home_section {
+  margin-top: var(--section-y-spacing);
+  margin-bottom: var(--section-y-spacing);
+  background-color: var(--layout-primary);
+}
+
+@media (max-width: 991px) {
+  .about-home_section .about-home_Info {
+    padding-top: 3rem;
+  }
+}
+
+.about-home_section .about-home_Info .about-home_button {
+  background-color: var(--layout-secondary);
+  color: var(--layout-primary);
+  padding: 1rem 1.3rem;
+  margin-top: 0.4rem;
+  display: inline-block;
+  font-family: var(--heading-font-family);
+  letter-spacing: 0.12rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.about-home_section .about-home_Info .about-home_button:hover,
+.about-home_section .about-home_Info .about-home_button:focus {
+  background-color: var(--btn-hover);
+}

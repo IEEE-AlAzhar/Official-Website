@@ -28,7 +28,7 @@ export default class Header extends Component {
           <li className="nav-item" key={index}>
             <NavLink
               exact
-              className="navbar_link"
+              className="navbar__link"
               activeClassName="active"
               to={route.path}
             >
@@ -46,7 +46,7 @@ export default class Header extends Component {
     return (
       <nav className="navbar navbar-expand-lg fixed-top" aria-label="site">
         <a
-          className="skip_link"
+          className="skip__link"
           href="#mainContent"
           onClick={this.skipToMainContent}
         >

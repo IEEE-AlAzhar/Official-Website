@@ -26,7 +26,7 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - `--layout-secondary`: #0a111a; `// used for buttons, borders and cards' background`
 - `--text-primary`: #242627; `// used for paragraphs text`
 - `--text-secondary`: #0a111a; `// used for headings and side notes text`
-- `--btn-hover`: #1c7fd0; `// used for hover on buttons`
+- `--btn-hover`: #024b88; `// used for hover on buttons`
 
 ### dark-theme:
 
@@ -57,6 +57,7 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - `letter-spacing`: 0.12rem;
 - `word-spacing`: 0.16rem;
 - All styles should have one line space between each other
+
 ```
 .class1 {
   some: style;
@@ -69,5 +70,5 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 
 ## Naming Conventions
 
-- Class names should follow [BEM](https://en.bem.info/methodology/quick-start/) Methodology.
+- Class names should follow [BEM](https://en.bem.info/methodology/quick-start/) Methodology. You can also read this [Cheat sheet](https://9elements.com/bem-cheat-sheet/).
 - Variable, Functions, Methods & components names' should be in `camelCase`.

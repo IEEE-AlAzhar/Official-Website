@@ -2,7 +2,7 @@
 
 The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
 
-![IEEE Logo](src/assets/logo.png)
+![IEEE Logo](./src/assets/images/logo.png)
 
 ## Table of contents
 
@@ -41,9 +41,13 @@ This app uses some dependencies:
 
 1. [css modules](https://github.com/css-modules/css-modules) - to scope the css and reduce unexpected visual results. See [this](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) for simplified explanation and how we use it in our app.
 
-1) [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
+1. [axios](https://github.com/axios/axios) - to consume APIs and integrate with the `back-end`.
 
-1) [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
+1. [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - to add descriptive icons.
+
+1. [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel) - to make a responsive carousel.
+
+1. [react-video](https://video-react.js.org/) - to make an interactive video.
 
 ## Structure
 
@@ -56,103 +60,132 @@ The folder structure of the application. The app is modular, every module encaps
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
+├── public
+|   └──data
+|      └── best-members.json
 ├── README.md
 ├── src
-│   ├── App.js
-│   ├── assets
-│   │   └── fonts
-│   │       ├── PT
-│   │       │   └── PTSans-Regular.ttf
-│   │       └── Rubik
-│   │           └── Rubik-Medium.ttf
-│   ├── globals
-│   │   └── routes.js
-│   ├── index.js
-│   ├── modules
-│   │   ├── blog
-│   │   │   ├── components
-│   │   │   │   ├── blogCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── blogListPage
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleBlogPage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       └── blog.service.js
-│   │   ├── contact
-│   │   │   ├── components
-│   │   │   │   ├── form
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── page
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       └── contact.service.js
-│   │   ├── events
-│   │   │   ├── components
-│   │   │   │   ├── eventCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── eventsListPage
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleEventPage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       └── events.service.js
-│   │   ├── static-pages
-│   │   │   ├── about
-│   │   │   │   └── components
-│   │   │   │       ├── page
-│   │   │   │       │   ├── index.js
-│   │   │   │       │   └── style.module.css
-│   │   │   │       └── section
-│   │   │   │           ├── index.js
-│   │   │   │           └── style.module.css
-│   │   │   └── home
-│   │   │       ├── components
-│   │   │       │   ├── bestMembers
-│   │   │       │   │   ├── index.js
-│   │   │       │   │   └── style.module.css
-│   │   │       │   ├── intro
-│   │   │       │   │   ├── index.js
-│   │   │       │   │   └── style.module.css
-│   │   │       │   └── page
-│   │   │       │       ├── index.js
-│   │   │       │       └── style.module.css
-│   │   │       └── services
-│   │   │           └── members.service.js
-│   │   ├── teamServices
-│   │   │   ├── components
-│   │   │   │   ├── serviceCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── servicesList
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleServicePage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── store
-│   │   │       └── services.json
-│   ├── serviceWorker.js
-│   ├── shared
-│   │   ├── footer
-│   │   │   ├── index.js
-│   │   │   └── style.module.css
-│   │   ├── header
-│   │   │   ├── index.js
-│   │   │   └── style.module.css
-│   │   └── layout
-│   │       ├── index.js
-│   │       └── style.module.css
-│   └── styles.css
-└── style-guide.md
+│   ├── App.js
+│   ├── assets
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── video
+│   ├── globals
+│   │   ├── contexts
+│   │   │   └── theme.context.js
+│   │   └── routes.js
+│   ├── index.js
+│   ├── modules
+│   │   ├── blog
+│   │   │   ├── components
+│   │   │   │   ├── blogCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── blogListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleBlogPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       └── blog.service.js
+│   │   ├── contact
+│   │   │   ├── components
+│   │   │   │   ├── form
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── icon
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── page
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       ├── contact.service.js
+│   │   │       └── validation.service.js
+│   │   ├── events
+│   │   │   ├── components
+│   │   │   │   ├── eventCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── eventsListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleEventPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   └── services
+│   │   │       └── events.service.js
+│   │   ├── static-pages
+│   │   │   ├── about
+│   │   │   │   └── components
+│   │   │   │       ├── page
+│   │   │   │       │   ├── components
+│   │   │   │       │   │   ├── header
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEEAZHARSection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEESection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   └── structure
+│   │   │   │       │   │       ├── index.js
+│   │   │   │       │   │       └── style.module.css
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── style.module.css
+│   │   │   │       ├── section
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── style.module.css
+│   │   │   │       └── video
+│   │   │   │           └── index.js
+│   │   │   └── home
+│   │   │       ├── components
+│   │   │       │   ├── bestMembers
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   ├── intro
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   └── page
+│   │   │       │       ├── index.js
+│   │   │       │       └── style.module.css
+│   │   │       └── services
+│   │   │           └── members.service.js
+│   │   └── teamServices
+│   │       ├── components
+│   │       │   ├── serviceCard
+│   │       │   │   ├── index.js
+│   │       │   │   └── style.module.css
+│   │       │   ├── servicesList
+│   │       │   │   ├── index.js
+│   │       │   │   └── style.module.css
+│   │       │   └── singleServicePage
+│   │       │       ├── index.js
+│   │       │       └── style.module.css
+│   │       └── store
+│   │           └── services.json
+│   ├── serviceWorker.js
+│   ├── shared
+│   │   ├── footer
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   ├── header
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── layout
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── newsletterForm
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   └── services
+│   │       ├── newsletter.service.js
+│   │       └── validation.service.js
+│   └── styles.css
+├── style-guide.md
+└── yarn.lock
 ```
 
 ## Contribution
