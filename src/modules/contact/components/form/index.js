@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import sendMessage from "../../services/contact.service";
-import {
-  EmailValid,
-  firstNameValid,
-  lastNameValid,
-} from "../../services/validation.service";
+import sendMessage from "modules/contact/services/contact.service";
+import { isValidText } from "modules/contact/services/validation.service";
+import { isEmailValid } from "shared/services/validation.service";
+
 import styles from "./style.module.css";
 
 const initialState = {
@@ -20,8 +18,8 @@ const initialState = {
   emailError: "",
   subjectError: "",
   messageError: "",
-  sendingSuccess: false,
-  sendingFailed: false,
+  isSendingSuccess: false,
+  isSendingFailed: false,
 };
 
 class Form extends Component {
@@ -43,19 +41,19 @@ class Form extends Component {
 
     if (!firstName) {
       firstNameError = "Please enter your first name";
-    } else if (!firstNameValid(firstName)) {
+    } else if (!isValidText(firstName)) {
       firstNameError = "Only characters are allowed";
     }
 
     if (!lastName) {
       lastNameError = "Please enter your last name";
-    } else if (!lastNameValid(lastName)) {
+    } else if (!isValidText(lastName)) {
       lastNameError = "Only characters are allowed";
     }
 
     if (!email) {
       emailError = "Please enter email";
-    } else if (!EmailValid(email)) {
+    } else if (!isEmailValid(email)) {
       emailError = "Please enter a valid email";
     }
 
@@ -104,11 +102,11 @@ class Form extends Component {
         subject,
         message,
       })
-        .then((data) => {
-          this.setState({ sendingSuccess: true });
+        .then(() => {
+          this.setState({ isSendingSuccess: true });
         })
         .catch((err) => {
-          this.setState({ sendingFailed: true });
+          this.setState({ isSendingFailed: true });
         });
     }
   };
@@ -126,10 +124,10 @@ class Form extends Component {
       emailError,
       subjectError,
       messageError,
-      sendingFailed,
-      sendingSuccess,
+      isSendingFailed,
+      isSendingSuccess,
     } = this.state;
-    return sendingSuccess ? (
+    return isSendingSuccess ? (
       <section className="col-lg m-auto">
         <svg
           className="bi bi-check-circle"
@@ -156,9 +154,9 @@ class Form extends Component {
       </section>
     ) : (
       <form className="col-md" onSubmit={this.onFormSubmit}>
-        {sendingFailed ? (
+        {isSendingFailed ? (
           <section>
-            <small className="text-danger">
+            <small className="text-danger" aria-live="polite">
               Error sending the message, please try again later!
             </small>
           </section>
