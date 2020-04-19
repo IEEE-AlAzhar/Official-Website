@@ -175,7 +175,10 @@ class Form extends Component {
               aria-label="First name"
             />
             <aside className="text-left">
-              <small className={`text-danger ${styles["error-message"]}`}>
+              <small
+                className={`text-danger ${styles["error-message"]}`}
+                aria-live="assertive"
+              >
                 {firstNameError}
               </small>
             </aside>
@@ -191,7 +194,10 @@ class Form extends Component {
               aria-label="Last Name"
             />
             <aside className="text-left">
-              <small className={`text-danger ${styles["error-message"]}`}>
+              <small
+                className={`text-danger ${styles["error-message"]}`}
+                aria-live="assertive"
+              >
                 {lastNameError}
               </small>
             </aside>
@@ -207,7 +213,10 @@ class Form extends Component {
             aria-label="Phone"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {phoneError}
             </small>
           </aside>
@@ -221,7 +230,10 @@ class Form extends Component {
             aria-label="Email"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {emailError}
             </small>
           </aside>
@@ -236,7 +248,10 @@ class Form extends Component {
             aria-label="Subject"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {subjectError}
             </small>
           </aside>
@@ -251,7 +266,10 @@ class Form extends Component {
             aria-label="Message"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {messageError}
             </small>
           </aside>
