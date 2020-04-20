@@ -1,7 +1,14 @@
 import React, { Component } from "react";
-
+import UpComingEvents from "./components/upComingEvents";
+import Layout from "shared/layout/index";
 export default class EventsListPage extends Component {
   render() {
-    return <h1> Events list page is ready ! </h1>;
+    return (
+      <>
+        <Layout>
+          <UpComingEvents />
+        </Layout>
+      </>
+    );
   }
 }
