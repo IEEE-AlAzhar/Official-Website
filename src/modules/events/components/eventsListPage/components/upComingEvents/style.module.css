@@ -12,8 +12,6 @@
     height: 50vh;
     width: 80vw;
     margin: 3rem 0 3rem 0;
-    justify-items: center;
-    align-items: center;
     background-size: cover;
     background-attachment: fixed;
 
@@ -21,6 +19,21 @@
 .eventsList__heading{
     margin:3rem 0 3rem 0;
 }
+.upcomingEvent__btnContainer{
+    display:grid;
+    justify-items: center;
+    align-items: center;
+}
 .upcomingEvent__btnContainer__btn{
     border-radius: 50%;
+}
+.upcomingEvent__content{
+    margin: 10px;
+}
+@media (max-width:1200px){
+    .upcomingEvent{
+        grid-template-columns:  1fr;
+        height: auto;
+
+    }
 }
