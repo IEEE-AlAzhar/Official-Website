@@ -8,13 +8,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: white solid 1px;
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../../../../../assets/images/poster.png);
-    background-size: cover;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../../../../../../assets/images/event.jpg);
     height: 50vh;
     width: 80vw;
     margin: 3rem 0 3rem 0;
     justify-items: center;
     align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
 
 }
 .eventsList__heading{
