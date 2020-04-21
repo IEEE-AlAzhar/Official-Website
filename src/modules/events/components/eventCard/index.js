@@ -70,3 +70,4 @@ class EventCard extends Component{
  
 export default EventCard ;
  
+
