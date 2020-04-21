@@ -20,6 +20,8 @@
 }
 .event-section_button:hover ,
 .event-section_button:focus {
+  color : var(--layout-primary);
   background-color: var(--btn-hover);
   text-decoration: none;
 }
+

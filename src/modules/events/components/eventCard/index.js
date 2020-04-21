@@ -40,20 +40,20 @@ class EventCard extends Component{
                       </p>
                   </figcaption>
               </figure>
-              <footer class={styles["event-card_footer"]}>
-                 <div className={styles["event-card-footer_content"]} >
-                    <div className={styles["event-card-footer_info"]}>
+              <section class={styles["event-card_SubDescription"]}>
+                 <div className={styles["event-card-SubDescription_content"]} >
+                    <div className={styles["event-card-SubDescription_info"]}>
                          <FontAwesomeIcon icon={faCalendarCheck } 
                                     className={styles["event-card_icon"]} />        
                           <span> {event.startDate}</span>
                      </div>
-                        <div className={styles["event-card-footer_info"]}>
+                        <div className={styles["event-card-SubDescription_info"]}>
                           <FontAwesomeIcon  icon={faMapMarkerAlt}
                                 className={styles["event-card_icon"]} /> 
                             <span>{event.location}</span> 
                       </div>
                   </div>
-                </footer>
+                </section>
             </section>
          )
     }

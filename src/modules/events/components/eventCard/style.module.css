@@ -7,11 +7,13 @@
   box-shadow:0px 1px 10px var(--layout-secondary) ;
 
 }
-.event-card_content  img {
+
+.events-card_cover img {
   display: block;
   width: 100%;
   border-top-left-radius:.5rem;
   border-top-right-radius: .5rem;
+  height: 13rem;
 }
 .event-card_description{
   overflow: hidden;
@@ -21,7 +23,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   padding-left: 1.5rem;
-   color: #fff;
+  color: #fff;
 }
 figcaption {
   padding-top: 1rem;
@@ -42,10 +44,10 @@ figcaption {
   font-size: 1.5rem;
   margin-right: .5rem;
  }
-.event-card-footer_info:hover {
+.event-card-SubDescription_info:hover {
   color: var( --btn-hover);
 }
-.event-card-footer_content {
+.event-card-SubDescription_content {
   width: 100%;
   border-top: solid 1px #e5e5e5;
   padding-top: 1rem;
@@ -55,7 +57,7 @@ figcaption {
   flex-direction: row;
   display: flex;
 }
-.event-card-footer_info {
+.event-card-SubDescription_info {
   display: inline-block;
   font-size: 1rem;
   font-weight: 400;
@@ -63,14 +65,14 @@ figcaption {
   transition: all .7s;
   }
 
-.event-card_footer {
+.event-card_SubDescription {
   padding-left: 30px;
   padding-right: 30px;
 }
-.event-card-footer_info:last-child {
+.event-card-SubDescription_info:last-child {
   margin-left: auto 
 }
-.event-card-footer_info:first-child {
+.event-card-SubDescription_info:first-child {
   margin-right:4rem 
 }
 

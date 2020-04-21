@@ -11,22 +11,21 @@ class EventsSection extends Component{
   } 
   componentDidMount(){
     getEvents().then(response => {
-        console.log(response)
-        this.setState({events : response.data.slice(0,3)})  } )
+         this.setState({events : response.data.slice(0,3)})  } )
   }
   render(){
     const {events} = this.state ;
     const EventsList = events.length ? events.map( eventsCard => {
       return (
         <div  key={eventsCard.id} className="col-lg-4 col-md-6 col-sm-6" >
-                 <EventCard events={eventsCard}  />
+                 <EventCard event={eventsCard}  />
         </div>)
        }) :
    (<div className='center'> loading.... </div> ) 
     return (
       <section className={styles["event-card_section"]}>
          <div className="container">
-            <h4 className="section_heading">our events</h4>
+           <h2 className="section_heading">our events</h2>
             <div className="row">     
                {EventsList}
              </div>
