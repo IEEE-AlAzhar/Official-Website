@@ -1,6 +1,6 @@
 .event-card_section{
-  margin-top: var(--section-y-spacing);
-  margin-bottom: var(--section-y-spacing);
+  padding-top: var(--section-y-spacing);
+  padding-bottom: var(--section-y-spacing);
   background-color: var(--layout-primary);
     
  }

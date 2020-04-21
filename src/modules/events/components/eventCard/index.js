@@ -12,49 +12,49 @@ class EventCard extends Component{
 
   render(){
   
-    const {events} = this.props ;
+    const {event} = this.props ;
 
     return (
-           <div className={styles["event-card_content"]}>
-              <figure className={styles["events-card_cover"]} key={events}>
-                  <Link to={'/' + events.id}>
+           <section className={styles["event-card_content"]}>
+              <figure className={styles["events-card_cover"]} key={event}>
+                  <Link to={'/' + event.id}>
                       <img  
-                        alt={`event ${events.title}`}
-                        src={events.cover}
-                        key={events.id} 
+                        alt={`event ${event.title}`}
+                        src={event.cover}
+                        key={event.id} 
                         />
                   </Link>
                   <p className={styles['activ-upcoming_event']}>
-                    {events.status === "upcoming"?<div>
+                    {event.status === "upcoming"?<div>
                      <FontAwesomeIcon icon={faClock}
                         className={styles["activ-upcoming-event_icon"]}/></div>: ''}
                   </p>
                   <figcaption >
                       <h3>
-                        <Link to={'/' + events.id} className={styles["event-card_title"]}>
-                          {events.title}
+                        <Link to={'/' + event.id} className={styles["event-card_title"]}>
+                          {event.title}
                           </Link>
                       </h3>
                       <p className={styles["event-card_description"]}>
-                          {events.description}
+                          {event.description}
                       </p>
                   </figcaption>
               </figure>
-              <div class={styles["event-card_footer"]}>
+              <footer class={styles["event-card_footer"]}>
                  <div className={styles["event-card-footer_content"]} >
                     <div className={styles["event-card-footer_info"]}>
                          <FontAwesomeIcon icon={faCalendarCheck } 
                                     className={styles["event-card_icon"]} />        
-                          <span> {events.startDate}</span>
+                          <span> {event.startDate}</span>
                      </div>
                         <div className={styles["event-card-footer_info"]}>
                           <FontAwesomeIcon  icon={faMapMarkerAlt}
                                 className={styles["event-card_icon"]} /> 
-                            <span>{events.location}</span> 
+                            <span>{event.location}</span> 
                       </div>
                   </div>
-                </div>
-            </div>
+                </footer>
+            </section>
          )
     }
 }
