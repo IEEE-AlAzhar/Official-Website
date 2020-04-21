@@ -1,0 +1,32 @@
+.single-service__header {
+  padding: var(--section-heading-spacing) 0;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__item {
+  height: 45vh;
+}
+
+.single-service__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--section-heading-spacing);
+}
+.single-service__title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 60%;
+  background: var(--layout-secondary);
+  bottom: -3px;
+  left: 0;
+}
+
+.single-serivce__description {
+  margin-bottom: var(--section-y-spacing);
+}
