@@ -2,8 +2,8 @@
   margin-top: var(--section-y-spacing);
   margin-bottom: var(--section-y-spacing);
   background-color: var(--layout-primary);
-  
-  }
+    
+ }
 .event-section_button {
   background-color: var(--layout-secondary);
   color: var(--layout-primary);
@@ -17,10 +17,9 @@
   margin: 0 auto;
   margin-top: 3rem;
   text-transform: capitalize;
-  }
+}
 .event-section_button:hover ,
 .event-section_button:focus {
   background-color: var(--btn-hover);
   text-decoration: none;
- }
-  
+}

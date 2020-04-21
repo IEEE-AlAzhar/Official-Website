@@ -5,7 +5,7 @@ import styles from "./style.module.css";
 import EventCard from "../eventCard"
  
 
-class EventSction extends Component{ 
+class EventsSection extends Component{ 
   state = {
     events : []
   } 
@@ -41,5 +41,5 @@ class EventSction extends Component{
   }
 }
  
-export default EventSction 
+export default EventsSection 
  
