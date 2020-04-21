@@ -14,7 +14,7 @@
 nav.navbar {
   background-color: var(--layout-primary);
   padding: 0;
-  border-bottom: 1px solid var(--layout-secondary);
+  box-shadow: 4px 2px 15px 10px #000;
   overflow: hidden;
 }
 
