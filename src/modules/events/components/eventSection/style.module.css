@@ -1,0 +1,26 @@
+.event-card_section{
+  margin-top: var(--section-y-spacing);
+  margin-bottom: var(--section-y-spacing);
+  background-color: var(--layout-primary);
+  
+  }
+.event-section_button {
+  background-color: var(--layout-secondary);
+  color: var(--layout-primary);
+  padding: 1rem 1.3rem;
+  display: inline-block;
+  font-family: var(--heading-font-family);
+  letter-spacing: 0.12rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 3rem;
+  text-transform: capitalize;
+  }
+.event-section_button:hover ,
+.event-section_button:focus {
+  background-color: var(--btn-hover);
+  text-decoration: none;
+ }
+  
