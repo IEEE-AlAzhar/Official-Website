@@ -3,8 +3,8 @@ import Layout from "shared/layout";
 import Intro from "../intro";
 import About from "../../../about/components/section/index";
 import BestMembers from "../bestMembers";
-
 import { Helmet } from "react-helmet";
+import TeamServicesSection from "modules/teamServices/components/teamServicesSection";
 
 export default class HomePage extends Component {
   render() {
@@ -12,7 +12,6 @@ export default class HomePage extends Component {
       <>
         <Helmet>
           <title> IEEE Al-Azhar </title>
-
           <meta
             name="description"
             content="IEEE Al-Azhar is a student activity in Al-Azhar university that aims to teach students and train them on different fields"
@@ -24,6 +23,7 @@ export default class HomePage extends Component {
             subtitle="Our Mission: Raising the Name of Al-Azhar University"
           />
           <About />
+          <TeamServicesSection />
           <BestMembers />
         </Layout>
       </>
