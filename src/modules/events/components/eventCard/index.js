@@ -20,11 +20,11 @@ class EventCard extends Component{
           <div className={styles["event-card_content"]}>
                 <figure className={styles["events-card_cover"]} key={eventsCard}>
                  <Link to={'/' + eventsCard.id}>
-                  <img  
-                    alt={eventsCard.title}
-                    src={eventsCard.cover}
-                    key={eventsCard.id} 
-                    />
+                    <img  
+                      alt={eventsCard.title}
+                      src={eventsCard.cover}
+                      key={eventsCard.id} 
+                      />
                   </Link>
                   <p className={styles['activ-upcoming_event']}>
                     {eventsCard.status === "upcoming"?<div>
@@ -42,7 +42,7 @@ class EventCard extends Component{
                     </p>
                   </figcaption>
               </figure>
-                <div class={styles["event-card_footer"]}>
+               <div class={styles["event-card_footer"]}>
                  <div className={styles["event-card-footer_content"]} >
                     <div className={styles["event-card-footer_info"]}>
                          <FontAwesomeIcon icon={faCalendarCheck } 
