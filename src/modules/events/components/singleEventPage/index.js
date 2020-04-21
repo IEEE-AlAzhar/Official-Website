@@ -1,30 +1,9 @@
 import React, { Component } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import Layout from "shared/layout";
+import Gallery from './components/Gallery/Gallery'
 import { getEvents } from '../../services/events.service'
 import styles from './style.module.css'
 
-
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
 
 export default class SingleEventPage extends Component {
   constructor() {
@@ -37,20 +16,14 @@ export default class SingleEventPage extends Component {
   componentDidMount = () => {
     getEvents()
     .then(response => {
-      response.data.forEach(event => {
-        if(event.id === this.props.match.params.id) {
-          return this.setState({ event })
-        }
-      });
+      this.setState({ event: response.data.find(event => event.id === this.props.match.params.id) })
     })
     .catch(console.log);
   }
 
-
-
   
   render() {
-    const { title, cover, description } = this.state.event
+    const { title, cover, description, images } = this.state.event
     return (
       <Layout>
         <div className='text-center'>
@@ -58,33 +31,56 @@ export default class SingleEventPage extends Component {
             <h1 className='my-5'>{title}</h1>
           </header>
           <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='' />
-          <article className='container mt-5 text-left'>
-            {description}
-          </article>
-          <Carousel
-            swipeable={false}
-            draggable={false}
-            showDots={true}
-            responsive={responsive}
-            ssr={true} // means to render carousel on server-side.
-            infinite={true}
-            autoPlay={this.props.deviceType !== "mobile" ? true : false}
-            autoPlaySpeed={3000}
-            keyBoardControl={true}
-            customTransition="all .5"
-            transitionDuration={500}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            deviceType={this.props.deviceType}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px">
-              <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='' />
-              <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='' />
-              <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='' />
-              <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='' />
-          </Carousel>
+          <div className='container'>
+            <article className='my-5 text-left'>
+              {description}
+            </article>
+            <Gallery images={images} />
+          </div>
         </div>
       </Layout>
     );
   }
 }
+
+//   "startDate": "07-05-2020",
+//   "endDate": "07-06-2020",
+//   "location": "Egypt, Cairo",
+//   "status": "upcoming",
+//   "form": {
+//     "postTarget": "/events/2",
+//     "fields": [
+//       {
+//         "type": "text",
+//         "name": "name",
+//         "rule": {
+//           "required": true,
+//           "max": 17
+//         }
+//       },
+//       {
+//         "type": "number",
+//         "name": "age",
+//         "rule": {
+//           "required": true,
+//           "max": 2,
+//           "min": 0
+//         }
+//       },
+//       {
+//         "type": "select",
+//         "name": "select",
+//         "options": ["option 1", "option 2", "option 3", "option 4"],
+//         "rule": {
+//           "required": true
+//         }
+//       },
+//       {
+//         "type": "textarea",
+//         "name": "message",
+//         "rule": {
+//           "max": 240
+//         }
+//       }
+//     ]
+//   }
