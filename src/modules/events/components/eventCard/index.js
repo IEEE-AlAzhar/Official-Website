@@ -14,6 +14,7 @@ class EventCard extends Component{
   
     const {events} = this.props ;
 
+<<<<<<< HEAD
     return (
            <div className={styles["event-card_content"]}>
               <figure className={styles["events-card_cover"]} key={events}>
@@ -23,6 +24,18 @@ class EventCard extends Component{
                         src={events.cover}
                         key={events.id} 
                         />
+=======
+    return(   
+        <div  key={eventsCard.id} className="col-lg-4 col-md-6 col-sm-6" >
+          <div className={styles["event-card_content"]}>
+                <figure className={styles["events-card_cover"]} key={eventsCard}>
+                 <Link to={'/' + eventsCard.id}>
+                    <img  
+                      alt={eventsCard.title}
+                      src={eventsCard.cover}
+                      key={eventsCard.id} 
+                      />
+>>>>>>> 67b08762ca023f980d1844ea2a3d8c0ec15745ad
                   </Link>
                   <p className={styles['activ-upcoming_event']}>
                     {events.status === "upcoming"?<div>
@@ -40,7 +53,11 @@ class EventCard extends Component{
                       </p>
                   </figcaption>
               </figure>
+<<<<<<< HEAD
               <div class={styles["event-card_footer"]}>
+=======
+               <div class={styles["event-card_footer"]}>
+>>>>>>> 67b08762ca023f980d1844ea2a3d8c0ec15745ad
                  <div className={styles["event-card-footer_content"]} >
                     <div className={styles["event-card-footer_info"]}>
                          <FontAwesomeIcon icon={faCalendarCheck } 
@@ -61,3 +78,7 @@ class EventCard extends Component{
  
 export default EventCard ;
  
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67b08762ca023f980d1844ea2a3d8c0ec15745ad
