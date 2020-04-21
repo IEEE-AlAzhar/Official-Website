@@ -11,11 +11,10 @@ class Gallery extends Component {
         const { 
             startDate, startTime, 
             endDate, endTime, location 
-        } = this.props
-        
+        } = this.props.details
+
         return(
             <section className='row m-4'>
-            {console.log(this.props)}
                 <span className='col-md my-3'>
                     <FontAwesomeIcon icon={faClock} size="2x" />
                     <p className={`m-0 ${styles['event-details_text']}`}> From : {startDate} at {startTime}</p>

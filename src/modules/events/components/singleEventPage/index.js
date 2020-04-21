@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Layout from "shared/layout";
 import Gallery from './components/Gallery/Gallery';
 import EventDetails from './components/EventDetails/EventDetails';
-import { getEvents } from '../../services/events.service'
+import { getEvents } from '../../services/events.service';
 import styles from './style.module.css'
 
 
@@ -15,9 +15,13 @@ class SingleEventPage extends Component {
   }
 
   componentDidMount = () => {
+    const { match, history } = this.props
     getEvents()
     .then(response => {
-      const event = response.data.find(event => event.id === this.props.match.params.id)
+      const event = response.data.find(event => event.id === match.params.id)
+      if(!event){
+        history.push('/events')
+      }
       this.setState({ event })
     })
     .catch(console.log);
@@ -30,6 +34,7 @@ class SingleEventPage extends Component {
       status, startDate, endDate, location,
       startTime, endTime
     } = this.state.event
+
     return (
       <Layout>
         <div className='text-center'>
@@ -40,13 +45,7 @@ class SingleEventPage extends Component {
           <div className='container'>
             {
               status === 'upcoming' ?
-              <EventDetails 
-              startDate={startDate}
-              startTime={startTime}
-              endDate={endDate}
-              endTime={endTime}
-              location={location}
-              />
+              <EventDetails details = {{ startDate, startTime, endDate, endTime, location }} />
               : null
             }
             <div>
@@ -64,10 +63,6 @@ class SingleEventPage extends Component {
 
 export default SingleEventPage;
 
-//   "startDate": "07-05-2020",
-//   "endDate": "07-06-2020",
-//   "location": "Egypt, Cairo",
-//   "status": "upcoming",
 //   "form": {
 //     "postTarget": "/events/2",
 //     "fields": [
