@@ -14,13 +14,22 @@ class EventSction extends Component{
         console.log(response)
         this.setState({events : response.data.slice(0,3)})  } )
   }
-
   render(){
+    const {events} = this.state ;
+    const EventsList = events.length ? events.map( eventsCard => {
+      return (
+        <div  key={eventsCard.id} className="col-lg-4 col-md-6 col-sm-6" >
+                 <EventCard events={eventsCard}  />
+        </div>)
+       }) :
+   (<div className='center'> loading.... </div> ) 
     return (
       <section className={styles["event-card_section"]}>
          <div className="container">
             <h4 className="section_heading">our events</h4>
-              <EventCard events={this.state.events}  />
+            <div className="row">     
+               {EventsList}
+             </div>
                 <div className="row">
                  <Link to='/events' 
                        className={styles["event-section_button"]}>
