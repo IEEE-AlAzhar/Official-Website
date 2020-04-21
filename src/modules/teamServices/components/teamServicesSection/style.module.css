@@ -10,13 +10,6 @@
   color: var(--text-primary);
   padding: 2rem 0;
 }
-.team-service-section_body {
-  font-family: var(--body-font-family);
-  font-size: var(--main-font-size);
-}
-.team-service-section_description {
-  color: var(--text-primary);
-}
 .team-service-section_button{
     background-color: var(--layout-secondary);
     color: var(--layout-primary);

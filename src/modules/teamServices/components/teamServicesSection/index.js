@@ -34,7 +34,10 @@ export default class TeamServicesSection extends Component {
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
                         </p>
-                        <Link className={styles["team-service-section_button"]}>
+                        <Link
+                          to="/sevice/id"
+                          className={styles["team-service-section_button"]}
+                        >
                           See More
                         </Link>
                       </div>
