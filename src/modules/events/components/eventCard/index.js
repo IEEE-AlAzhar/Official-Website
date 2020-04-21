@@ -55,7 +55,7 @@ class EventCard extends Component{
                   </div>
                 </div>
             </div>
-      )
+         )
     }
 }
  
