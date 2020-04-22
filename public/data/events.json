@@ -125,44 +125,7 @@
       "https://via.placeholder.com/500?text=Image+3",
       "https://via.placeholder.com/500?text=Image+4"
     ],
-    "status": "past",
-    "form": {
-      "postTarget": "/events/2",
-      "fields": [
-        {
-          "type": "text",
-          "name": "name",
-          "rule": {
-            "required": true,
-            "max": 17
-          }
-        },
-        {
-          "type": "number",
-          "name": "age",
-          "rule": {
-            "required": true,
-            "max": 2,
-            "min": 0
-          }
-        },
-        {
-          "type": "select",
-          "name": "select",
-          "options": ["option 1", "option 2", "option 3", "option 4"],
-          "rule": {
-            "required": true
-          }
-        },
-        {
-          "type": "textarea",
-          "name": "message",
-          "rule": {
-            "max": 240
-          }
-        }
-      ]
-    }
+    "status": "upcoming"
   },
   {
     "id": "4",

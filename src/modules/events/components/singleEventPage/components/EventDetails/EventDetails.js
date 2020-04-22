@@ -30,7 +30,7 @@ class Gallery extends Component {
         const { open } = this.state;
         const { 
             startDate, startTime, 
-            endDate, endTime, location 
+            endDate, endTime, location, form
         } = this.props.details;
 
         return(
@@ -44,28 +44,32 @@ class Gallery extends Component {
                     <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" />
                     <p className={styles['event-details_text']}>{location}</p>
                 </span>
-                <span className='col-lg my-3'>
-                    <input
-                        type="button"
-                        onClick={this.onOpenModal}
-                        className={`rounded-pill ${styles["apply-btn"]}`}
-                        value="APPLY NOW!"
-                        aria-label="Send"
-                    />
-                    <Modal 
-                        open={open} 
-                        onClose={this.onCloseModal}
-                        center
-                        styles={{
-                            modal: {
-                                animation: `${
-                                open ? styles.customEnterAnimation : styles.customLeaveAnimation
-                                } 500ms`,
-                            },
-                        }}>
-                            <h2>Pup up contents here</h2>
-                    </Modal>
-                </span>
+                {
+                    form ?
+                    <span className='col-lg my-3'>
+                        <input
+                            type="button"
+                            onClick={this.onOpenModal}
+                            className={`rounded-pill ${styles["apply-btn"]}`}
+                            value="APPLY NOW!"
+                            aria-label="Send"
+                        />
+                        <Modal 
+                            open={open} 
+                            onClose={this.onCloseModal}
+                            center
+                            styles={{
+                                modal: {
+                                    animation: `${
+                                    open ? styles.customEnterAnimation : styles.customLeaveAnimation
+                                    } 500ms`,
+                                },
+                            }}>
+                                <h2>Pup up contents here</h2>
+                        </Modal>
+                    </span>
+                    : null
+                }
             </section>
         );
     }

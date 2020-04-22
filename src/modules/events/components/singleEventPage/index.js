@@ -32,7 +32,7 @@ class SingleEventPage extends Component {
     const { 
       title, cover, description, images, 
       status, startDate, endDate, location,
-      startTime, endTime
+      startTime, endTime, form
     } = this.state.event
 
     return (
@@ -45,7 +45,14 @@ class SingleEventPage extends Component {
           <div className='container'>
             {
               status === 'upcoming' ?
-              <EventDetails details = {{ startDate, startTime, endDate, endTime, location }} />
+              <EventDetails details = {{ 
+                startDate, 
+                startTime, 
+                endDate, 
+                endTime, 
+                location, 
+                form
+                }} />
               : null
             }
             <div>
