@@ -6,12 +6,11 @@ import styles from "./style.module.css";
 
 export default class SingleServicePage extends Component {
   state = {};
-  constructor(props) {
-    super(props);
-    const { id } = this.props.match.params;
-    this.state.service = services.filter((service) => service.id === id)[0];
-  }
 
+  componentWillMount() {
+    const { id } = this.props.match.params;
+    this.setState({ service: services.find((service) => service.id === id) });
+  }
   render() {
     const { service } = this.state;
     if (!this.state.service) return <p>Not Found</p>;
