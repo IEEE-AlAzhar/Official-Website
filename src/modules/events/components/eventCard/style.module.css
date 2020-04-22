@@ -1,7 +1,7 @@
 .event-card_content {
   background-color:var(--layout-secondary);
   border-radius: .5rem;
-  transition: all .7s;
+  transition: box-shadow .8s;
 }
 .event-card_content:hover {
   box-shadow:  3px 3px 5px var(--layout-secondary) ;
@@ -39,6 +39,8 @@ figcaption {
 .event-card_title:hover, 
 .event-card_title:focus{
   text-decoration: none;
+  color: #fff;
+
 }
 .event-card_icon {
   font-size: 1.5rem;
