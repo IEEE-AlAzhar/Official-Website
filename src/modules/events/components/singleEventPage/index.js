@@ -52,7 +52,11 @@ class SingleEventPage extends Component {
               <article className='my-5 text-left'>
                 {description}
               </article>
-              <Gallery images={images} />
+              {
+                images ?
+                <Gallery images={images} />
+                :null
+              }
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ const responsive = {
 class Gallery extends Component {
   render() {
     const { images } = this.props
-    return images ?
+    return (
       <section className='my-5'>
         <h3 className='h2 mt-5 mb-4'>Event Gallery</h3>
         <Carousel
@@ -49,7 +49,7 @@ class Gallery extends Component {
           }
         </Carousel>
       </section>
-    : null 
+    )
   }
 }
 

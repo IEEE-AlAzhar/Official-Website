@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faMapMarkerAlt,
@@ -7,11 +9,29 @@ import {
 import styles from './style.module.css';
 
 class Gallery extends Component {
+    constructor() {
+        super();
+        this.state = {
+            open: false
+        }
+    }
+
+    onOpenModal = () => {
+        console.log('open')
+        this.setState({ open: true });
+    };
+    
+    onCloseModal = () => {
+        console.log('close')
+        this.setState({ open: false });
+    };
+
     render() {
+        const { open } = this.state;
         const { 
             startDate, startTime, 
             endDate, endTime, location 
-        } = this.props.details
+        } = this.props.details;
 
         return(
             <section className='row m-4'>
@@ -26,11 +46,25 @@ class Gallery extends Component {
                 </span>
                 <span className='col-lg my-3'>
                     <input
-                    type="submit"
-                    className={`rounded-pill ${styles["apply-btn"]}`}
-                    value="APPLY NOW!"
-                    aria-label="Send"
+                        type="button"
+                        onClick={this.onOpenModal}
+                        className={`rounded-pill ${styles["apply-btn"]}`}
+                        value="APPLY NOW!"
+                        aria-label="Send"
                     />
+                    <Modal 
+                        open={open} 
+                        onClose={this.onCloseModal}
+                        center
+                        styles={{
+                            modal: {
+                                animation: `${
+                                open ? styles.customEnterAnimation : styles.customLeaveAnimation
+                                } 500ms`,
+                            },
+                        }}>
+                            <h2>Pup up contents here</h2>
+                    </Modal>
                 </span>
             </section>
         );
