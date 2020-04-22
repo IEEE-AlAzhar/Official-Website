@@ -28,6 +28,7 @@
   --layout-secondary: #0a111a;
   --text-primary: #242627;
   --text-secondary: #0a111a;
+  --background-secondary: #0a111a;
   --btn-hover: #024b88;
 }
 
@@ -36,6 +37,7 @@
   --layout-secondary: #1c7fd0;
   --text-primary: #fff;
   --text-secondary: #1c7fd0;
+  --background-secondary: #4f545c;
   --btn-hover: #fff;
 }
 
