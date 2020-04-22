@@ -24,7 +24,11 @@ export default class EventsListPage extends Component {
                   if (event.status === "upcoming") {
                     return (
                       <div key={event.id} className={styles[`upcoming-events`]}>
-                        <img src={event.cover} alt="event cover" />
+                        <img
+                          src={event.cover}
+                          alt="event cover"
+                          className={styles[`upcoming-events__cover`]}
+                        />
                         <h1>{event.title}</h1>
                         <p>{event.description}</p>
                         <p>{event.endDate}</p>
@@ -33,8 +37,12 @@ export default class EventsListPage extends Component {
                     );
                   } else {
                     return (
-                      <div key={event.id}>
-                        <img src={event.cover} alt="event cover" />
+                      <div key={event.id} className={styles[`past-events`]}>
+                        <img
+                          src={event.cover}
+                          alt="event cover"
+                          className={styles[`past-events__cover`]}
+                        />
                         <h1>{event.title}</h1>
                         <p>{event.description}</p>
                         <p>{event.endDate}</p>
