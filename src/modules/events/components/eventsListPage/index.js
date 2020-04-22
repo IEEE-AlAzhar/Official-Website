@@ -18,7 +18,7 @@ export default class EventsListPage extends Component {
     return (
       <>
         <Layout>
-          <h1>Our Events</h1>
+          <h1 className={styles[`events-heading`]}>Our Events</h1>
           <div className={styles[`events-container`]}>
             <EventCard
               events={this.state.eventsList ? this.state.eventsList : null}

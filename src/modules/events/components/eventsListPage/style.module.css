@@ -1,4 +1,7 @@
-
+.events-heading{
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+}
 .past-events__cover{
     width: 100%;
 }
