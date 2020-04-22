@@ -42,7 +42,7 @@ class EventCard extends Component {
             </p>
           </figcaption>
         </figure>
-        <section class={styles["event-card_SubDescription"]}>
+        <section className={styles["event-card_SubDescription"]}>
           <div className={styles["event-card-SubDescription_content"]}>
             <div className={styles["event-card-SubDescription_info"]}>
               <FontAwesomeIcon

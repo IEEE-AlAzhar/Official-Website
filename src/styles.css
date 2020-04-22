@@ -37,7 +37,7 @@
   --layout-secondary: #1c7fd0;
   --text-primary: #fff;
   --text-secondary: #1c7fd0;
-  --background-secondary: #4f545c;
+  --background-secondary: #343a40;
   --btn-hover: #fff;
 }
 
@@ -55,6 +55,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font-family);
+  color: var(--text-secondary)
 }
 
 .section_heading {
