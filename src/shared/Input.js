@@ -5,12 +5,7 @@ export default class Input extends Component {
   state = {
     validationMessage: null,
   };
-
-  constructor() {
-    super();
-
-    this.addClass();
-  }
+  
 
   // get all the input types to add attributes dynamically to the input
   inputTypes = {
@@ -172,11 +167,6 @@ export default class Input extends Component {
     }
   };
 
-  // make the error message's position according to the errorPosition prop provided
-  errorPosition = () => {
-    return this.props.errorPosition === "top" ? "order-top" : "order-bottom";
-  };
-
   checkIntType = (field) => {
     if (this.props.type === "int" && !Is.int(+field.value)) {
       this.errorMessage = this.customMessage(
@@ -275,16 +265,17 @@ export default class Input extends Component {
   };
 
   addClass = (e) => {
-    if (this.props.className) {
-      e.target.classList.add(this.props.className);
+    if (this.props.classes) {
+      e.target.classList.add(this.props.classes);
     }
   };
 
   render() {
-    let { type, options, className } = this.props;
+    let { type, options, classes } = this.props;
 
     return (
       <section className="input-wrapper">
+      {/* {console.log('props: ',this.props)} */}
         {this.state.validationMessage !== null && (
           <label className={`error ${this.errorPosition()}`}>
             {this.state.validationMessage}
@@ -304,7 +295,7 @@ export default class Input extends Component {
         ) : type === "textarea" ? (
           <textarea
             {...this.getAcceptedProps()}
-            className={`form-control ${className}`}
+            className={`form-control ${classes}`}
             onInput={this.validateField}
           ></textarea>
         ) : (
@@ -315,7 +306,7 @@ export default class Input extends Component {
                 ? "number"
                 : type
             }
-            className={`form-control ${className}`}
+            className={`form-control ${classes}`}
             onInput={this.validateField}
           />
         )}

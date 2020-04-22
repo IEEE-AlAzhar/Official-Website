@@ -8,7 +8,7 @@ class ApplyButton extends Component {
     constructor() {
         super();
         this.state = {
-            open: false
+            open: true
         }
     }
 
@@ -22,7 +22,7 @@ class ApplyButton extends Component {
 
     render() {
         const { open } = this.state;
-        const { cover } = this.props
+        const { cover, form } = this.props
         return(
             <span className='col-lg my-3'>
                 <input
@@ -36,21 +36,19 @@ class ApplyButton extends Component {
                     open={open} 
                     onClose={this.onCloseModal}
                     center
-                    classNames={{
-                        modal: styles.customModal
-                    }}
                     styles={{
+                        overlay: {
+                            background: `url(${cover}) no-repeat center center fixed`, 
+                            backgroundSize: 'cover',
+                        },
                         modal: {
                             animation: `${
                             open ? styles.customEnterAnimation : styles.customLeaveAnimation
                             } 500ms`,
-                        },
-                        overlay: {
-                            background: `url(${cover}) no-repeat center center fixed`, 
-                            backgroundSize: 'cover',
+                            width: '90%'
                         }
                     }}>
-                    <PopupContent />
+                    <PopupContent form={form} />
                 </Modal>
             </span>
         );

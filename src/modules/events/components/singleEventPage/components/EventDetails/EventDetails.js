@@ -28,7 +28,7 @@ class Gallery extends Component {
                 </span>
                 {
                     form ?
-                        <ApplyButton cover={cover} />
+                        <ApplyButton cover={cover} form={form} />
                     : null
                 }
             </section>

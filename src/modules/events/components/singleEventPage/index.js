@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import Layout from "shared/layout";
 import Gallery from './components/Gallery/Gallery';
 import EventDetails from './components/EventDetails/EventDetails';
@@ -37,6 +38,9 @@ class SingleEventPage extends Component {
 
     return (
       <Layout>
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
         <div className='text-center'>
           <header className='pt-3'>
             <h1 className='my-5'>{title}</h1>
@@ -53,7 +57,7 @@ class SingleEventPage extends Component {
                 location, 
                 form,
                 cover
-                }} />
+              }} />
               : null
             }
             <div>

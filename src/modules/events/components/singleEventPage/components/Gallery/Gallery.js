@@ -40,11 +40,11 @@ class Gallery extends Component {
           >
           {
             images.map(img => {
-            return (
-              <figure key={img}>
-                <img className={styles['gallery-imgs']} src={img} alt='gallery images' />
-              </figure>
-            );
+              return (
+                <figure key={img}>
+                  <img className={styles['gallery-imgs']} src={img} alt='gallery images' />
+                </figure>
+              )
             })
           }
         </Carousel>
