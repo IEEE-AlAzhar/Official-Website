@@ -1,0 +1,25 @@
+.upcoming-events{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media(max-width:767px){
+    .past-events{
+        display:grid;
+        grid-template-columns: 1fr ;
+    }
+
+}
+@media(min-width:768px){
+    .past-events{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media(min-width:1200px){
+    .past-events{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
