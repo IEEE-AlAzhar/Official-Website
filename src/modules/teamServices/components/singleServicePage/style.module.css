@@ -33,3 +33,11 @@
   margin-top: var(--section-heading-spacing);
   margin-bottom: var(--section-y-spacing);
 }
+
+.carousel-control--focus {
+  width: 35px;
+  height: 35px;
+  background-color: #000;
+  background-size: 60%;
+  border-radius: 5px;
+}

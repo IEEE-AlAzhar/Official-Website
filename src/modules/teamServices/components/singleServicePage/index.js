@@ -43,7 +43,6 @@ export default class SingleServicePage extends Component {
                   <ol className="carousel-indicators">
                     {service.gallery.map((image, index) => (
                       <li
-                        tabIndex="0"
                         key={index}
                         data-target="#carousel"
                         data-slide-to={`${index}`}
@@ -74,7 +73,7 @@ export default class SingleServicePage extends Component {
                     data-slide="prev"
                   >
                     <span
-                      className="carousel-control-prev-icon"
+                      className={`${styles["carousel-control--focus"]} carousel-control-prev-icon`}
                       aria-hidden="true"
                     ></span>
                     <span className="sr-only">Previous</span>
@@ -86,7 +85,7 @@ export default class SingleServicePage extends Component {
                     data-slide="next"
                   >
                     <span
-                      className="carousel-control-next-icon"
+                      className={`${styles["carousel-control--focus"]} carousel-control-next-icon`}
                       aria-hidden="true"
                     ></span>
                     <span className="sr-only">Next</span>
