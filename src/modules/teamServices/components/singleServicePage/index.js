@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+
 import { Helmet } from "react-helmet";
-import services from "../../store/services.json";
 import Layout from "shared/layout";
+
+import services from "../../store/services.json";
 import styles from "./style.module.css";
 
 export default class SingleServicePage extends Component {
-  state = {};
+  state = {
+    service: null,
+  };
 
   componentWillMount() {
     const { id } = this.props.match.params;
