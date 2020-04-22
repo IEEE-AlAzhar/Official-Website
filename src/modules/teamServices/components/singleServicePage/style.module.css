@@ -1,32 +1,43 @@
 .single-service__header {
-  padding: var(--section-heading-spacing) 0;
-}
-
-.carousel__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel__item {
-  height: 45vh;
+  text-align: center;
 }
 
 .single-service__title {
+  margin: var(--section-heading-spacing) 0;
   position: relative;
   display: inline-block;
-  margin-bottom: var(--section-heading-spacing);
 }
 .single-service__title::after {
   content: "";
   position: absolute;
   height: 3px;
-  width: 60%;
+  width: 50%;
   background: var(--layout-secondary);
   bottom: -3px;
   left: 0;
 }
 
-.single-serivce__description {
+.carousel__image,
+.single-service__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__item,
+.single-service__cover {
+  height: 45vh;
+}
+
+.single-service__content {
+  margin-top: var(--section-heading-spacing);
   margin-bottom: var(--section-y-spacing);
+}
+
+.carousel-control--focus {
+  width: 35px;
+  height: 35px;
+  background-color: #000;
+  background-size: 60%;
+  border-radius: 5px;
 }
