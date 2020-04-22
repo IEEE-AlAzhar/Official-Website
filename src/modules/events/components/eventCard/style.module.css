@@ -1,7 +1,7 @@
 .event-card_content {
   background-color:var(--layout-secondary);
   border-radius: .5rem;
-  transition: box-shadow .8s;
+  transition: all 1s;
 }
 .event-card_content:hover {
   box-shadow:  3px 3px 5px var(--layout-secondary) ;
@@ -35,6 +35,7 @@ figcaption {
   text-transform: capitalize;
   color: var(--layout-primary);
   text-decoration: none;
+  transition: all 1s;
  }
 .event-card_title:hover, 
 .event-card_title:focus{
@@ -45,6 +46,11 @@ figcaption {
 .event-card_icon {
   font-size: 1.5rem;
   margin-right: .5rem;
+ 
+ }
+ .event-card-SubDescription_info {
+  transition: all 1s;
+
  }
 .event-card-SubDescription_info:hover {
   color: var( --btn-hover);
@@ -81,6 +87,9 @@ figcaption {
 @media (max-width: 991px) {
   .event-card_content {
     margin-top: 3rem;
+   }
+   .event-card_icon {
+     display: block;
    }
  }
 .events-card_cover {

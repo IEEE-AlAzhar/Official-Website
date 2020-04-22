@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import
  {   faMapMarkerAlt,
      faCalendarCheck ,
-     faClock
+     faClock ,
+     faCalendarTimes
   } from "@fortawesome/free-solid-svg-icons";
 
 class EventCard extends Component{ 
@@ -13,8 +14,7 @@ class EventCard extends Component{
   render(){
   
     const {event} = this.props ;
-
-    return (
+     return (
            <section className={styles["event-card_content"]}>
               <figure className={styles["events-card_cover"]} key={event}>
                   <Link to={'/' + event.id}>
@@ -40,19 +40,25 @@ class EventCard extends Component{
                       </p>
                   </figcaption>
               </figure>
-              <section class={styles["event-card_SubDescription"]}>
+              <section className={styles["event-card_SubDescription"]}>
                  <div className={styles["event-card-SubDescription_content"]} >
                     <div className={styles["event-card-SubDescription_info"]}>
                          <FontAwesomeIcon icon={faCalendarCheck } 
-                                    className={styles["event-card_icon"]} />        
+                            className={styles["event-card_icon"]} />        
                           <span> {event.startDate}</span>
                      </div>
                         <div className={styles["event-card-SubDescription_info"]}>
-                          <FontAwesomeIcon  icon={faMapMarkerAlt}
-                                className={styles["event-card_icon"]} /> 
-                            <span>{event.location}</span> 
+                          {event.location.length ? (<>
+                            <FontAwesomeIcon  icon={faMapMarkerAlt}
+                              className={styles["event-card_icon"]} /> 
+                            <span>{ event.location}</span>
+                               </>
+                          ) : ( <> 
+                             <FontAwesomeIcon  icon={ faCalendarTimes}
+                             className={styles["event-card_icon"]} /> 
+                            <span>{event.endDate}</span> </> ) }
                       </div>
-                  </div>
+                   </div>
                 </section>
             </section>
          )

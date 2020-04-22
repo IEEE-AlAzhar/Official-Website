@@ -7,33 +7,30 @@ import EventCard from "../eventCard"
 
 class EventsSection extends Component{ 
   state = {
-    event : []
+     event : []
   } 
   componentDidMount(){
-    getEvents().then(response => {
+     getEvents().then(response => {
          this.setState({event : response.data.slice(0,3)})  } )
   }
   render(){
     const {event} = this.state ;
-    const EventsList = event.length ? event.map( eventsCard => {
-      return (
-        <div  key={eventsCard.id} className="col-lg-4 col-md-6 col-sm-6" >
-                 <EventCard event={eventsCard}  />
-        </div>)
-       }) :
-   (<div className='center'> loading.... </div> ) 
+ 
     return (
       <section className={styles["event_section"]}>
          <div className="container">
            <h2 className="section_heading">our events</h2>
-            <div className="row">     
-               {EventsList}
-             </div>
+              <div className="row"> 
+                  {event.length ? event.map( eventsCard => (
+                    <div  key={eventsCard.id} className="col-lg-4 col-md-6 col-sm-6" >
+                              <EventCard event={eventsCard}  />
+                    </div>)) :
+                    (<div className='center'> loading.... </div> ) }    
+                </div>
                 <div className="row">
-                 <Link to='/events' 
-                       className={styles["event-section_button"]}>
-                    discover our events</Link>
-             </div>
+                    <Link to='/events'  className={styles["event-section_button"]}>
+                      discover our events</Link>
+                </div>
           </div>    
       </section>
     )
