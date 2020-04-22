@@ -51,7 +51,8 @@ class SingleEventPage extends Component {
                 endDate, 
                 endTime, 
                 location, 
-                form
+                form,
+                cover
                 }} />
               : null
             }

@@ -1,0 +1,33 @@
+.apply-btn{
+    background-color: var(--layout-secondary);
+    border: none;
+    color: var(--layout-primary);
+    padding: 15px 32px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.apply-btn:hover,
+.apply-btn:focus {
+    background-color: var(--btn-hover);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.apply-btn:focus {
+    transform: translateY(10px);
+}
+
+.customModal {
+    /* background-color: yellow; */
+}
+
+@keyframes :local(customEnterAnimation) {
+    0% { transform: scale(0) }
+    100% { transform: scale(1) }
+}
+@keyframes :local(customLeaveAnimation) {
+    0% { transform: scale(1) }
+    100% { transform: scale(0) }
+}
