@@ -4,7 +4,7 @@
   transition: all .7s;
 }
 .event-card_content:hover {
-  box-shadow:0px 1px 10px var(--layout-secondary) ;
+  box-shadow:  3px 3px 5px var(--layout-secondary) ;
 
 }
 
