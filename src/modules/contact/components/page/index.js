@@ -13,16 +13,13 @@ class ContactPage extends Component {
           <title>Contact Us</title>
         </Helmet>
         <div
-          className="text-center modal-dialog-centered px-3 py-2"
-          style={{ backgroundColor: "#0a111a" }}
-        >
+          className="text-center modal-dialog-centered px-3 py-2">
           <section
-            className={`row container px-1 py-4 mx-auto rounded`}
+            className={`row container px-1 py-4 mx-auto rounded shadow-lg`}
             style={{
               backgroundColor: "var(--layout-primary)",
               fontFamily: "var(--heading-font-family)",
-            }}
-          >
+            }}>
             <Icon />
             <div className={`mr-3 ${styles["vertical-line"]}`} />
             <Form />
