@@ -8,22 +8,22 @@ class ApplyButton extends Component {
     constructor() {
         super();
         this.state = {
-            open: false
+            modalOpen: false
         }
     }
 
     onOpenModal = () => {
-        this.setState({ open: true });
+        this.setState({ modalOpen: true });
     };
     
     onCloseModal = () => {
-        this.setState({ open: false });
+        this.setState({ modalOpen: false });
     };
 
     render() {
-        const { open } = this.state;
-        const { cover, form, title } = this.props
-        return(
+        const { modalOpen } = this.state;
+        const { cover, form, title } = this.props;
+        return (
             <span className='col-lg my-3'>
                 <input
                     type="button"
@@ -33,7 +33,7 @@ class ApplyButton extends Component {
                     aria-label="Send"
                 />
                 <Modal 
-                    open={open} 
+                    open={modalOpen} 
                     onClose={this.onCloseModal}
                     center
                     styles={{
@@ -43,8 +43,9 @@ class ApplyButton extends Component {
                         },
                         modal: {
                             animation: `${
-                            open ? styles.customEnterAnimation : styles.customLeaveAnimation
+                                modalOpen ? styles.customEnterAnimation : styles.customLeaveAnimation
                             } 500ms`,
+                            backgroundColor: 'var(--layout-primary)',
                             width: '30rem',
                             borderRadius: '1rem'
                         }

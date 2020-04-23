@@ -23,7 +23,7 @@ class Gallery extends Component {
     const { images } = this.props
     return (
       <section className='my-5'>
-        <h3 className='h2 mt-5 mb-4'>Event Gallery</h3>
+        <h3 className='h3 mt-5 mb-4' style={{ color: "var(--text-secondary)" }}>Event Gallery</h3>
         <Carousel
           swipeable={true}
           showDots={true}

@@ -141,50 +141,7 @@
       "https://via.placeholder.com/500?text=Image+3",
       "https://via.placeholder.com/500?text=Image+4"
     ],
-    "status": "past",
-    "form": {
-      "postTarget": "/events/10",
-      "fields": [
-        {
-          "name": "name",
-          "placeholder": "Name",
-          "transformer": {
-            "onChange": "uppercase"
-          },
-          "validationRules": [
-            {
-              "rule": "required",
-              "message": "Please enter your name"
-            }
-          ]
-        },
-        {
-          "name": "age",
-          "placeholder": "Age",
-          "filter": "numeric",
-          "validationRules": [
-            {
-              "rule": "required",
-              "message": "Please enter your age"
-            }
-          ]
-        },
-        {
-          "name": "email",
-          "placeholder": "Email",
-          "validationRules": [
-            {
-              "rule": "required",
-              "message": "Please enter an email"
-            },
-            {
-              "rule": "email",
-              "message": "Please enter a valid email"
-            }
-          ]
-        }
-      ]
-    }
+    "status": "upcoming"
   },
   {
     "id": "4",
@@ -377,7 +334,6 @@
     "endDate": "07-06-2020",
     "startTime": "22:00",
     "endTime": "12:00",
-    "location": "Egypt, Cairo",
     "cover": "https://via.placeholder.com/500?text=Event+7",
     "images": [
       "https://via.placeholder.com/500?text=Image+1",
@@ -385,7 +341,7 @@
       "https://via.placeholder.com/500?text=Image+3",
       "https://via.placeholder.com/500?text=Image+4"
     ],
-    "status": "past",
+    "status": "upcoming",
     "form": {
       "postTarget": "/events/10",
       "fields": [
@@ -438,58 +394,8 @@
     "endDate": "07-06-2020",
     "startTime": "22:00",
     "endTime": "12:00",
-    "location": "Egypt, Cairo",
     "cover": "https://via.placeholder.com/500?text=Event+8",
-    "images": [
-      "https://via.placeholder.com/500?text=Image+1",
-      "https://via.placeholder.com/500?text=Image+2",
-      "https://via.placeholder.com/500?text=Image+3",
-      "https://via.placeholder.com/500?text=Image+4"
-    ],
-    "status": "past",
-    "form": {
-      "postTarget": "/events/10",
-      "fields": [
-        {
-          "name": "name",
-          "placeholder": "Name",
-          "transformer": {
-            "onChange": "uppercase"
-          },
-          "validationRules": [
-            {
-              "rule": "required",
-              "message": "Please enter your name"
-            }
-          ]
-        },
-        {
-          "name": "age",
-          "placeholder": "Age",
-          "filter": "numeric",
-          "validationRules": [
-            {
-              "rule": "required",
-              "message": "Please enter your age"
-            }
-          ]
-        },
-        {
-          "name": "email",
-          "placeholder": "Email",
-          "validationRules": [
-            {
-              "rule": "required",
-              "message": "Please enter an email"
-            },
-            {
-              "rule": "email",
-              "message": "Please enter a valid email"
-            }
-          ]
-        }
-      ]
-    }
+    "status": "past"
   },
   {
     "id": "9",
