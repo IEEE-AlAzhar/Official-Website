@@ -12,7 +12,7 @@ class Gallery extends Component {
     render() {
         const { 
             startDate, startTime, endDate, 
-            endTime, location, form, cover
+            endTime, location, form, cover, title
         } = this.props.details;
 
         return(
@@ -28,7 +28,7 @@ class Gallery extends Component {
                 </span>
                 {
                     form ?
-                        <ApplyButton cover={cover} form={form} />
+                        <ApplyButton cover={cover} form={form} title={title} />
                     : null
                 }
             </section>

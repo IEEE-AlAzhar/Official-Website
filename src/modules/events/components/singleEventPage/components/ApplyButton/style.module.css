@@ -19,11 +19,6 @@
     transform: translateY(10px);
 }
 
-/* .customModal {
-    background-color: yellow;
-    filter: blur(0px);
-} */
-
 @keyframes :local(customEnterAnimation) {
     0% { transform: scale(0) }
     100% { transform: scale(1) }

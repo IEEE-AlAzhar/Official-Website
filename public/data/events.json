@@ -38,8 +38,8 @@
           "name": "age",
           "rule": {
             "required": true,
-            "max": 2,
-            "min": 0
+            "max": 100,
+            "min": 20
           }
         },
         {
@@ -87,7 +87,7 @@
           "name": "age",
           "rule": {
             "required": true,
-            "max": 2,
+            "max": 50,
             "min": 0
           }
         },
@@ -398,6 +398,67 @@
           "rule": {
             "max": 240
           }
+        }
+      ]
+    }
+  },
+  {
+    "id": "10",
+    "title": "Event 8 Title",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus corporis deserunt sequi perspiciatis odio ab? Nam, voluptate dicta at unde nesciunt natus distinctio inventore!",
+    "startDate": "07-05-2020",
+    "endDate": "07-06-2020",
+    "startTime": "22:00",
+    "endTime": "12:00",
+    "location": "Egypt, Cairo",
+    "cover": "https://via.placeholder.com/500?text=Event+8",
+    "images": [
+      "https://via.placeholder.com/500?text=Image+1",
+      "https://via.placeholder.com/500?text=Image+2",
+      "https://via.placeholder.com/500?text=Image+3",
+      "https://via.placeholder.com/500?text=Image+4"
+    ],
+    "status": "upcoming",
+    "form": {
+      "postTarget": "/events/10",
+      "fields": [
+        {
+          "name": "name",
+          "placeholder": "Name",
+          "transformer": {
+            "onChange": "uppercase"
+          },
+          "validationRules": [
+            {
+              "rule": "required",
+              "message": "Please enter your name"
+            }
+          ]
+        },
+        {
+          "name": "age",
+          "placeholder": "Age",
+          "filter": "numeric",
+          "validationRules": [
+            {
+              "rule": "required",
+              "message": "Please enter your age"
+            }
+          ]
+        },
+        {
+          "name": "email",
+          "placeholder": "Email",
+          "validationRules": [
+            {
+              "rule": "required",
+              "message": "Please enter an email"
+            },
+            {
+              "rule": "email",
+              "message": "Please enter a valid email"
+            }
+          ]
         }
       ]
     }

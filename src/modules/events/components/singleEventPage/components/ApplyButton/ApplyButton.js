@@ -8,7 +8,7 @@ class ApplyButton extends Component {
     constructor() {
         super();
         this.state = {
-            open: true
+            open: false
         }
     }
 
@@ -22,7 +22,7 @@ class ApplyButton extends Component {
 
     render() {
         const { open } = this.state;
-        const { cover, form } = this.props
+        const { cover, form, title } = this.props
         return(
             <span className='col-lg my-3'>
                 <input
@@ -45,10 +45,10 @@ class ApplyButton extends Component {
                             animation: `${
                             open ? styles.customEnterAnimation : styles.customLeaveAnimation
                             } 500ms`,
-                            width: '90%'
+                            width: '30rem'
                         }
                     }}>
-                    <PopupContent form={form} />
+                    <PopupContent form={form} title={title} />
                 </Modal>
             </span>
         );

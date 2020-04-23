@@ -1,56 +1,39 @@
 import React, { Component } from "react";
-import FormInput from 'shared/Input';
-import { sendEventForm } from '../../../../services/events.service'
+import FormBuilder from '@langleyfoxall/react-dynamic-form-builder';
+import { sendEventForm } from 'modules/events/services/events.service'
 import styles from './style.module.css';
 
+let postTarget = '';    // made this because onFormSubmit function doesn't accept the keyword {this}
 class PopupContent extends Component {
-    constructor() {
-        super();
-        this.state = {}
+    componentDidMount = () => {
+        postTarget += this.props.form.postTarget
     }
 
-    onFormSubmit = (e) => {
-        e.preventDefault()
-        console.log(this.state)
-        sendEventForm(this.props.form.postTarget, this.state)
-        .then(console.log)
-        .catch(console.log)
+    onSubmit(submission) {
+        if(submission.valid){
+            sendEventForm(postTarget, submission.data.form)
+            .then(console.log)
+            .catch(console.log)
+        }
     }
 
     render() {
-        const { form } = this.props
+        const { form, title } = this.props;
         return(
-            <form onSubmit={this.onFormSubmit}>
-            {console.log(form.postTarget)}
-                {
-                    form.fields.map((field, index) => {
-                        return (
-                            <section key={index} className="form-group">
-                                <label>{field.name}</label>
-                                <FormInput
-                                    type={field.type}
-                                    required={field.rule.required}
-                                    max={field.rule.max}
-                                    min={field.rule.max}
-                                    minLength={field.rule.minLength}
-                                    maxLength={field.rule.maxLength}
-                                    options={field.options}
-                                    classes={'form-control rounded-pill'}
-                                    regPattern={ field.rule.pattern || `[A-Za-z]`}
-                                />
-                            </section>
-                        )
-                    })
-                }
-                <section className='text-center'>
-                    <input
-                        type="submit"
-                        className={`rounded-pill ${styles["send-btn"]}`}
-                        value="SEND"
-                        aria-label="Send"
-                    />
-                </section>
-            </form>
+            <section className='text-center p-3'>
+                <p className='h3'>{title}</p>
+                <FormBuilder
+                    form={form.fields}
+                    onSubmit={this.onSubmit}
+                    defaultContainerClass={' form-group'}               // you have to add a space before first className..
+                    defaultInputClass={' form-control rounded-pill'}
+                    defaultValidationErrorClass={` text-left text-danger ${styles["error-message"]}`}
+                    defaultSubmitClass={` rounded-pill ${styles["send-btn"]}`}
+                    submitButton={{
+                        text: 'SEND'
+                    }}
+                />
+            </section>
         );
     }
 }
