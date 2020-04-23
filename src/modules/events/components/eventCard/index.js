@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
   faCalendarCheck,
+  faCalendarTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
 class EventCard extends Component {
@@ -52,11 +53,23 @@ class EventCard extends Component {
               <span> {event.startDate}</span>
             </div>
             <div className={styles["event-card-SubDescription_info"]}>
-              <FontAwesomeIcon
-                icon={faMapMarkerAlt}
-                className={styles["event-card_icon"]}
-              />
-              <span>{event.location}</span>
+              {event.location.length ? (
+                <>
+                  <FontAwesomeIcon
+                    icon={faMapMarkerAlt}
+                    className={styles["event-card_icon"]}
+                  />
+                  <span>{event.location}</span>
+                </>
+              ) : (
+                <>
+                  <FontAwesomeIcon
+                    icon={faCalendarTimes}
+                    className={styles["event-card_icon"]}
+                  />
+                  <span>{event.endDate}</span>{" "}
+                </>
+              )}
             </div>
           </div>
         </section>
