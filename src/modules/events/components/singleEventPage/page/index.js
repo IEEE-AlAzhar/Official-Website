@@ -24,7 +24,6 @@ class SingleEventPage extends Component {
         this.setState({ event })
       }
     })
-    .catch(console.log);
   }
 
   

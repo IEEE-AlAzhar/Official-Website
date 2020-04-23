@@ -275,7 +275,6 @@ export default class Input extends Component {
 
     return (
       <section className="input-wrapper">
-      {/* {console.log('props: ',this.props)} */}
         {this.state.validationMessage !== null && (
           <label className={`error ${this.errorPosition()}`}>
             {this.state.validationMessage}
