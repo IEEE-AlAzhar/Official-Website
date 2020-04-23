@@ -3,7 +3,7 @@ import Layout from "shared/layout";
 import Intro from "../intro";
 import About from "../../../about/components/section/index";
 import BestMembers from "../bestMembers";
-
+import EventSection from "../../../../events/components/eventsSection"
 import { Helmet } from "react-helmet";
 
 export default class HomePage extends Component {
@@ -25,6 +25,7 @@ export default class HomePage extends Component {
           />
           <About />
           <BestMembers />
+          <EventSection />
         </Layout>
       </>
     );
