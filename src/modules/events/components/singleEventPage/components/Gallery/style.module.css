@@ -1,0 +1,11 @@
+.gallery-imgs{
+    width: 15rem;
+    border-radius: 20%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .gallery-imgs{
+        width: 10rem;
+    }
+}
