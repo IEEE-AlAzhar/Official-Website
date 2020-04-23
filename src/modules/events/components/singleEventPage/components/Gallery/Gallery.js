@@ -39,10 +39,10 @@ class Gallery extends Component {
           itemClass="carousel-item-padding-40-px"
           >
           {
-            images.map(img => {
+            images.map((img,index) => {
               return (
-                <figure key={img}>
-                  <img className={styles['gallery-imgs']} src={img} alt='gallery images' />
+                <figure key={index}>
+                  <img className={styles['gallery-imgs']} src={img} alt='Event Gallery' />
                 </figure>
               )
             })

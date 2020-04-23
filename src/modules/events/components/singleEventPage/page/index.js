@@ -46,7 +46,7 @@ class SingleEventPage extends Component {
             <title>{title}</title>
           </Helmet>
           <div className='text-center'>
-            <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='' />
+            <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='Event Cover' />
             <section className='container'>
               <header className='px-5 mx-5'>
                 <h1 className='h2 my-5' style={{ color: "var(--text-secondary)" }}>{title}</h1>
