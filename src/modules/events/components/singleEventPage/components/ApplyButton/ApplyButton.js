@@ -45,7 +45,8 @@ class ApplyButton extends Component {
                             animation: `${
                             open ? styles.customEnterAnimation : styles.customLeaveAnimation
                             } 500ms`,
-                            width: '30rem'
+                            width: '30rem',
+                            borderRadius: '1rem'
                         }
                     }}>
                     <PopupContent form={form} title={title} />

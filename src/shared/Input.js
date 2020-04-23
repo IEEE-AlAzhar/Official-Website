@@ -314,11 +314,3 @@ export default class Input extends Component {
     );
   }
 }
-
-
-
-// onChange={(event) => this.inputChangeHandler(event)}
-
-// inputChangeHandler = (event) => {
-//   this.setState({ [event.target.name]: event.target.value });
-// };
