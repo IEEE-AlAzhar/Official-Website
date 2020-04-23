@@ -7,11 +7,11 @@ import services from "../../store/services.json";
 import styles from "./style.module.css";
 
 export default class SingleServicePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+  state = {};
+
+  componentDidMount() {
     const { id } = this.props.match.params;
-    this.state.service = services.find((service) => service.id === id);
+    this.setState({ service: services.find((service) => service.id === id) });
   }
 
   render() {
