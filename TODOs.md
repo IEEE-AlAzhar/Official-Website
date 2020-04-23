@@ -4,3 +4,4 @@
 4. Write tests for the components.
 5. Edit the colors. (choose a color pallet).
 6. Make the `NotFound` component.
+7. Use `mock server`.
