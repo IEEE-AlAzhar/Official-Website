@@ -74,12 +74,6 @@
     "endTime": "12:00",
     "location": "Egypt, Cairo",
     "cover": "https://via.placeholder.com/500?text=Event+2",
-    "images": [
-      "https://via.placeholder.com/500?text=Image+1",
-      "https://via.placeholder.com/500?text=Image+2",
-      "https://via.placeholder.com/500?text=Image+3",
-      "https://via.placeholder.com/500?text=Image+4"
-    ],
     "status": "upcoming",
     "form": {
       "postTarget": "/events/2",
@@ -136,6 +130,12 @@
     "location": "Egypt, Cairo",
     "cover": "https://via.placeholder.com/500?text=Event+3",
     "images": [
+      "https://via.placeholder.com/500?text=Image+1",
+      "https://via.placeholder.com/500?text=Image+2",
+      "https://via.placeholder.com/500?text=Image+3",
+      "https://via.placeholder.com/500?text=Image+1",
+      "https://via.placeholder.com/500?text=Image+2",
+      "https://via.placeholder.com/500?text=Image+3",
       "https://via.placeholder.com/500?text=Image+1",
       "https://via.placeholder.com/500?text=Image+2",
       "https://via.placeholder.com/500?text=Image+3",

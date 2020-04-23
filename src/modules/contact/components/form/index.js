@@ -129,16 +129,15 @@ class Form extends Component {
       sendingFailed,
       sendingSuccess,
     } = this.state;
-    return sendingSuccess ? (
-      <section className="col-lg m-auto">
+    return sendingSuccess 
+    ? <section className="col-lg m-auto">
         <svg
           className="bi bi-check-circle"
           width="4em"
           height="4em"
           viewBox="0 0 16 16"
           fill="green"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
             d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z"
@@ -154,15 +153,16 @@ class Form extends Component {
           Thank you, your message has been sent successfully.
         </p>
       </section>
-    ) : (
-      <form className="col-md" onSubmit={this.onFormSubmit}>
-        {sendingFailed ? (
-          <section>
-            <small className="text-danger">
-              Error sending the message, please try again later!
-            </small>
-          </section>
-        ) : null}
+    : <form className="col-md" onSubmit={this.onFormSubmit}>
+        {
+          sendingFailed ? (
+            <section>
+              <small className="text-danger">
+                Error sending the message, please try again later!
+              </small>
+            </section>
+          ) : null
+        }
         <section className="form-row my-3">
           <span className="col">
             <input
@@ -263,7 +263,6 @@ class Form extends Component {
           aria-label="Send"
         />
       </form>
-    );
   }
 }
 
