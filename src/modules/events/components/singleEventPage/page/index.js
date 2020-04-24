@@ -59,7 +59,7 @@ class SingleEventPage extends Component {
             <img className={`w-100 ${styles['event-cover']}`} src={cover} alt='Event Cover' />
             <section className='container'>
               <header className='px-5 mx-5'>
-                <h1 className='h2 my-5' style={{ color: "var(--text-primary)" }}>{title}</h1>
+                <h1 className='h2 my-5 section_heading'>{title}</h1>
               </header>
               <EventDetails details = {{ 
                 startDate, 
