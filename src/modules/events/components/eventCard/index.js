@@ -13,11 +13,11 @@ class EventCard extends Component{
 
   render(){
   
-    const {event} = this.props ;
+    const {event } = this.props ;
      return (
            <section className={styles["event-card_content"]}>
               <figure className={styles["events-card_cover"]} key={event}>
-                  <Link to={'/' + event.id}>
+                  <Link to={'/events/' + event.id}>
                       <img  
                         alt={`event ${event.title}`}
                         src={event.cover}
@@ -31,7 +31,7 @@ class EventCard extends Component{
                   </p>
                   <figcaption >
                       <h3>
-                        <Link to={'/' + event.id} className={styles["event-card_title"]}>
+                        <Link to={'/events/' + event.id} className={styles["event-card_title"]}>
                           {event.title}
                           </Link>
                       </h3>

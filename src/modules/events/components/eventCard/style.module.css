@@ -1,22 +1,22 @@
 .event-card_content {
   background-color:var(--layout-secondary);
   border-radius: .5rem;
-  transition: all 1s;
+  transition: all .4s;
 }
 .event-card_content:hover {
   box-shadow:  3px 3px 5px var(--layout-secondary) ;
-
-}
+ }
 
 .events-card_cover img {
   display: block;
   width: 100%;
   border-top-left-radius:.5rem;
   border-top-right-radius: .5rem;
-  height: 13rem;
+  height: 17rem;
 }
 .event-card_description{
   overflow: hidden;
+  margin: 1rem;
   text-overflow: ellipsis;
   line-height: 1em;
   display: -webkit-box;
@@ -35,7 +35,8 @@ figcaption {
   text-transform: capitalize;
   color: var(--layout-primary);
   text-decoration: none;
-  transition: all 1s;
+  margin: 1rem;
+  transition: all .7s;
  }
 .event-card_title:hover, 
 .event-card_title:focus{

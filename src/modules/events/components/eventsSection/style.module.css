@@ -1,9 +1,8 @@
 .event_section{
   padding-top: var(--section-y-spacing);
   padding-bottom: var(--section-y-spacing);
-  background-color: var(--layout-primary);
-    
- }
+
+}
 .event-section_button {
   background-color: var(--layout-secondary);
   color: var(--layout-primary);
