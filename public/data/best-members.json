@@ -1,0 +1,52 @@
+[
+  {
+    "name": "sama",
+    "committee": "web",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "mohamed",
+    "committee": "security",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "lina",
+    "committee": "hr",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "moataz",
+    "committee": "pr",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "esmail",
+    "committee": "media",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "John Doe",
+    "committee": "marketing",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "John Doe",
+    "committee": "mobile",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "John Doe",
+    "committee": "network",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "John Doe",
+    "committee": "programming",
+    "image": "https://via.placeholder.com/400"
+  },
+  {
+    "name": "John Doe",
+    "committee": "programming",
+    "image": "https://via.placeholder.com/400"
+  }
+]

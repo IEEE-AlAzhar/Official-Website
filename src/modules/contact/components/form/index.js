@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import sendMessage from "modules/contact/services/contact.service";
+import { isValidText } from "modules/contact/services/validation.service";
+import { isEmailValid } from "shared/services/validation.service";
+
 import styles from "./style.module.css";
 
 const initialState = {
@@ -7,111 +11,272 @@ const initialState = {
   phone: "",
   email: "",
   subject: "",
-  message: ""
-}
+  message: "",
+  firstNameError: "",
+  lastNameError: "",
+  phoneError: "",
+  emailError: "",
+  subjectError: "",
+  messageError: "",
+  isSendingSuccess: false,
+  isSendingFailed: false,
+};
 
 class Form extends Component {
   constructor() {
     super();
-    this.state = initialState
+    this.state = initialState;
   }
+
+  validate = () => {
+    const { firstName, lastName, phone, email, subject, message } = this.state;
+    let {
+      firstNameError,
+      lastNameError,
+      phoneError,
+      emailError,
+      subjectError,
+      messageError,
+    } = "";
+
+    if (!firstName) {
+      firstNameError = "Please enter your first name";
+    } else if (!isValidText(firstName)) {
+      firstNameError = "Only characters are allowed";
+    }
+
+    if (!lastName) {
+      lastNameError = "Please enter your last name";
+    } else if (!isValidText(lastName)) {
+      lastNameError = "Only characters are allowed";
+    }
+
+    if (!email) {
+      emailError = "Please enter email";
+    } else if (!isEmailValid(email)) {
+      emailError = "Please enter a valid email";
+    }
+
+    if (!phone) {
+      phoneError = "Please enter your phone number";
+    }
+    if (!subject) {
+      subjectError = "Please enter message subject";
+    }
+    if (!message) {
+      messageError = "Please enter your message";
+    }
+
+    if (
+      firstNameError ||
+      lastNameError ||
+      phoneError ||
+      emailError ||
+      subjectError ||
+      messageError
+    ) {
+      this.setState({
+        firstNameError,
+        lastNameError,
+        phoneError,
+        emailError,
+        subjectError,
+        messageError,
+      });
+      return false;
+    }
+
+    return true;
+  };
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    fetch("https://Som3a.com/", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        phone: this.state.phone,
-        email: this.state.email,
-        subject: this.state.subject,
-        message: this.state.message,
-      }),
-    })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+    const { firstName, lastName, phone, email, subject, message } = this.state;
+    const isValid = this.validate();
+    if (isValid) {
+      sendMessage({
+        firstName,
+        lastName,
+        phone,
+        email,
+        subject,
+        message,
+      })
+        .then(() => {
+          this.setState({ isSendingSuccess: true });
+        })
+        .catch((err) => {
+          this.setState({ isSendingFailed: true });
+        });
+    }
   };
 
   inputChangeHandler = (event) => {
-    this.setState({ [event.target.id]: event.target.value });
+    this.setState({ [event.target.name + "Error"]: "" });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
-    return (
+    const {
+      firstNameError,
+      lastNameError,
+      phoneError,
+      emailError,
+      subjectError,
+      messageError,
+      isSendingFailed,
+      isSendingSuccess,
+    } = this.state;
+    return isSendingSuccess ? (
+      <section className="col-lg m-auto">
+        <svg
+          className="bi bi-check-circle"
+          width="4em"
+          height="4em"
+          viewBox="0 0 16 16"
+          fill="green"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z"
+            clipRule="evenodd"
+          />
+          <path
+            fillRule="evenodd"
+            d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z"
+            clipRule="evenodd"
+          />
+        </svg>
+        <p className="text-success">
+          Thank you, your message has been sent successfully.
+        </p>
+      </section>
+    ) : (
       <form className="col-md" onSubmit={this.onFormSubmit}>
+        {isSendingFailed ? (
+          <section>
+            <small className="text-danger" aria-live="polite">
+              Error sending the message, please try again later!
+            </small>
+          </section>
+        ) : null}
         <section className="form-row my-3">
           <span className="col">
             <input
               onChange={this.inputChangeHandler}
-              id='firstName'
+              name="firstName"
               type="text"
               className="form-control rounded-pill"
               placeholder="First name"
               title="Only characters are allowed."
-              pattern="[A-Za-z]{1,}"      // Only characters are allowed..
-              required
+              aria-label="First name"
             />
+            <aside className="text-left">
+              <small
+                className={`text-danger ${styles["error-message"]}`}
+                aria-live="assertive"
+              >
+                {firstNameError}
+              </small>
+            </aside>
           </span>
           <span className="col">
             <input
               onChange={this.inputChangeHandler}
-              id='lastName'
+              name="lastName"
               type="text"
               className="form-control rounded-pill"
               placeholder="Last name"
               title="Only characters are allowed."
-              pattern="[A-Za-z]{1,}"      // Only characters are allowed..
-              required
+              aria-label="Last Name"
             />
+            <aside className="text-left">
+              <small
+                className={`text-danger ${styles["error-message"]}`}
+                aria-live="assertive"
+              >
+                {lastNameError}
+              </small>
+            </aside>
           </span>
         </section>
         <section className="form-group">
           <input
             onChange={this.inputChangeHandler}
-            id='phone'
+            name="phone"
             type="number"
             className={`form-control rounded-pill ${styles.phone}`}
             placeholder="Phone Number"
-            required
+            aria-label="Phone"
           />
+          <aside className="text-left">
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
+              {phoneError}
+            </small>
+          </aside>
         </section>
         <section className="form-group">
           <input
             onChange={this.inputChangeHandler}
-            id='email'
-            type="email"
+            name="email"
             className="form-control rounded-pill"
             placeholder="Email"
-            required
+            aria-label="Email"
           />
+          <aside className="text-left">
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
+              {emailError}
+            </small>
+          </aside>
         </section>
         <section className="form-group">
           <input
             onChange={this.inputChangeHandler}
-            id='subject'
+            name="subject"
             type="text"
             className="form-control rounded-pill"
-            placeholder="Subject" 
-            required
+            placeholder="Subject"
+            aria-label="Subject"
           />
+          <aside className="text-left">
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
+              {subjectError}
+            </small>
+          </aside>
         </section>
         <section className="form-group">
           <textarea
             onChange={this.inputChangeHandler}
-            id='message'
+            name="message"
             className="form-control rounded"
             rows="3"
             placeholder="Message here"
-            required
+            aria-label="Message"
           />
+          <aside className="text-left">
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
+              {messageError}
+            </small>
+          </aside>
         </section>
         <input
           type="submit"
-          className={`rounded-pill ${styles.sendBtn}`}
+          className={`rounded-pill ${styles["send-btn"]}`}
           value="SEND"
+          aria-label="Send"
         />
       </form>
     );

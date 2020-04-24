@@ -13,8 +13,7 @@
 }
 
 :root {
-  --section-top-spacing: 8rem;
-  --section-bottom-spacing: 8rem;
+  --section-y-spacing: 8rem;
   --section-heading-spacing: 5rem;
 
   --heading-font-family: "Rubik", sans-serif;
@@ -29,7 +28,7 @@
   --layout-secondary: #0a111a;
   --text-primary: #242627;
   --text-secondary: #0a111a;
-  --btn-hover: #1c7fd0;
+  --btn-hover: #024b88;
 }
 
 .dark-theme {
@@ -56,6 +55,12 @@ h6 {
   font-family: var(--heading-font-family);
 }
 
+.section_heading {
+  text-align: center;
+  margin-bottom: var(--section-heading-spacing);
+  text-transform: uppercase;
+}
+
 p {
   line-height: 1.5;
   letter-spacing: 0.12rem;
@@ -64,4 +69,8 @@ p {
 
 p + p {
   margin-top: 2rem;
+}
+
+.video-react-control-bar {
+  font-size: 1rem;
 }
