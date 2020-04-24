@@ -24,11 +24,11 @@ class EventCard extends Component{
                         key={event.id} 
                         />
                   </Link>
-                  <p className={styles['activ-upcoming_event']}>
-                    {event.status === "upcoming"?<div>
+                  <div className={styles['activ-upcoming_event']}>
+                    {event.status === "upcoming"?<span>
                      <FontAwesomeIcon icon={faClock}
-                        className={styles["activ-upcoming-event_icon"]}/></div>: ''}
-                  </p>
+                        className={styles["activ-upcoming-event_icon"]}/></span>: ''}
+                  </div>
                   <figcaption >
                       <h3>
                         <Link to={'/events/' + event.id} className={styles["event-card_title"]}>
