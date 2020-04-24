@@ -18,18 +18,38 @@ export default class EventsListPage extends Component {
   render() {
     return (
       <>
+        {this.state.eventsList ? console.log(this.state.eventsList) : null}
         <Layout>
-          <h1 className={styles[`events__hea-ding`]}>Our Events</h1>
-          <div className={styles[`events__container`]}>
-            {this.state.eventsList.map((event) => {
-              if (event.status === "upcoming") {
-                return (
-                  <div className="col-12">
-                    <EventCard event={event} />
-                  </div>
-                );
-              }
-            })}
+          <h1 className={styles[`events-heading`]}>Our Events</h1>
+          <br />
+          <div className={styles[`events-container`]}>
+            {this.state.eventsList
+              ? this.state.eventsList.map((event) => {
+                  if (event.status === "upcoming") {
+                    return (
+                      <div className={styles["upcoming-events"]}>
+                        <EventCard event={event} />
+                      </div>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
+              : null}
+            <h1 className={styles[`past-heading`]}>Past events</h1>
+            {this.state.eventsList
+              ? this.state.eventsList.map((event) => {
+                  if (event.status !== "upcoming") {
+                    return (
+                      <div>
+                        <EventCard event={event} />
+                      </div>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
+              : null}
           </div>
         </Layout>
       </>
