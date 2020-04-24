@@ -23,7 +23,10 @@ class EventsSection extends Component {
           <div className="row">
             {event.length ? (
               event.map((eventsCard) => (
-                <div key={eventsCard.id} className="col-lg-4 col-md-6 col-sm-6">
+                <div
+                  key={eventsCard.id}
+                  className="col-lg-4 col-md-6 col-sm-12"
+                >
                   <EventCard event={eventsCard} />
                 </div>
               ))
