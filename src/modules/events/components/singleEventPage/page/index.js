@@ -27,7 +27,7 @@ class SingleEventPage extends Component {
         this.setState({ notFound: true });
       }
     })
-    .catch(err => {
+    .catch(() => {
       this.setState({ notFound: true });
     })
   }

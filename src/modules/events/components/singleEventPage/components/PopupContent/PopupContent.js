@@ -16,10 +16,10 @@ class PopupContent extends Component {
     onSubmit = (submission) => {
         if(submission.valid) {
             sendEventForm(this.props.form.postTarget, submission.data.form)
-            .then(response => {
+            .then(() => {
                 this.setState({ sentSuccessfully: true })
             })
-            .catch(err => {
+            .catch(() => {
                 this.setState({ sentFail: true })
             })
         }
@@ -70,9 +70,7 @@ class PopupContent extends Component {
                     defaultInputClass={' form-control rounded-pill'}
                     defaultValidationErrorClass={` text-left text-danger ${styles["error-message"]}`}
                     defaultSubmitClass={` rounded-pill ${styles["send-btn"]}`}
-                    submitButton={{
-                        text: 'SEND'
-                    }}
+                    submitButton={{ text: 'SEND' }}
                 />
             </section>
     }
