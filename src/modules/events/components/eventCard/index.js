@@ -1,18 +1,17 @@
-import React, { Component }  from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import
- {   faMapMarkerAlt,
-     faCalendarCheck ,
-     faClock ,
-     faCalendarTimes
-  } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMapMarkerAlt,
+  faCalendarCheck,
+  faCalendarTimes,
+  faClock
+} from "@fortawesome/free-solid-svg-icons";
 
-class EventCard extends Component{ 
-
-  render(){
-  
+class EventCard extends Component {
+  render() {
+   
     const {event } = this.props ;
      return (
            <section className={styles["event-card_content"]}>
@@ -64,6 +63,5 @@ class EventCard extends Component{
          )
     }
 }
- 
-export default EventCard ;
- 
+
+export default EventCard;

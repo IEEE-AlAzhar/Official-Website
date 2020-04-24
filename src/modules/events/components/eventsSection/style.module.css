@@ -22,7 +22,7 @@
   color : var(--layout-primary);
   background-color: var(--btn-hover);
   text-decoration: none;
-  box-shadow: 3px 3px 5px var(--layout-secondary) ;
+  box-shadow: 3px 3px 5px #000;
 
 }
 

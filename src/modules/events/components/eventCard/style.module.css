@@ -1,4 +1,5 @@
 .event-card_content {
+<<<<<<< HEAD
   background-color:var(--layout-secondary);
   border-radius: .5rem;
   transition: all .4s;
@@ -6,15 +7,30 @@
 .event-card_content:hover {
   box-shadow:  3px 3px 5px var(--layout-secondary) ;
  }
+=======
+  background-color: var(--background-secondary);
+  border-radius: 0.5rem;
+  transition: box-shadow 0.3s;
+}
+.event-card_content:hover {
+  box-shadow: 10px 10px 6px #000;
+}
+>>>>>>> 21f6a841a2a9ca133d8f4bdd6e7b3df9f10195a1
 
 .events-card_cover img {
   display: block;
   width: 100%;
+<<<<<<< HEAD
   border-top-left-radius:.5rem;
   border-top-right-radius: .5rem;
   height: 17rem;
+=======
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 13rem;
+>>>>>>> 21f6a841a2a9ca133d8f4bdd6e7b3df9f10195a1
 }
-.event-card_description{
+.event-card_description {
   overflow: hidden;
   margin: 1rem;
   text-overflow: ellipsis;
@@ -28,34 +44,31 @@
 figcaption {
   padding-top: 1rem;
   padding-left: 1rem;
-  padding-bottom: .1rem;
-
+  padding-bottom: 0.1rem;
 }
-.event-card_title{
+.event-card_title {
   text-transform: capitalize;
-  color: var(--layout-primary);
   text-decoration: none;
+<<<<<<< HEAD
   margin: 1rem;
   transition: all .7s;
  }
 .event-card_title:hover, 
 .event-card_title:focus{
+=======
+  color: #fff;
+}
+.event-card_title:hover,
+.event-card_title:focus {
+>>>>>>> 21f6a841a2a9ca133d8f4bdd6e7b3df9f10195a1
   text-decoration: none;
   color: #fff;
-
 }
 .event-card_icon {
   font-size: 1.5rem;
-  margin-right: .5rem;
- 
- }
- .event-card-SubDescription_info {
-  transition: all 1s;
-
- }
-.event-card-SubDescription_info:hover {
-  color: var( --btn-hover);
+  margin-right: 0.5rem;
 }
+
 .event-card-SubDescription_content {
   width: 100%;
   border-top: solid 1px #e5e5e5;
@@ -70,41 +83,31 @@ figcaption {
   display: inline-block;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--layout-primary);
-  transition: all .7s;
-  }
+  transition: all 0.3s;
+  color: #fff;
+}
 
 .event-card_SubDescription {
   padding-left: 30px;
   padding-right: 30px;
 }
 .event-card-SubDescription_info:last-child {
-  margin-left: auto 
+  margin-left: auto;
 }
 .event-card-SubDescription_info:first-child {
-  margin-right:4rem 
+  margin-right: 4rem;
 }
 
 @media (max-width: 991px) {
   .event-card_content {
     margin-top: 3rem;
-   }
-   .event-card_icon {
-     display: block;
-   }
- }
+  }
+}
 .events-card_cover {
   position: relative;
- }
-.activ-upcoming_event {
+}
+.active-upcoming-event {
   position: absolute;
-  top: 0;
-  left: 1rem;
-  background-color:#fff;
- }
-
-.activ-upcoming-event_icon {
-  color:var(--layout-secondary);
-  font-size: 3rem;
-  margin: .4rem ; 
- }
+  bottom: 7.4rem;
+  background-color: var(--background-secondary);
+}

@@ -44,7 +44,7 @@ export default class Footer extends Component {
           <NewsletterForm />
 
           <section className="text-center">
-            <h2> Follow us </h2>
+            <h2 className={styles["social-list__heading"]}> Follow us </h2>
             <ul className="list-unstyled">{this.renderSocialList()}</ul>
           </section>
         </div>

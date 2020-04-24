@@ -24,6 +24,7 @@
 }
 .intro-header_section .intro-header_heading {
   font-size: 3rem;
+  color: #fff;
 }
 .intro-header_section .intro-header_subtitle {
   font-size: var(--heading-2-font-size);

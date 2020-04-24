@@ -7,14 +7,13 @@ import services from "../../store/services.json";
 import styles from "./style.module.css";
 
 export default class SingleServicePage extends Component {
-  state = {
-    service: null,
-  };
+  state = {};
 
-  componentWillMount() {
+  componentDidMount() {
     const { id } = this.props.match.params;
     this.setState({ service: services.find((service) => service.id === id) });
   }
+
   render() {
     const { service } = this.state;
     if (!this.state.service) return <p>Not Found</p>;
