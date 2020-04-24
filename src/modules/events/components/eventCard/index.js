@@ -11,7 +11,6 @@ import {
 class EventCard extends Component {
   render() {
     const { event } = this.props;
-
     return (
       <section className={styles["event-card_content"]}>
         <figure className={styles["events-card_cover"]} key={event}>
@@ -22,13 +21,9 @@ class EventCard extends Component {
               key={event.id}
             />
           </Link>
-          <p className={styles["active-upcoming-event"]}>
-            {event.status === "upcoming" ? (
-              <span className="m-2 text-white"> Upcoming </span>
-            ) : (
-              ""
-            )}
-          </p>
+          <div className={styles["active-upcoming_event"]}>
+            {event.status === "upcoming" ? <span>Upcoming</span> : ""}
+          </div>
           <figcaption>
             <h3>
               <Link

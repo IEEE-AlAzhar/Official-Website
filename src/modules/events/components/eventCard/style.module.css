@@ -16,11 +16,12 @@
 }
 .event-card_description {
   overflow: hidden;
+  margin: 1rem;
   text-overflow: ellipsis;
   line-height: 1em;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   padding-left: 1.5rem;
   color: #fff;
 }
@@ -81,8 +82,10 @@ figcaption {
 .events-card_cover {
   position: relative;
 }
-.active-upcoming-event {
+.active-upcoming_event {
   position: absolute;
-  bottom: 7.4rem;
+  bottom: 11.4rem;
+  padding: 0 0.3rem;
   background-color: var(--background-secondary);
+  color: #fff;
 }
