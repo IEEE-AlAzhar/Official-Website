@@ -4,10 +4,14 @@
   margin: auto;
 }
 
-@media only screen and (max-width: 991px)
-{
+@media only screen and (max-width: 991px) {
   .vertical-line {
     border-left: 0px;
     height: 0px;
   }
+}
+
+.form-section__background {
+  background-color: var(--layout-primary);
+  font-family: var(--heading-font-family);
 }
