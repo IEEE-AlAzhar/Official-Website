@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faClock } from "@fortawesome/free-solid-svg-icons";
 import styles from "./style.module.css";
 
-class Gallery extends Component {
+class EventDetails extends Component {
   render() {
     const {
       startDate,
@@ -19,22 +19,24 @@ class Gallery extends Component {
     } = this.props.details;
 
     return (
-      <section className="row m-4">
+      <section className="row">
         <span className="col-md">
           <FontAwesomeIcon icon={faClock} size="1x" />
-          <p className={`h5 m-0 ${styles["event-details_text"]}`}>
+          <p className={`h6 m-0 p-0 ${styles["event-details_text"]}`}>
             {" "}
-            From : {startDate} at {startTime}
+            From : {startDate}
+            {startTime ? ` at ${startTime}` : null}
           </p>
-          <p className={`h5 m-0 ${styles["event-details_text"]}`}>
+          <p className={`h6 m-0 p-0 ${styles["event-details_text"]}`}>
             {" "}
-            To : {endDate} at {endTime}
+            To : {endDate}
+            {endTime ? ` at ${endTime}` : null}
           </p>
         </span>
         {location ? (
           <span className="col-md">
             <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" />
-            <p className={`h4 ${styles["event-details_text"]}`}>{location}</p>
+            <p className={`h5 ${styles["event-details_text"]}`}>{location}</p>
           </span>
         ) : null}
         {form && status === "upcoming" ? (
@@ -45,4 +47,4 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery;
+export default EventDetails;

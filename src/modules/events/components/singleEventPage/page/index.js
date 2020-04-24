@@ -11,17 +11,26 @@ class SingleEventPage extends Component {
     super();
     this.state = {
       event: {},
+      notFound: false,
     };
   }
 
   componentDidMount = () => {
     const { match } = this.props;
-    getEvents().then((response) => {
-      const event = response.data.find((event) => event.id === match.params.id);
-      if (event) {
-        this.setState({ event });
-      }
-    });
+    getEvents()
+      .then((response) => {
+        const event = response.data.find(
+          (event) => event.id === match.params.id
+        );
+        if (event) {
+          this.setState({ event });
+        } else {
+          this.setState({ notFound: true });
+        }
+      })
+      .catch((err) => {
+        this.setState({ notFound: true });
+      });
   };
 
   render() {
@@ -41,7 +50,16 @@ class SingleEventPage extends Component {
 
     return (
       <Layout>
-        {!title ? (
+        {this.state.notFound ? (
+          <section className="my-5 py-5">
+            <h1 className="text-center my-5 py-5">
+              404 NOT FOUND
+              <span role="img" aria-label="Panda">
+                😢
+              </span>
+            </h1>
+          </section>
+        ) : !title ? (
           <section className="my-5 py-5">
             <h1 className="text-center my-5 py-5">Loading...</h1>
           </section>
@@ -58,12 +76,7 @@ class SingleEventPage extends Component {
               />
               <section className="container">
                 <header className="px-5 mx-5">
-                  <h1
-                    className="h2 my-5"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    {title}
-                  </h1>
+                  <h1 className="h2 my-5 section_heading">{title}</h1>
                 </header>
                 <EventDetails
                   details={{

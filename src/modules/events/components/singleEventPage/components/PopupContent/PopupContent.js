@@ -54,7 +54,7 @@ class PopupContent extends Component {
       </section>
     ) : (
       <section className="text-center p-3">
-        <p className="h3" style={{ color: "var(--text-secondary)" }}>
+        <p className="h3 mb-4" style={{ color: "var(--text-secondary)" }}>
           {title}
         </p>
         {sentFail ? (

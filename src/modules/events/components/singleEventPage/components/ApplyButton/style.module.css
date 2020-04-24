@@ -19,11 +19,12 @@
     transform: translateY(10px);
 }
 
-@keyframes :local(customEnterAnimation) {
+
+@keyframes customEnterAnimation {
     0% { transform: scale(0) }
     100% { transform: scale(1) }
 }
-@keyframes :local(customLeaveAnimation) {
+@keyframes customLeaveAnimation {
     0% { transform: scale(1) }
     100% { transform: scale(0) }
 }
