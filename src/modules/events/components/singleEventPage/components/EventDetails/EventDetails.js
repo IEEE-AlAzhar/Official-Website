@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ApplyButton from '../ApplyButton/ApplyButton';
+import PopupContent from '../PopupContent/PopupContent';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faMapMarkerAlt,
@@ -9,10 +10,16 @@ import styles from './style.module.css';
 
 
 class EventDetails extends Component {
+
+    getPopupContent = () => {
+        const { form, title } = this.props.details;
+        return (<PopupContent form={form} title={title} />)
+    }
+
     render() {
         const { 
-            startDate, startTime, endDate, status,
-            endTime, location, form, cover, title
+            startDate, startTime, endDate, endTime,
+            status, location, form, cover
         } = this.props.details;
 
         return(
@@ -32,7 +39,7 @@ class EventDetails extends Component {
                 }
                 {
                     form && status === 'upcoming' ?
-                        <ApplyButton cover={cover} form={form} title={title} />
+                        <ApplyButton cover={cover} getPopupContent={this.getPopupContent} />
                     : null
                 }
             </section>

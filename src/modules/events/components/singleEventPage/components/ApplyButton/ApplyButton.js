@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
-import PopupContent from '../PopupContent/PopupContent';
 import styles from './style.module.css';
 
 class ApplyButton extends Component {
@@ -22,7 +21,7 @@ class ApplyButton extends Component {
 
     render() {
         const { modalOpen } = this.state;
-        const { cover, form, title } = this.props;
+        const { cover, getPopupContent } = this.props;
         return (
             <span className='col-lg my-3'>
                 <input
@@ -50,7 +49,7 @@ class ApplyButton extends Component {
                             borderRadius: '1rem'
                         }
                     }}>
-                    <PopupContent form={form} title={title} />
+                    { getPopupContent() }
                 </Modal>
             </span>
         );
