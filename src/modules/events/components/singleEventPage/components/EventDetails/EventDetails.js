@@ -1,21 +1,26 @@
 import React, { Component } from "react";
 import ApplyButton from "../ApplyButton/ApplyButton";
+import PopupContent from "../PopupContent/PopupContent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faClock } from "@fortawesome/free-solid-svg-icons";
 import styles from "./style.module.css";
 
 class EventDetails extends Component {
+  getPopupContent = () => {
+    const { form, title } = this.props.details;
+    return <PopupContent form={form} title={title} />;
+  };
+
   render() {
     const {
       startDate,
       startTime,
       endDate,
-      status,
       endTime,
+      status,
       location,
       form,
       cover,
-      title,
     } = this.props.details;
 
     return (
@@ -40,7 +45,7 @@ class EventDetails extends Component {
           </span>
         ) : null}
         {form && status === "upcoming" ? (
-          <ApplyButton cover={cover} form={form} title={title} />
+          <ApplyButton cover={cover} getPopupContent={this.getPopupContent} />
         ) : null}
       </section>
     );

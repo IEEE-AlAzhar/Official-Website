@@ -15,10 +15,10 @@ class PopupContent extends Component {
   onSubmit = (submission) => {
     if (submission.valid) {
       sendEventForm(this.props.form.postTarget, submission.data.form)
-        .then((response) => {
+        .then(() => {
           this.setState({ sentSuccessfully: true });
         })
-        .catch((err) => {
+        .catch(() => {
           this.setState({ sentFail: true });
         });
     }
