@@ -4,7 +4,6 @@ import Layout from "shared/layout";
 import Icon from "../icon/index";
 import Form from "../form/index";
 import styles from "./style.module.css";
-
 class ContactPage extends Component {
   render() {
     return (
@@ -12,14 +11,10 @@ class ContactPage extends Component {
         <Helmet>
           <title>Contact Us</title>
         </Helmet>
-        <div
-          className="text-center modal-dialog-centered px-3 py-2">
+        <div className="text-center modal-dialog-centered px-3 py-2">
           <section
-            className={`row container px-1 py-4 mx-auto rounded shadow-lg`}
-            style={{
-              backgroundColor: "var(--layout-primary)",
-              fontFamily: "var(--heading-font-family)",
-            }}>
+            className={`row container px-1 py-4 mx-auto rounded ${styles["form-section__background"]}`}
+          >
             <Icon />
             <div className={`mr-3 ${styles["vertical-line"]}`} />
             <Form />
