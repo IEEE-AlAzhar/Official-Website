@@ -21,7 +21,7 @@
   line-height: 1em;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   padding-left: 1.5rem;
   color: #fff;
 }
