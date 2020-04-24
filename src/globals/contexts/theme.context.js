@@ -1,5 +1,5 @@
 import React, { Component, createContext } from "react";
-
+import { darkThemePonyfill, lightThemePonyfill } from "./../cssVarsPonyfill";
 export const ThemeProvider = createContext();
 
 export default class ThemeContext extends Component {
@@ -20,12 +20,16 @@ export default class ThemeContext extends Component {
         localStorage.setItem("theme", "dark");
         document.body.classList.remove("light-theme");
         document.body.classList.add("dark-theme");
+
+        darkThemePonyfill();
       });
     } else {
       this.setState({ theme: "light" }, () => {
         localStorage.setItem("theme", "light");
         document.body.classList.add("light-theme");
         document.body.classList.remove("dark-theme");
+
+        lightThemePonyfill();
       });
     }
   };
