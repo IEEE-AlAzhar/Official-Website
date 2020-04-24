@@ -7,10 +7,10 @@
   width: 50%;
   border-radius: 50%;
   margin-bottom: 2rem;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
 }
 .best-members img:hover {
-  border: 2px solid var(--layout-secondary);
+  border: 3px solid var(--layout-secondary);
 }
 .best-members h3 {
   text-transform: uppercase;
