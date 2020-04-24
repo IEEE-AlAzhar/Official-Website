@@ -14,7 +14,7 @@ The blog module.
 
 - **200:**
 
-```
+```json
 [
   {
     "id": "1",
@@ -43,7 +43,6 @@ The blog module.
     "createdAt": "07-05-2020"
   }
 ]
-
 ```
 
 ### Single Blog
@@ -149,7 +148,7 @@ The blog module.
 
 - **200:**
 
-```
+```json
 [
   {
     "id": "1",
@@ -197,7 +196,7 @@ The blog module.
 
 - **200:**
 
-```
+```json
 [
   {
     "id": "1",
@@ -249,7 +248,7 @@ The events module.
 
 **200:**
 
-```
+```json
 [
   {
     "id": "1",
@@ -414,7 +413,7 @@ The events module.
 
 **200:**
 
-```
+```json
 
   {
     "id": "1",
