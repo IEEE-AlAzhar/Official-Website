@@ -1,5 +1,5 @@
-1. Use `lodash` and remove `Is` package.
-2. Polyfill `find()` method and `css variables`.
+1. Use `lodash` and remove `Is` package. (DONE)
+2. Polyfill `find()` method and `css variables`. (DONE)
 3. Convert the list of the navbar from dropdown to drawer.
 4. Write tests for the components.
 5. Edit the colors. (choose a color pallet).
