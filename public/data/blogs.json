@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "cover": "https://via.placeholder.com/500?text=Image+1",
     "title": "Blog 1",
     "categories": [
       { "categoryId": "1", "categoryName": "prog" },
@@ -14,6 +15,7 @@
   {
     "id": "2",
     "title": "Blog 2",
+    "cover": "https://via.placeholder.com/500?text=Image+1",
     "categories": [
       { "categoryId": "1", "categoryName": "prog" },
       { "categoryId": "2", "categoryName": "tech" }
@@ -25,6 +27,7 @@
   },
   {
     "id": "3",
+    "cover": "https://via.placeholder.com/500?text=Image+1",
     "title": "Blog 3",
     "categories": [
       { "categoryId": "1", "categoryName": "prog" },
@@ -37,6 +40,7 @@
   },
   {
     "id": "4",
+    "cover": "https://via.placeholder.com/500?text=Image+1",
     "title": "Blog 4",
     "categories": [
       { "categoryId": "1", "categoryName": "prog" },
@@ -49,6 +53,7 @@
   },
   {
     "id": "5",
+    "cover": "https://via.placeholder.com/500?text=Image+1",
     "title": "Blog 5",
     "categories": [
       { "categoryId": "1", "categoryName": "prog" },
@@ -61,6 +66,7 @@
   },
   {
     "id": "6",
+    "cover": "https://via.placeholder.com/500?text=Image+1",
     "title": "Blog 6",
     "categories": [
       { "categoryId": "1", "categoryName": "prog" },
