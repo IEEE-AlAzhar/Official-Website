@@ -13,13 +13,11 @@ export default class EventsListPage extends Component {
       this.setState({
         eventsList: res.data,
       });
-      console.log(getEvents());
     });
   }
   render() {
     return (
       <>
-        {this.state.eventsList ? console.log(this.state.eventsList) : null}
         <Layout>
           <h1 className={styles[`events-heading`]}>Our Events</h1>
           <h2 className={styles[`events-heading`]}>Upcoming Events</h2>
