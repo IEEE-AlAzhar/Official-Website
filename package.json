@@ -2,7 +2,7 @@
   "name": "ieee-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://IEEE-AlAzhar.github.io/Official-Website",
+  "homepage": "https://ieee-alazhar.github.io/Official-Website",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
