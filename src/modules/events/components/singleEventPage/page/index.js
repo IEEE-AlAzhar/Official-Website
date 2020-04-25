@@ -19,7 +19,7 @@ class SingleEventPage extends Component {
   }
 
   componentDidMount = () => {
-    const { match } = this.props;
+    const { match, history } = this.props;
     getEvents()
       .then((response) => {
         const event = response.data.find(
@@ -28,11 +28,11 @@ class SingleEventPage extends Component {
         if (event) {
           this.setState({ event });
         } else {
-          this.setState({ notFound: true });
+          history.push("/not-found");
         }
       })
       .catch((err) => {
-        this.setState({ notFound: true });
+        history.push("/not-found");
       });
   };
 

@@ -6,3 +6,5 @@
 6. Make the `NotFound` component.
 7. Use `mock server`.
 8. Add `swipe` effect to the header side drawer.
+9. Add background shapes to the body.
+10. Make the style of `NotFoundPage`.

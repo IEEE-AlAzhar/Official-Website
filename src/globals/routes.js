@@ -9,6 +9,7 @@ import BlogListPage from "modules/blog/components/blogListPage";
 import SingleBlogPage from "modules/blog/components/singleBlogPage";
 
 import ContactPage from "modules/contact/components/page";
+import NotFoundPage from "shared/notFoundPage";
 
 export default [
   { path: "/", component: HomePage, label: "Home" },
@@ -19,4 +20,5 @@ export default [
   { path: "/blog", component: BlogListPage, label: "Blog" },
   { path: "/blog/:id/:title", component: SingleBlogPage },
   { path: "/contact-us", component: ContactPage, label: "Contact us" },
+  { path: "/not-found", component: NotFoundPage },
 ];
