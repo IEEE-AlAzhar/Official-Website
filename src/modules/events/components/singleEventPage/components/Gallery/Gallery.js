@@ -54,7 +54,6 @@ class Gallery extends Component {
         <h2 className="h3 mt-5 mb-4 section_heading">Event Gallery</h2>
         <Carousel
           swipeable={true}
-          showDots={true}
           responsive={responsive}
           infinite={true}
           autoPlay={true}
@@ -62,7 +61,6 @@ class Gallery extends Component {
           keyBoardControl={true}
           transitionDuration={1000}
           removeArrowOnDeviceType={["tablet", "mobile"]}
-          dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px mb-3"
           customRightArrow={<CustomRightArrow />}
           customLeftArrow={<CustomLeftArrow />}
