@@ -1,0 +1,26 @@
+[
+  {
+    "categoryId": "1",
+    "categoryName": "tech"
+  },
+  {
+    "categoryId": "2",
+    "categoryName": "programming"
+  },
+  {
+    "categoryId": "3",
+    "categoryName": "network"
+  },
+  {
+    "categoryId": "4",
+    "categoryName": "web"
+  },
+  {
+    "categoryId": "5",
+    "categoryName": "security"
+  },
+  {
+    "categoryId": "6",
+    "categoryName": "embedded"
+  }
+]

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Layout from "shared/layout";
 import Intro from "../intro";
-import About from "../../../about/components/section/index";
+import About from "modules/static-pages/about/components/section/index";
 import BestMembers from "../bestMembers";
-
+import EventSection from "modules/events/components/eventsSection";
 import { Helmet } from "react-helmet";
 
 export default class HomePage extends Component {
@@ -24,6 +24,7 @@ export default class HomePage extends Component {
             subtitle="Our Mission: Raising the Name of Al-Azhar University"
           />
           <About />
+          <EventSection />
           <BestMembers />
         </Layout>
       </>

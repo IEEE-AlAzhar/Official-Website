@@ -1,0 +1,28 @@
+.event_section{
+  padding-top: var(--section-y-spacing);
+  padding-bottom: var(--section-y-spacing);
+
+}
+.event-section_button {
+  background-color: var(--layout-secondary);
+  color: var(--layout-primary);
+  padding: 1rem 1.3rem;
+  display: inline-block;
+  font-family: var(--heading-font-family);
+  letter-spacing: 0.12rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 3rem;
+  text-transform: capitalize;
+}
+.event-section_button:hover ,
+.event-section_button:focus {
+  color : var(--layout-primary);
+  background-color: var(--btn-hover);
+  text-decoration: none;
+  box-shadow: 3px 3px 5px #000;
+
+}
+

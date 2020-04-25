@@ -18,8 +18,8 @@ const initialState = {
   emailError: "",
   subjectError: "",
   messageError: "",
-  isSendingSuccess: false,
-  isSendingFailed: false,
+  sentSuccessfully: false,
+  sentFaild: false,
 };
 
 class Form extends Component {
@@ -103,10 +103,10 @@ class Form extends Component {
         message,
       })
         .then(() => {
-          this.setState({ isSendingSuccess: true });
+          this.setState({ sentSuccessfully: true });
         })
         .catch((err) => {
-          this.setState({ isSendingFailed: true });
+          this.setState({ sentFaild: true });
         });
     }
   };
@@ -124,10 +124,10 @@ class Form extends Component {
       emailError,
       subjectError,
       messageError,
-      isSendingFailed,
-      isSendingSuccess,
+      sentFaild,
+      sentSuccessfully,
     } = this.state;
-    return isSendingSuccess ? (
+    return sentSuccessfully ? (
       <section className="col-lg m-auto">
         <svg
           className="bi bi-check-circle"
@@ -154,9 +154,9 @@ class Form extends Component {
       </section>
     ) : (
       <form className="col-md" onSubmit={this.onFormSubmit}>
-        {isSendingFailed ? (
+        {sentFaild ? (
           <section>
-            <small className="text-danger" aria-live="polite">
+            <small className="text-danger">
               Error sending the message, please try again later!
             </small>
           </section>
