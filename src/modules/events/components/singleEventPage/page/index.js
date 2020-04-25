@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+
 import { Helmet } from "react-helmet";
-import Layout from "shared/layout";
+
 import Gallery from "../components/Gallery/Gallery";
 import EventDetails from "../components/EventDetails/EventDetails";
+
 import { getEvents } from "modules/events/services/events.service";
+
 import styles from "./style.module.css";
 
 class SingleEventPage extends Component {
@@ -49,7 +52,7 @@ class SingleEventPage extends Component {
     } = this.state.event;
 
     return (
-      <Layout>
+      <>
         {this.state.notFound ? (
           <section className="my-5 py-5">
             <h1 className="text-center my-5 py-5">
@@ -99,7 +102,7 @@ class SingleEventPage extends Component {
             </div>
           </div>
         )}
-      </Layout>
+      </>
     );
   }
 }

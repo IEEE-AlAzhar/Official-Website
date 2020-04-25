@@ -5,9 +5,6 @@ import Footer from "shared/footer";
 import "./style.css";
 
 export default class Layout extends Component {
-  componentDidMount() {
-    console.log("layout");
-  }
   render() {
     let { children } = this.props;
     return (

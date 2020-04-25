@@ -1,11 +1,11 @@
 .side-drawer {
   height: 100%;
-  background: white;
+  background-color: var(--layout-primary);
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
-  width: 70%;
+  width: 40%;
   max-width: 400px;
   z-index: 200;
   transform: translateX(-100%);
@@ -14,4 +14,38 @@
 
 .side-drawer--opened {
   transform: translateX(0);
+}
+
+.side-drawer__closer {
+  color: var(--text-primary);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0.4rem;
+  top: 1rem;
+}
+
+.side-drawer__list {
+  margin-top: 25%;
+}
+
+.side-drawer__item {
+  padding: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.side-drawer__link {
+  margin: 0 0.1rem;
+  transition: all 0.2s;
+  color: var(--text-secondary);
+  padding-bottom: 1rem;
+}
+
+.side-drawer__link:hover {
+  text-decoration: none;
+}
+
+.side-drawer__item .side-drawer__link--active,
+.side-drawer__link:hover {
+  color: var(--btn-hover);
 }
