@@ -35,7 +35,7 @@ export default class EventsListPage extends Component {
                 }
               })
             ) : (
-              <p>Loading ...</p>
+              <span>Loading ...</span>
             )}
             <h2 className={styles[`past-heading`]}>Past Events</h2>
             {this.state.eventsList ? (
@@ -51,7 +51,7 @@ export default class EventsListPage extends Component {
                 }
               })
             ) : (
-              <p>Loading ...</p>
+              <span>Loading ...</span>
             )}
           </div>
         </Layout>
