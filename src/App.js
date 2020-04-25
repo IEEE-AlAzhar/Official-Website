@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import routes from "globals/routes";
 import { ThemeProvider } from "globals/contexts/theme.context";
 import { darkThemePonyfill, lightThemePonyfill } from "globals/cssVarsPonyfill";
+
+import Layout from "shared/layout";
+
 export default class App extends Component {
   static contextType = ThemeProvider;
 
@@ -31,11 +39,14 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          {routes.map((route, index) =>
-            this.renderSingleRoute(index, route.path, route.component)
-          )}
-        </Switch>
+        <Layout>
+          <Switch>
+            {routes.map((route, index) =>
+              this.renderSingleRoute(index, route.path, route.component)
+            )}
+            <Redirect to="/not-found" />
+          </Switch>
+        </Layout>
       </Router>
     );
   }
