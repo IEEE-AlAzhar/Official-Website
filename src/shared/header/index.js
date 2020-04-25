@@ -15,10 +15,35 @@ import "./style.css";
 export default class Header extends Component {
   static contextType = ThemeProvider;
 
+  state = {
+    isMenuOpened: false,
+  };
+
+  componentDidMount() {
+    document.body.addEventListener("click", (e) => {
+      console.log(e.target);
+      this.setOpenState(false);
+    });
+  }
+
   skipToMainContent = (e) => {
     e.preventDefault();
 
     document.querySelector(`${e.target.getAttribute("href")}`).focus();
+  };
+
+  setOpenState = (status) => {
+    if (typeof status === "boolean")
+      this.setState({
+        isMenuOpened: status,
+      });
+  };
+
+  // close the menu
+  closeMenu = (e) => {
+    e.stopPropagation();
+
+    this.setOpenState(false);
   };
 
   renderNavbarLinks = () =>
@@ -70,6 +95,7 @@ export default class Header extends Component {
           aria-controls="navbarNavDropdown"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => this.setOpenState(true)}
         >
           <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
