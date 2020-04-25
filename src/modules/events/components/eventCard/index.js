@@ -48,7 +48,7 @@ class EventCard extends Component {
               <span> {event.startDate}</span>
             </div>
             <div className={styles["event-card-SubDescription_info"]}>
-              {event.location.length ? (
+              {event.location && event.location.length ? (
                 <>
                   <FontAwesomeIcon
                     icon={faMapMarkerAlt}

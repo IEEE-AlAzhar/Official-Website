@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+
 import { Helmet } from "react-helmet";
-import Layout from "shared/layout";
+
 import Icon from "../icon/index";
 import Form from "../form/index";
+
 import styles from "./style.module.css";
+
 class ContactPage extends Component {
   render() {
     return (
-      <Layout>
+      <>
         <Helmet>
           <title>Contact Us</title>
         </Helmet>
@@ -20,7 +23,7 @@ class ContactPage extends Component {
             <Form />
           </section>
         </div>
-      </Layout>
+      </>
     );
   }
 }

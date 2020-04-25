@@ -48,6 +48,10 @@ body {
   background-color: var(--layout-primary) !important;
 }
 
+body.freezed {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
