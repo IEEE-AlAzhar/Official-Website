@@ -18,38 +18,41 @@ export default class EventsListPage extends Component {
   render() {
     return (
       <>
-        {this.state.eventsList ? console.log(this.state.eventsList) : null}
         <Layout>
           <h1 className={styles[`events-heading`]}>Our Events</h1>
-          <br />
+          <h2 className={styles[`events-heading`]}>Upcoming Events</h2>
           <div className={styles[`events-container`]}>
-            {this.state.eventsList
-              ? this.state.eventsList.map((event) => {
-                  if (event.status === "upcoming") {
-                    return (
-                      <div className={styles["upcoming-events"]}>
-                        <EventCard event={event} />
-                      </div>
-                    );
-                  } else {
-                    return null;
-                  }
-                })
-              : null}
-            <h1 className={styles[`past-heading`]}>Past events</h1>
-            {this.state.eventsList
-              ? this.state.eventsList.map((event) => {
-                  if (event.status !== "upcoming") {
-                    return (
-                      <div>
-                        <EventCard event={event} />
-                      </div>
-                    );
-                  } else {
-                    return null;
-                  }
-                })
-              : null}
+            {this.state.eventsList ? (
+              this.state.eventsList.map((event) => {
+                if (event.status === "upcoming") {
+                  return (
+                    <div className={styles["upcoming-events"]}>
+                      <EventCard event={event} />
+                    </div>
+                  );
+                } else {
+                  return null;
+                }
+              })
+            ) : (
+              <span>Loading ...</span>
+            )}
+            <h2 className={styles[`past-heading`]}>Past Events</h2>
+            {this.state.eventsList ? (
+              this.state.eventsList.map((event) => {
+                if (event.status !== "upcoming") {
+                  return (
+                    <div>
+                      <EventCard event={event} />
+                    </div>
+                  );
+                } else {
+                  return null;
+                }
+              })
+            ) : (
+              <span>Loading ...</span>
+            )}
           </div>
         </Layout>
       </>
