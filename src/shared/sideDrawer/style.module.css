@@ -5,11 +5,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 55%;
   max-width: 400px;
   z-index: 200;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-out;
 }
 
 .side-drawer--opened {

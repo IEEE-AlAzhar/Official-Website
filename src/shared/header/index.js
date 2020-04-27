@@ -108,12 +108,10 @@ export default class Header extends Component {
           <span className="sr-only"> Link to Home page </span>
         </a>
 
-        {isMenuOpened && (
-          <SideDrawer
-            isOpened={isMenuOpened}
-            closeSideDrawer={() => this.setOpenState(false)}
-          />
-        )}
+        <SideDrawer
+          isOpened={isMenuOpened}
+          closeSideDrawer={() => this.setOpenState(false)}
+        />
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ml-auto text-right">
             {this.renderNavbarLinks()}
