@@ -5,6 +5,10 @@ footer {
   border-top: 1px solid #fff;
 }
 
+.social-list__heading {
+  color: #fff;
+}
+
 footer .social-list__link {
   font-size: var(--heading-2-font-size);
   color: #fff;

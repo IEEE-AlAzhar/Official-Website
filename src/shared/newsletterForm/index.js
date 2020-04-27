@@ -65,7 +65,6 @@ export default class NewsletterForm extends Component {
             id="newsletter"
             className={`form-control ${styles["subscribe-form__input"]}`}
             placeholder="Type your email here"
-            aria-label="Get our latest news"
             value={email}
             onChange={this.handleChange}
             name="email"
@@ -83,7 +82,7 @@ export default class NewsletterForm extends Component {
           <span
             className={msg.type === "error" ? "text-danger" : "text-success"}
           >
-            <small>{msg.body}</small>
+            <small aria-live="assertive">{msg.body}</small>
           </span>
         )}
       </form>

@@ -14,8 +14,12 @@
 nav.navbar {
   background-color: var(--layout-primary);
   padding: 0;
-  border-bottom: 1px solid var(--layout-secondary);
+  box-shadow: 4px 2px 15px 10px #000;
   overflow: hidden;
+}
+
+nav.navbar .navbar-toggler{
+  position: absolute;
 }
 
 .dark-theme nav.navbar .navbar-toggler,
@@ -46,7 +50,7 @@ nav.navbar {
     margin-bottom: 0.7rem;
   }
 
-  .active,
+  .nav-item .active,
   .navbar__link:hover {
     border-bottom: none;
   }
@@ -56,7 +60,7 @@ nav.navbar {
   text-decoration: none;
 }
 
-.active,
+.nav-item .active,
 .navbar__link:hover {
   border-bottom: 3px solid;
   color: var(--btn-hover);

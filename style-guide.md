@@ -26,6 +26,7 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - `--layout-secondary`: #0a111a; `// used for buttons, borders and cards' background`
 - `--text-primary`: #242627; `// used for paragraphs text`
 - `--text-secondary`: #0a111a; `// used for headings and side notes text`
+- `--background-secondary`: #0a111a; `// used for cards background`
 - `--btn-hover`: #024b88; `// used for hover on buttons`
 
 ### dark-theme:
@@ -34,6 +35,7 @@ Make sure to read these guidelines to be in sync with us in our process and to m
 - `--layout-secondary`: #1c7fd0; `// used for buttons, borders and cards' background`
 - `--text-primary`: #fff; `// used for paragraphs text`
 - `--text-secondary`: #1c7fd0; `// used for headings and side notes text`
+- `--background-secondary`: #343a40; `// used for cards background`
 - `--btn-hover`: #fff; `// used for hover on buttons`
 
 > To test the dark mode, add `dark-theme` class to the container of the component you are working on and use the above variables.

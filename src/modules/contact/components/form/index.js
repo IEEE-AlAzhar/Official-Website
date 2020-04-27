@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import sendMessage from "../../services/contact.service";
-import {
-  EmailValid,
-  firstNameValid,
-  lastNameValid,
-} from "../../services/validation.service";
+import sendMessage from "modules/contact/services/contact.service";
+import { isValidText } from "modules/contact/services/validation.service";
+import { isEmailValid } from "shared/services/validation.service";
+
 import styles from "./style.module.css";
 
 const initialState = {
@@ -20,8 +18,8 @@ const initialState = {
   emailError: "",
   subjectError: "",
   messageError: "",
-  sendingSuccess: false,
-  sendingFailed: false,
+  sentSuccessfully: false,
+  sentFaild: false,
 };
 
 class Form extends Component {
@@ -43,19 +41,19 @@ class Form extends Component {
 
     if (!firstName) {
       firstNameError = "Please enter your first name";
-    } else if (!firstNameValid(firstName)) {
+    } else if (!isValidText(firstName)) {
       firstNameError = "Only characters are allowed";
     }
 
     if (!lastName) {
       lastNameError = "Please enter your last name";
-    } else if (!lastNameValid(lastName)) {
+    } else if (!isValidText(lastName)) {
       lastNameError = "Only characters are allowed";
     }
 
     if (!email) {
       emailError = "Please enter email";
-    } else if (!EmailValid(email)) {
+    } else if (!isEmailValid(email)) {
       emailError = "Please enter a valid email";
     }
 
@@ -104,11 +102,11 @@ class Form extends Component {
         subject,
         message,
       })
-        .then((data) => {
-          this.setState({ sendingSuccess: true });
+        .then(() => {
+          this.setState({ sentSuccessfully: true });
         })
         .catch((err) => {
-          this.setState({ sendingFailed: true });
+          this.setState({ sentFaild: true });
         });
     }
   };
@@ -126,10 +124,10 @@ class Form extends Component {
       emailError,
       subjectError,
       messageError,
-      sendingFailed,
-      sendingSuccess,
+      sentFaild,
+      sentSuccessfully,
     } = this.state;
-    return sendingSuccess ? (
+    return sentSuccessfully ? (
       <section className="col-lg m-auto">
         <svg
           className="bi bi-check-circle"
@@ -156,7 +154,7 @@ class Form extends Component {
       </section>
     ) : (
       <form className="col-md" onSubmit={this.onFormSubmit}>
-        {sendingFailed ? (
+        {sentFaild ? (
           <section>
             <small className="text-danger">
               Error sending the message, please try again later!
@@ -175,7 +173,10 @@ class Form extends Component {
               aria-label="First name"
             />
             <aside className="text-left">
-              <small className={`text-danger ${styles["error-message"]}`}>
+              <small
+                className={`text-danger ${styles["error-message"]}`}
+                aria-live="assertive"
+              >
                 {firstNameError}
               </small>
             </aside>
@@ -191,7 +192,10 @@ class Form extends Component {
               aria-label="Last Name"
             />
             <aside className="text-left">
-              <small className={`text-danger ${styles["error-message"]}`}>
+              <small
+                className={`text-danger ${styles["error-message"]}`}
+                aria-live="assertive"
+              >
                 {lastNameError}
               </small>
             </aside>
@@ -207,7 +211,10 @@ class Form extends Component {
             aria-label="Phone"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {phoneError}
             </small>
           </aside>
@@ -221,7 +228,10 @@ class Form extends Component {
             aria-label="Email"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {emailError}
             </small>
           </aside>
@@ -236,7 +246,10 @@ class Form extends Component {
             aria-label="Subject"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {subjectError}
             </small>
           </aside>
@@ -251,7 +264,10 @@ class Form extends Component {
             aria-label="Message"
           />
           <aside className="text-left">
-            <small className={`text-danger ${styles["error-message"]}`}>
+            <small
+              className={`text-danger ${styles["error-message"]}`}
+              aria-live="assertive"
+            >
               {messageError}
             </small>
           </aside>
