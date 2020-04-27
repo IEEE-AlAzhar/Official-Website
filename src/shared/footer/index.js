@@ -43,7 +43,7 @@ export default class Footer extends Component {
         <div className="d-sm-flex container justify-content-between">
           <NewsletterForm />
 
-          <section className="text-center mt-5">
+          <section className="text-center mt-5 mt-sm-0">
             <h2 className={styles["social-list__heading"]}> Follow us </h2>
             <ul className="list-unstyled">{this.renderSocialList()}</ul>
           </section>
