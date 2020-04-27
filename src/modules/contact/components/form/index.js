@@ -162,7 +162,7 @@ class Form extends Component {
           </section>
         ) : null}
         <section className="form-row my-3">
-          <span className="col">
+          <span className="col-md-6">
             <input
               onChange={this.inputChangeHandler}
               name="firstName"
@@ -181,7 +181,7 @@ class Form extends Component {
               </small>
             </aside>
           </span>
-          <span className="col">
+          <span className="col-md-6 mt-3 mt-md-0">
             <input
               onChange={this.inputChangeHandler}
               name="lastName"
