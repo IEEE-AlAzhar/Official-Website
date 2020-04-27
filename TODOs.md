@@ -8,3 +8,4 @@
 8. Add `swipe` effect to the header side drawer.
 9. Add background shapes to the body.
 10. Make the style of `NotFoundPage`.
+11. Add float button to the layout to be shown if there's upcoming event.
