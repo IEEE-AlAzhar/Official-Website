@@ -37,9 +37,6 @@ export default class SideDrawer extends Component {
         return "";
       }
     });
-  componentWillUnmount() {
-    console.log("side unmounted");
-  }
 
   render() {
     let { isOpened, closeSideDrawer } = this.props;
