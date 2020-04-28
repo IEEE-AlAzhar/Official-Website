@@ -13,34 +13,25 @@ export default class TeamServicesSection extends Component {
             {data.map((data, index) => {
               return (
                 <div key={index} className="col-lg-4 col-md-6 col-sm-12">
-                  <div className="container">
-                    <div
-                      key={index}
-                      className={styles["team-service-section"]}
-                      style={{ width: "20rem" }}
-                    >
-                      <img
-                        src={data.cover}
-                        alt="this is cover photo"
-                        style={{ height: "15rem" }}
-                      />
-                      <div className={styles["team-service-section_body"]}>
-                        <h3 className={styles["team-service-section_title"]}>
-                          {data.title}
-                        </h3>
-                        <p
-                          className={styles["team-service-section_description"]}
-                        >
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </p>
-                        <Link
-                          to="/sevice/id"
-                          className={styles["team-service-section_button"]}
-                        >
-                          See More
-                        </Link>
-                      </div>
+                  <div className={styles["team-service-section_container"]}>
+                    <img
+                      className={styles["team-service-section_cover"]}
+                      src={data.cover}
+                      alt="Service Cover"
+                    />
+                    <div className={styles["team-service-section_content"]}>
+                      <h3 className={styles["team-service-section_title"]}>
+                        {data.title}
+                      </h3>
+                      <p className={styles["team-service-section_description"]}>
+                        {data.description.slice(0, 100)}...
+                      </p>
+                      <Link
+                        className={styles["team-service-section_button"]}
+                        to={data.id}
+                      >
+                        discover the details
+                      </Link>
                     </div>
                   </div>
                 </div>

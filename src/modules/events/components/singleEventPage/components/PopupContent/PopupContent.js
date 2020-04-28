@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FormBuilder from "langleyfoxall/react-dynamic-form-builder";
+import FormBuilder from "@langleyfoxall/react-dynamic-form-builder";
 import { sendEventForm } from "modules/events/services/events.service";
 import styles from "./style.module.css";
 
