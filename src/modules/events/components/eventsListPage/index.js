@@ -29,7 +29,7 @@ export default class EventsListPage extends Component {
                     if (event.status === "upcoming") {
                       return (
                         <div className="lg-col-12 md-col-12 sm-col-12 mt-4">
-                          <EventCard event={event} />
+                          <EventCard event={event} key={event.id} />
                         </div>
                       );
                     } else {
@@ -46,7 +46,7 @@ export default class EventsListPage extends Component {
                       if (event.status !== "upcoming") {
                         return (
                           <div className="col-lg-4 col-md-6 col-sm-12 mt-4">
-                            <EventCard event={event} />
+                            <EventCard event={event} key={event.id} />
                           </div>
                         );
                       } else {
