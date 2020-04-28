@@ -1,11 +1,15 @@
 
 .events-heading{
     text-align: center;
-    margin-top:7rem;
-
+    margin: 5% 0 5% 0;
 }
 .past-heading{
     margin: 5% 0 5% 0;
+    text-align: center;
 
+}
+hr{
+    height: 1vh;
+    background-color: #007bff;
 }
 
