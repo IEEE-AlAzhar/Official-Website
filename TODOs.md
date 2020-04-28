@@ -9,3 +9,5 @@
 9. Add background shapes to the body.
 10. Make the style of `NotFoundPage`.
 11. Add float button to the layout to be shown if there's upcoming event.
+12. Add `isActive` to the form of the event.
+13. Add `loading` component.
