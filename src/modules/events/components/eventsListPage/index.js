@@ -19,40 +19,46 @@ export default class EventsListPage extends Component {
     return (
       <>
         <Layout>
-          <h1 className={styles[`events-heading`]}>Our Events</h1>
-          <h2 className={styles[`events-heading`]}>Upcoming Events</h2>
-          <div className={styles[`events-container`]}>
-            {this.state.eventsList ? (
-              this.state.eventsList.map((event) => {
-                if (event.status === "upcoming") {
-                  return (
-                    <div className={styles["upcoming-events"]}>
-                      <EventCard event={event} />
-                    </div>
-                  );
-                } else {
-                  return null;
-                }
-              })
-            ) : (
-              <span>Loading ...</span>
-            )}
-            <h2 className={styles[`past-heading`]}>Past Events</h2>
-            {this.state.eventsList ? (
-              this.state.eventsList.map((event) => {
-                if (event.status !== "upcoming") {
-                  return (
-                    <div>
-                      <EventCard event={event} />
-                    </div>
-                  );
-                } else {
-                  return null;
-                }
-              })
-            ) : (
-              <span>Loading ...</span>
-            )}
+          <div className={styles[`events-list`]}>
+            <div className="container">
+              <h1 className={styles[`events-heading`]}>Our Events</h1>
+              <h2 className={styles[`events-heading`]}>Upcoming Events</h2>
+              <div className="row">
+                {this.state.eventsList ? (
+                  this.state.eventsList.map((event) => {
+                    if (event.status === "upcoming") {
+                      return (
+                        <div className="lg-col-12 md-col-12 sm-col-12 mt-4">
+                          <EventCard event={event} />
+                        </div>
+                      );
+                    } else {
+                      return null;
+                    }
+                  })
+                ) : (
+                  <span>Loading ...</span>
+                )}
+                <h2 className={styles[`past-heading`]}>Past Events</h2>
+                <div className="row">
+                  {this.state.eventsList ? (
+                    this.state.eventsList.map((event) => {
+                      if (event.status !== "upcoming") {
+                        return (
+                          <div className="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <EventCard event={event} />
+                          </div>
+                        );
+                      } else {
+                        return null;
+                      }
+                    })
+                  ) : (
+                    <span>Loading ...</span>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </Layout>
       </>
