@@ -11,14 +11,46 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 import "./style.css";
+import SideDrawer from "shared/sideDrawer";
 
 export default class Header extends Component {
   static contextType = ThemeProvider;
+
+  state = {
+    isMenuOpened: false,
+  };
 
   skipToMainContent = (e) => {
     e.preventDefault();
 
     document.querySelector(`${e.target.getAttribute("href")}`).focus();
+  };
+
+  componentDidMount() {
+    document.body.addEventListener("click", (e) => {
+      let navbar = document.querySelector(".navbar");
+      if (!navbar.contains(e.target) || e.target.id === "sideDrawerLink") {
+        setTimeout(() => this.setOpenState(false), 140);
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    document.body.removeEventListener("click", () => {});
+  }
+
+  setOpenState = (status) => {
+    if (typeof status === "boolean")
+      this.setState({
+        isMenuOpened: status,
+      });
+
+    // document.body.classList.add("freezed")
+  };
+
+  closeMenu = () => {
+    this.setOpenState(false);
+    // document.body.classList.remove("freeze")
   };
 
   renderNavbarLinks = () =>
@@ -43,8 +75,12 @@ export default class Header extends Component {
 
   render() {
     const { theme, toggle } = this.context;
+    let { isMenuOpened } = this.state;
     return (
-      <nav className="navbar navbar-expand-lg fixed-top" aria-label="site">
+      <nav
+        className="navbar navbar-expand-lg fixed-top d-flex"
+        aria-label="site"
+      >
         <a
           className="skip__link"
           href="#mainContent"
@@ -52,27 +88,30 @@ export default class Header extends Component {
         >
           Skip to main content
         </a>
-        <a className="navbar-brand ml-5" href="/">
+        <button
+          className="navbar-toggler ml-2"
+          type="button"
+          aria-label="Toggle navigation"
+          title="Show Side Menu"
+          onClick={() => this.setOpenState(!isMenuOpened)}
+        >
+          <FontAwesomeIcon icon={faBars} size="2x" />
+        </button>
+        <a className="navbar-brand ml-lg-5 mx-auto" href="/">
           <img
             src={theme === "light" ? Logo : LogoWhite}
             width="80"
             height="80"
-            alt="IEEE's logo"
-            title="Back to home"
+            alt=""
+            title="IEEE-Azhar Student Branch"
           />
           <span className="sr-only"> Link to Home page </span>
         </a>
-        <button
-          className="navbar-toggler mr-5"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <FontAwesomeIcon icon={faBars} size="lg" />
-        </button>
+
+        <SideDrawer
+          isOpened={isMenuOpened}
+          closeSideDrawer={() => this.setOpenState(false)}
+        />
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ml-auto text-right">
             {this.renderNavbarLinks()}
