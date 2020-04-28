@@ -1,0 +1,6 @@
+.blogs__heading {
+  padding-top: var(--section-heading-spacing);
+}
+.blogs__list {
+  padding-bottom: var(--section-y-spacing);
+}
