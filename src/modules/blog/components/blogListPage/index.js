@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import Filtrition from './componants'
 
 export default class BlogListPage extends Component {
   render() {
-    return <h1> Blog list page is ready ! </h1>;
+    return (
+      <div>
+        <Filtrition />
+      </div>
+    )
   }
 }
