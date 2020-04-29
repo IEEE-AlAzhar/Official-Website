@@ -67,6 +67,10 @@
     display: block;
     color: var(--text-primary);
   }
+  .team-service-section_container:hover .team-service-section_content,
+  .team-service-section_container:focus .team-service-section_content {
+    box-shadow: none;
+  }
   .team-service-section_title {
     color: var(--text-primary);
   }
