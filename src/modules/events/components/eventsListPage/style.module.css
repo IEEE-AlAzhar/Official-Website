@@ -1,0 +1,14 @@
+.events-heading {
+  text-align: center;
+  margin: 9rem 0 var(--section-heading-spacing) 0;
+}
+.events-heading__upcoming,
+.events-heading__past {
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+}
+hr {
+  background-color: var(--text-secondary);
+  height: 1px
+}
