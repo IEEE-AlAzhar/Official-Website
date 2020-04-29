@@ -38,7 +38,7 @@ const BlogCard = (props) => {
         </ul>
       </section>
       <section className="col-md-9 d-flex">
-        <div className={`card  ${styles["blog-card"]}`}>
+        <div className={`${styles["blog-card"]}`}>
           <Link title={title} to={`/blog/${id}/${titleSlugify(`${title}`)}`}>
             <img
               src={cover}
