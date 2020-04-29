@@ -12,6 +12,9 @@
   max-height: 100%;
   margin-bottom: 2rem;
 }
+.team-service-section_container {
+  transition: all 0.3s ease-in-out;
+}
 .team-service-section_content {
   position: absolute;
   z-index: 1;
@@ -19,7 +22,6 @@
   background-color: var(--background-secondary);
   margin-bottom: 2rem;
   display: none;
-  transition: all 0.3s ease-in-out;
   color: white;
 }
 .team-service-section_title {

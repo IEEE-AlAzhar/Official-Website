@@ -13,7 +13,10 @@ export default class TeamServicesSection extends Component {
             {data.map((data, index) => {
               return (
                 <div key={index} className="col-lg-4 col-md-6 col-sm-12">
-                  <div className={styles["team-service-section_container"]}>
+                  <div
+                    className={styles["team-service-section_container"]}
+                    tabindex="0"
+                  >
                     <img
                       className={styles["team-service-section_cover"]}
                       src={data.cover}
@@ -28,7 +31,7 @@ export default class TeamServicesSection extends Component {
                       </p>
                       <Link
                         className={styles["team-service-section_button"]}
-                        to={data.id}
+                        to="/services/{id}"
                       >
                         discover the details
                       </Link>
