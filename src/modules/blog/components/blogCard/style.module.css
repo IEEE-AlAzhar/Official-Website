@@ -5,7 +5,7 @@
 }
 
 .blog-card {
-  box-shadow: 8px 10px 18px -10px var(--layout-secondary);
+  box-shadow: 8px 10px 18px -10px #000;
   transition: all 0.3s ease;
   background: var(--layout-primary);
   border: 0;
