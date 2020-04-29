@@ -1,6 +1,6 @@
 .blog-card__image {
   display: block;
-  height: 250px;
+  height: 220px;
   object-fit: cover;
 }
 
@@ -8,6 +8,7 @@
   box-shadow: 8px 10px 18px -10px var(--layout-secondary);
   transition: all 0.3s ease;
   background: var(--layout-primary);
+  border: 0;
 }
 
 .blog-card:hover {
@@ -15,4 +16,11 @@
 }
 .blog-card:hover h2 {
   text-decoration: underline;
+}
+.blog__info {
+  background: var(--background-secondary);
+  color: #fff;
+}
+.blog__info h2 a {
+  color: #fff;
 }
