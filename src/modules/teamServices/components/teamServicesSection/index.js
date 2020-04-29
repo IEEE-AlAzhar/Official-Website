@@ -15,7 +15,7 @@ export default class TeamServicesSection extends Component {
                 <div key={index} className="col-lg-4 col-md-6 col-sm-12">
                   <div
                     className={styles["team-service-section_container"]}
-                    tabindex="0"
+                    tabIndex="0"
                   >
                     <img
                       className={styles["team-service-section_cover"]}
