@@ -25,24 +25,22 @@ export default class EventsListPage extends Component {
             <h2 className={styles[`events-heading__upcoming`]}>
               Upcoming Events
             </h2>
-            {this.state.eventsList ? (
-              this.state.eventsList.map((event) => {
-                if (event.status === "upcoming") {
-                  return (
-                    <div
-                      className="col-lg-4 col-md-6 col-sm-12  mt-4"
-                      key={event.id}
-                    >
-                      <EventCard event={event} />
-                    </div>
-                  );
-                } else {
-                  return null;
-                }
-              })
-            ) : (
-              <span>Loading ...</span>
-            )}
+            {this.state.eventsList
+              ? this.state.eventsList.map((event) => {
+                  if (event.status === "upcoming") {
+                    return (
+                      <div
+                        className="col-lg-4 col-md-6 col-sm-12  mt-4"
+                        key={event.id}
+                      >
+                        <EventCard event={event} />
+                      </div>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
+              : null}
           </section>
           <hr />
           <section className="row py-5 mb-5">
