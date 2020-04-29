@@ -31,7 +31,7 @@ export default class TeamServicesSection extends Component {
                       </p>
                       <Link
                         className={styles["team-service-section_button"]}
-                        to="/services/{id}"
+                        to={"/service/" + data.id}
                       >
                         discover the details
                       </Link>
