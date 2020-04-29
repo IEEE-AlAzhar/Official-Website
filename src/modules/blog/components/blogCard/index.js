@@ -47,7 +47,7 @@ const BlogCard = (props) => {
             />
           </Link>
           <div className={`card-body ${styles["blog__info"]}`}>
-            <h2 className={`${styles.blog__title}`}>
+            <h2>
               <Link
                 title={title}
                 to={`/blog/${id}/${titleSlugify(`${title}`)}`}
