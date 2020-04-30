@@ -1,0 +1,73 @@
+.team-service-section {
+  text-align: center;
+}
+.team-service-section_heading {
+  padding: var(--section-heading-spacing) 0;
+  text-transform: uppercase;
+}
+.team-service-section_cover {
+  z-index: -1;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 2rem;
+}
+.team-service-section_container {
+  transition: all 0.3s ease-in-out;
+}
+.team-service-section_content {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: var(--background-secondary);
+  margin-bottom: 2rem;
+  display: none;
+  color: white;
+}
+.team-service-section_title {
+  color: white;
+  padding: 2rem 0;
+}
+.team-service-section_container:hover .team-service-section_content,
+.team-service-section_container:focus .team-service-section_content {
+  display: block;
+  box-shadow: 3px 3px 5px #000;
+  width: 92.5%;
+  height: 91.5%;
+}
+.team-service-section_container:hover .team-service-section_button,
+.team-service-section_container:focus .team-service-section_button {
+  background-color: var(--btn-hover);
+  color: var(--layout-primary);
+  text-decoration: none;
+}
+.team-service-section_button {
+  background-color: var(--layout-secondary);
+  color: var(--layout-primary);
+  padding: 0.3rem 1rem;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  margin: 1rem;
+}
+.team-service-section_button:hover {
+  background-color: var(--btn-hover);
+  color: var(--layout-primary);
+  text-decoration: none;
+}
+@media (max-width: 991px) {
+  .team-service-section_cover {
+    max-height: 40%;
+  }
+  .team-service-section_content {
+    position: relative;
+    background-color: var(--btn-hover);
+    background-color: var(--layout-primary);
+    display: block;
+    color: var(--text-primary);
+  }
+  .team-service-section_title {
+    color: var(--text-primary);
+  }
+}

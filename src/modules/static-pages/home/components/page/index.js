@@ -7,6 +7,7 @@ import About from "modules/static-pages/about/components/section/index";
 import EventSection from "modules/events/components/eventsSection";
 
 import { Helmet } from "react-helmet";
+import TeamServicesSection from "modules/teamServices/components/teamServicesSection";
 
 export default class HomePage extends Component {
   render() {
@@ -25,6 +26,7 @@ export default class HomePage extends Component {
           subtitle="Our Mission: Raising the Name of Al-Azhar University"
         />
         <About />
+        <TeamServicesSection />
         <EventSection />
         <BestMembers />
       </>

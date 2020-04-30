@@ -1,0 +1,26 @@
+.blog-card__image {
+  display: block;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-card {
+  box-shadow: 8px 10px 18px -10px #000;
+  transition: all 0.3s ease;
+  background: var(--layout-primary);
+  border: 0;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+}
+.blog-card:hover h2 {
+  text-decoration: underline;
+}
+.blog__info {
+  background: var(--background-secondary);
+  color: #fff;
+}
+.blog__info h2 a {
+  color: #fff;
+}

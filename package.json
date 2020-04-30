@@ -13,6 +13,10 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+<<<<<<< HEAD
+=======
+    "bootstrap": "^4.4.1",
+>>>>>>> deb7bdabd6e63e36399fe1a00665650043e2750a
     "core-js": "^2.6.11",
     "css-vars-ponyfill": "^2.2.1",
     "husky": "^4.2.3",
