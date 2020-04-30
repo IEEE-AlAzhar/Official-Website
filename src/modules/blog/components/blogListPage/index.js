@@ -16,14 +16,14 @@ export default class BlogListPage extends Component {
   componentDidMount() {
     getBlogs().then(({ data: blogs }) => this.setState({ blogs }));
   }
-  filterCategories = (data) => {
+  handelFilterCategories = (data) => {
     console.log("Name", data);
     filterBlogs(data).then((response) => {
-      console.log("lina: ", response);
+      console.log("FilterCategories: ", response);
       this.setState()
     });
   };
-  searchCatogery(data) {
+  HandelSearchCatogery(data) {
     console.log("Data from search components: ", data.toLowerCase());
     SearchBlogs(data).then((response) => {
       console.log("search: ", response);
@@ -40,10 +40,12 @@ export default class BlogListPage extends Component {
         </Helmet>
         <h1 className={`${styles.blogs__heading} text-center`}>Blogs</h1>
         <div className="container">
-          <div className="row">
-            <FilterCategories filterCategories={this.filterCategories} />
-            <SearchCategories searchCatogery={this.searchCatogery} />
-          </div>
+          <section>
+            <div className="row">
+              <FilterCategories filterCategories={this.handelFilterCategories} />
+              <SearchCategories searchCatogery={this.HandelSearchCatogery} />
+            </div>
+          </section>
           <div className="row">
             <section className={`col-lg-8 ${styles.blogs__list}`}>
               {blogs.map((blog) => (

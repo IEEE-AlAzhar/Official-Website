@@ -22,14 +22,12 @@ export default class FilterCategory extends Component {
 
     render() {
         const { CategoryName } = this.state;
-
         return (
             <div className={`col-6 ${styles['filteredCategory']}`}>
                 <form>
                     <select className="form-control"
-                        onChange={this.handleChangeCategory}
-                    >
-                        <option value="" disabled>
+                        onChange={this.handleChangeCategory} >
+                        <option value="" >
                             Choose a  Category blogs
                         </option>
                         {CategoryName.map((Category, index) => (

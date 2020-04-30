@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import styles from "./style.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default class FilterSearch extends Component {
     constructor(props) {
@@ -18,15 +22,19 @@ export default class FilterSearch extends Component {
     };
     render() {
         return (
-            <div className="col-6 ">
-                <form onSubmit={this.onFormSubmit} className="form-group active-cyan-4">
-                    <span className="fa fa-search form-control-feedback">
-                        <input
-                            type="text"
-                            onChange={(event) => this.onTextChange(event.target.value)}
-                            className="form-control"
-                            placeholder="Search for new blogs "
-                            aria-label="Search"
+            <div className={`col-6 ${styles['searchCatogery_componant']}`}>
+                <form onSubmit={this.onFormSubmit} className={styles['searchCatogery-componant__form']}>
+                    <input
+                        type="text"
+                        onChange={(event) => this.onTextChange(event.target.value)}
+                        className={` ${styles['searchCatogery-componant__input']}`}
+                        placeholder="What are you looking for? "
+                        aria-label="Search"
+                    />
+                    <span className={styles['searchCatogery-componant__sideSearch']}>
+                        <FontAwesomeIcon
+                            icon={faSearch}
+                            className={styles['searchCatogery-componant__icon']}
                         />
                     </span>
                 </form>
