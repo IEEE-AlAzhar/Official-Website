@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-import Filtrition from './componants'
-=======
 import BlogCard from "./../blogCard/index";
 import { Helmet } from "react-helmet";
 import styles from "./style.module.css";
 import { getBlogs } from "modules/blog/services/blog.service";
->>>>>>> deb7bdabd6e63e36399fe1a00665650043e2750a
 
 export default class BlogListPage extends Component {
   state = {
@@ -18,13 +14,6 @@ export default class BlogListPage extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (
-      <div>
-        <Filtrition />
-      </div>
-    )
-=======
     const { blogs } = this.state;
     return (
       <>
@@ -43,6 +32,5 @@ export default class BlogListPage extends Component {
         </div>
       </>
     );
->>>>>>> deb7bdabd6e63e36399fe1a00665650043e2750a
   }
 }
