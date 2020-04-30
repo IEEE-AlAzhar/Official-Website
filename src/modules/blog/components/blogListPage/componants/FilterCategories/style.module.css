@@ -12,7 +12,7 @@
   cursor: pointer;
 
  }
- .searchCatogery-componant__select option:hover {
+ .filtered:last-child {
     padding: 2rem;
     background-color: var(--layout-secondary);
 
