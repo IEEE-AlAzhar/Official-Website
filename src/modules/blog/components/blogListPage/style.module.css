@@ -4,3 +4,7 @@
 .blogs__list {
   padding-bottom: var(--section-y-spacing);
 }
+.blogs_filtertion {
+  margin-top: var(--section-y-spacing);
+  padding-bottom: var(--section-y-spacing);
+}

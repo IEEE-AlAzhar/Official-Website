@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getCategoryName } from '../../../../services/blog.service'
+
 import styles from "./style.module.css";
 
 export default class FilterCategory extends Component {
@@ -24,11 +25,11 @@ export default class FilterCategory extends Component {
         const { CategoryName } = this.state;
         return (
             <div className={`col-6 ${styles['filteredCategory']}`}>
-                <form>
-                    <select className="form-control"
+                <form >
+                    <select className={styles['searchCatogery-componant__select']}
                         onChange={this.handleChangeCategory} >
                         <option value="" >
-                            Choose a  Category blogs
+                            Choose a Category blogs
                         </option>
                         {CategoryName.map((Category, index) => (
                             <option className={styles["filtered"]}
@@ -37,8 +38,9 @@ export default class FilterCategory extends Component {
                             </option>
                         ))}
                     </select>
+
                 </form>
-            </div>
+            </div >
         );
     }
 }
