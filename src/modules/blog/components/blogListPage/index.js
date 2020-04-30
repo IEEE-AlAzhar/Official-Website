@@ -40,7 +40,7 @@ export default class BlogListPage extends Component {
         </Helmet>
         <h1 className={`${styles.blogs__heading} text-center`}>Blogs</h1>
         <div className="container">
-          <section>
+          <section className={styles['blogs_filtertion']}>
             <div className="row">
               <FilterCategories filterCategories={this.handelFilterCategories} />
               <SearchCategories searchCatogery={this.HandelSearchCatogery} />

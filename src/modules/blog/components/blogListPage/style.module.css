@@ -5,6 +5,6 @@
   padding-bottom: var(--section-y-spacing);
 }
 .blogs_filtertion {
-  margin-top: var(--section-y-spacing);
+  padding-top: 1rem;
   padding-bottom: var(--section-y-spacing);
 }

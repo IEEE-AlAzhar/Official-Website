@@ -29,7 +29,7 @@ export default class FilterCategory extends Component {
                     <select className={styles['searchCatogery-componant__select']}
                         onChange={this.handleChangeCategory} >
                         <option value="" >
-                            Choose a Category blogs
+                            Choose a  Category blogs
                         </option>
                         {CategoryName.map((Category, index) => (
                             <option className={styles["filtered"]}
