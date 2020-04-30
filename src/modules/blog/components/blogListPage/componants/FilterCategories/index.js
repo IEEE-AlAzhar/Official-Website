@@ -1,30 +1,30 @@
 import React, { Component } from "react";
 import { getCategoryName } from '../../../../services/blog.service'
+import styles from "./style.module.css";
 
 export default class FilterCategory extends Component {
     state = {
         CategoryName: [],
-        Category: ""
-    };
 
+    };
     componentDidMount() {
         getCategoryName().then((response) => {
+            console.log("dada:", response);
             this.setState({ CategoryName: response.data });
-            console.log(response)
         });
     }
-    handleChangeCategory = event => {
-        this.props.filterByCategory(event.target.value);
-        this.setState({
-            CategoryName: [],
-        });
+    handleChangeCategory = (event) => {
+        console.log(event.target.value);
+        console.log("PROPS: ", this.props);
+        this.props.filterCategories(event.target.value);
+
     };
 
     render() {
         const { CategoryName } = this.state;
 
         return (
-            <div className="col-6 ">
+            <div className={`col-6 ${styles['filteredCategory']}`}>
                 <form>
                     <select className="form-control"
                         onChange={this.handleChangeCategory}
@@ -33,7 +33,8 @@ export default class FilterCategory extends Component {
                             Choose a  Category blogs
                         </option>
                         {CategoryName.map((Category, index) => (
-                            <option key={index} value={Category.CategoryName}>
+                            <option className={styles["filtered"]}
+                                key={index} value={Category.CategoryName} >
                                 {Category.categoryName.toUpperCase()}
                             </option>
                         ))}
