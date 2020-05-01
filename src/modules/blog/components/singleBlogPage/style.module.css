@@ -1,13 +1,19 @@
 .blog-title{
     font-size: 5rem;
+    padding-top: 6rem;
 }
 .blog-created{
-    text-align: center;
+    padding-bottom: 6rem;
+    
 }
 
 .blog-personaldetails__list{
     list-style: none;
     color:#1c7fd0;
+}
+
+.blog-personaldetails__item{
+    display: inline;
 }
 .social-links{
     padding: 5px;

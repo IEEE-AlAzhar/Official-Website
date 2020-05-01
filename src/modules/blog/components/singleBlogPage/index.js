@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styles from "./style.module.css";
-import { Redirect } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -11,7 +10,6 @@ import { getBlogs } from "modules/blog/services/blog.service";
 export default class SingleBlogPage extends Component {
   state = {
     blog: {},
-    status: false,
   };
   componentDidMount = () => {
     getBlogs().then((res) => {
@@ -19,7 +17,10 @@ export default class SingleBlogPage extends Component {
         (blog) => blog.id === this.props.match.params.id
       );
       if (blog) {
-        this.setState({ blog: { blog }, status: true });
+        this.setState({ blog: blog });
+        console.log(this.state);
+      } else {
+        this.props.history.push("/not-found");
       }
     });
   };
@@ -38,34 +39,52 @@ export default class SingleBlogPage extends Component {
         {this.state.status ? (
           <div className="container">
             <header className="row justify-content-center">
-              <div className="mt-5 py-5 ">
-                <h1 className={styles[`blog-title`]}>{title}</h1>
-                <p className={styles[`blog-created`]}>{createdAt}</p>
+              <div className=" col-lg-12 ">
+                <h1 className={`text-center ${styles[`blog-title`]}`}>
+                  {title}
+                </h1>
+                <p className={` text-center ${styles[`blog-created`]}`}>
+                  {createdAt}
+                </p>
+                <img
+                  src={cover}
+                  alt="blog cover"
+                  className="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2"
+                />
               </div>
             </header>
-            <section className="row ">
+            <section className="row">
               <div
-                className={`mt-5 py-5 col-lg-3 ${
+                className={`mt-5 py-5 col-lg-2 col-md-12 col-sm-12 justify-content-center ${
                   styles[`blog-personaldetails`]
                 }`}
               >
-                <ul className={styles[`blog-personaldetails__list`]}>
-                  <li>
+                {window.innerWidth <= 1200 ? <hr /> : null}
+                <ul
+                  className={`text-center ${
+                    styles[`blog-personaldetails__list`]
+                  }`}
+                >
+                  <li className={styles[`blog-personaldetails__item`]}>
                     {this.state.blog.categories
                       ? categories.map((categorie) => {
-                          return categorie.categoryName;
+                          return categorie.categoryName + ",";
                         })
                       : null}
                   </li>
-                  <li>{author}</li>
-                  <li>
-                    <a href={authorFacebook}>
+                  <br />
+                  <li className={styles[`blog-personaldetails__item`]}>
+                    {author}
+                  </li>
+                  <br />
+                  <li className={styles[`blog-personaldetails__item`]}>
+                    <a href={authorFacebook} target="_blank">
                       <FontAwesomeIcon
                         icon={faFacebook}
                         className={styles[`social-links`]}
                       />
                     </a>
-                    <a href="#">
+                    <a href="#" target="_blank">
                       <FontAwesomeIcon
                         icon={faLinkedin}
                         className={styles[`social-links`]}
@@ -79,17 +98,14 @@ export default class SingleBlogPage extends Component {
                     </a>
                   </li>
                 </ul>
+                {window.innerWidth <= 1200 ? <hr /> : null}
               </div>
-              <div className="mt-5 py-5 col-lg-9">
+              <div className="mt-5 py-5 col-lg-10 col-md-12 col-sm-12">
                 <p>{body}</p>
               </div>
             </section>
           </div>
-        ) : (
-          <>
-            <Redirect to={"/not-found"} />
-          </>
-        )}
+        ) : null}
       </>
     );
   }
