@@ -5,7 +5,7 @@
 5. Edit the colors. (choose a color pallet).
 6. Make the `NotFound` component. (DONE)
 7. Add `swipe` effect to the header side drawer.
-8. Add background shapes to the body.
-9. Make the style of `NotFoundPage`.
+9. Make the style of `NotFoundPage`. (DONE)
 10. Add float button to the layout to be shown if there's upcoming event.
 11. Add `loading` component. (DONE)
+12. Update structure section in the `readme` after finishing.

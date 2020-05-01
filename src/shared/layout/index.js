@@ -4,7 +4,6 @@ import Footer from "shared/footer";
 
 import "./style.css";
 
-
 export default class Layout extends Component {
   render() {
     let { children } = this.props;
@@ -14,6 +13,7 @@ export default class Layout extends Component {
         <main id="mainContent" tabIndex="-1">
           {children}
         </main>
+        <button className="float-notification">New Event</button>
         <Footer />
       </>
     );
