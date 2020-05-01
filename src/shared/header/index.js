@@ -8,10 +8,11 @@ import { ThemeProvider } from "globals/contexts/theme.context";
 
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import "./style.css";
 import SideDrawer from "shared/sideDrawer";
+import ThemeButton from "shared/theme-button";
 
 export default class Header extends Component {
   static contextType = ThemeProvider;
@@ -61,6 +62,7 @@ export default class Header extends Component {
             <NavLink
               exact
               className="navbar__link"
+              data-testid="navbar-link"
               activeClassName="active"
               to={route.path}
             >
@@ -93,6 +95,7 @@ export default class Header extends Component {
           type="button"
           aria-label="Toggle navigation"
           title="Show Side Menu"
+          data-testid="side-drawer-toggler"
           onClick={() => this.setOpenState(!isMenuOpened)}
         >
           <FontAwesomeIcon icon={faBars} size="2x" />
@@ -105,7 +108,6 @@ export default class Header extends Component {
             alt=""
             title="IEEE-Azhar Student Branch"
           />
-          <span className="sr-only"> Link to Home page </span>
         </a>
 
         <SideDrawer
@@ -113,25 +115,14 @@ export default class Header extends Component {
           closeSideDrawer={() => this.setOpenState(false)}
         />
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav ml-auto text-right">
+          <ul
+            className="navbar-nav ml-auto text-right"
+            data-testid="navbar-list"
+          >
             {this.renderNavbarLinks()}
           </ul>
           <div className="text-center theme-toggler">
-            <button className="btn" onClick={toggle} aria-label="Toggle theme">
-              {theme === "light" ? (
-                <FontAwesomeIcon
-                  icon={faMoon}
-                  size="2x"
-                  title="Switch to dark mode"
-                />
-              ) : (
-                <FontAwesomeIcon
-                  icon={faSun}
-                  size="2x"
-                  title="Back to light mode"
-                />
-              )}
-            </button>
+            <ThemeButton toggle={toggle} theme={theme} />
           </div>
         </div>
       </nav>
