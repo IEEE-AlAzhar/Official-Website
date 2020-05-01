@@ -28,11 +28,11 @@ class SingleEventPage extends Component {
         if (event) {
           this.setState({ event });
         } else {
-          history.push("/not-found");
+          history.push("/404");
         }
       })
       .catch((err) => {
-        history.push("/not-found");
+        history.push("/404");
       });
   };
 
