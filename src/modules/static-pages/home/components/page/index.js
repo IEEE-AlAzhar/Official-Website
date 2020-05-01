@@ -10,6 +10,9 @@ import { Helmet } from "react-helmet";
 import TeamServicesSection from "modules/teamServices/components/teamServicesSection";
 
 export default class HomePage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <>

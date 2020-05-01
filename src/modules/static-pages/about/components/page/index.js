@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Helmet } from "react-helmet";
 
@@ -8,6 +8,10 @@ import Structure from "./components/structure/index";
 import IEEEAZHARSection from "./components/IEEEAZHARSection/index";
 
 function AboutPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Helmet>

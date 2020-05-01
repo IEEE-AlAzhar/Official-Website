@@ -12,8 +12,14 @@ export default class TeamServicesSection extends Component {
           <div className="row">
             {data.map((data, index) => {
               return (
-                <div key={index} className="col-lg-4 col-md-6 col-sm-12">
-                  <div className={styles["team-service-section_container"]}>
+                <div
+                  key={index}
+                  className="col-lg-4 col-md-6 col-sm-12 overflow-hidden text-center"
+                >
+                  <Link
+                    to={`/services/${data.id}`}
+                    className={styles["team-service-section_container"]}
+                  >
                     <img
                       className={styles["team-service-section_cover"]}
                       src={data.cover}
@@ -24,16 +30,18 @@ export default class TeamServicesSection extends Component {
                         {data.title}
                       </h3>
                       <p className={styles["team-service-section_description"]}>
-                        {data.description.slice(0, 100)}...
+                        {data.description.split(" ").slice(0, 15).join(" ")}
+                        ...
                       </p>
                       <Link
+                        tabIndex="-1"
+                        to={`/services/${data.id}`}
                         className={styles["team-service-section_button"]}
-                        to={data.id}
                       >
-                        discover the details
+                        Read more about this service
                       </Link>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               );
             })}

@@ -19,6 +19,8 @@ class SingleEventPage extends Component {
   }
 
   componentDidMount = () => {
+    window.scrollTo(0, 0);
+
     const { match, history } = this.props;
     getEvents()
       .then((response) => {
