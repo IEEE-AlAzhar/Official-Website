@@ -28,6 +28,7 @@ export default class SideDrawer extends Component {
               activeClassName={styles["side-drawer__link--active"]}
               to={route.path}
               id="sideDrawerLink"
+              data-testid="side-drawer-link"
               tabIndex={this.props.isOpened ? "0" : "-1"}
             >
               {route.label}
@@ -56,10 +57,14 @@ export default class SideDrawer extends Component {
           type="button"
           aria-label="Toggle side drawer"
           title="Close Side Menu"
+          data-testid="drawer-closer"
         >
           <FontAwesomeIcon icon={faTimes} size="2x" />
         </button>
-        <ul className={`${styles["side-drawer__list"]} list-unstyled`}>
+        <ul
+          data-testid="side-drawer-list"
+          className={`${styles["side-drawer__list"]} list-unstyled`}
+        >
           {this.renderNavbarLinks()}
         </ul>
         <div className="text-center theme-toggler">
