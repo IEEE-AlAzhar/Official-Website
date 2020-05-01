@@ -45,7 +45,9 @@ export default class Footer extends Component {
 
           <section className="text-center mt-5 mt-sm-0">
             <h2 className={styles["social-list__heading"]}> Follow us </h2>
-            <ul className="list-unstyled">{this.renderSocialList()}</ul>
+            <ul className="list-unstyled" data-testid="social-list">
+              {this.renderSocialList()}
+            </ul>
           </section>
         </div>
       </footer>
