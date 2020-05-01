@@ -6,6 +6,5 @@
 6. Make the `NotFound` component. (DONE)
 7. Add `swipe` effect to the header side drawer.
 9. Make the style of `NotFoundPage`. (DONE)
-10. Add float button to the layout to be shown if there's upcoming event.
-11. Add `loading` component. (DONE)
-12. Update structure section in the `readme` after finishing.
+10. Add `loading` component. (DONE)
+11. Update structure section in the `readme` after finishing.
