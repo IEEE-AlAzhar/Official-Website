@@ -17,17 +17,17 @@ export default class BlogListPage extends Component {
     getBlogs().then(({ data: blogs }) => this.setState({ blogs }));
   }
   handelFilterCategories = (categoryName) => {
+    console.log("filter categories name  : " + categoryName);
+
     filterBlogs(categoryName).then((response) => {
       this.setState({ blogs: response.data });
       console.log(categoryName)
     });
   };
   handelSearchCategories = (titleInputValue) => {
-    console.log("search categories" + titleInputValue)
-
+    console.log("search categories : " + titleInputValue);
     SearchBlogs(titleInputValue.toLowerCase()).then((response) => {
       this.setState({ blogs: response.data });
-      console.log("search categories" + titleInputValue)
 
     });
   };
@@ -46,7 +46,7 @@ export default class BlogListPage extends Component {
               <FilterCategories
                 filterCategories={this.handelFilterCategories} />
               <SearchCategories
-                searchCatogery={this.HandelSearchCatogery} />
+                searchCatogeries={this.handelSearchCategories} />
             </div>
           </section>
           <div className="row">

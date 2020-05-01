@@ -12,13 +12,14 @@ export default class SearchCatogeries extends Component {
         };
     }
     onTextChange = (value) => {
+        console.log(value)
         this.setState({ searchField: value });
     };
     onFormSubmit = (e) => {
-        const { handelSearchCategories } = this.props;
-        const { searchField } = this.state;
         e.preventDefault();
-        handelSearchCategories(searchField);
+        const { searchCatogeries } = this.props;
+        const { searchField } = this.state;
+        searchCatogeries(searchField);
     };
     render() {
         return (
