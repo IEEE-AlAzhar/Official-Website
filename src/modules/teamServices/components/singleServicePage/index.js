@@ -9,6 +9,8 @@ export default class SingleServicePage extends Component {
   state = {};
 
   componentDidMount() {
+    window.scrollTo(0, 0);
+
     const { id } = this.props.match.params;
     let service = services.find((service) => service.id === id);
     if (!service) {
