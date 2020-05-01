@@ -1,12 +1,12 @@
 import axios from "axios";
 
-export const getCategoryName = () => axios.get("/data/categories.json");
+export const getCatogeriesNames = () => axios.get("/data/categories.json");
 
 export const getBlogs = () => {
   return axios.get("./data/blogs.json");
 };
-export const filterBlogs = (categoryId) => {
-  return axios.post(`/filter/${categoryId}`);
+export const filterBlogs = (categoryName) => {
+  return axios.post(`/filter/${categoryName}`);
 
 };
 export const SearchBlogs = (titleInputValue) => {

@@ -16,18 +16,17 @@ export default class BlogListPage extends Component {
   componentDidMount() {
     getBlogs().then(({ data: blogs }) => this.setState({ blogs }));
   }
-  handelFilterCategories = (data) => {
-    console.log("Name", data);
-    filterBlogs(data).then((response) => {
-      console.log("FilterCategories: ", response);
-      this.setState()
+  handelFilterCategories = (categoryName) => {
+    filterBlogs(categoryName).then((response) => {
+      this.setState({ blogs: response.data });
+      console.log(categoryName)
     });
   };
-  HandelSearchCatogery(data) {
-    console.log("Data from search components: ", data.toLowerCase());
-    SearchBlogs(data).then((response) => {
-      console.log("search: ", response);
-      this.setState()
+  handelSearchCategories = (titleInputValue) => {
+    SearchBlogs(titleInputValue.toLowerCase()).then((response) => {
+      this.setState({ blogs: response.data });
+      console.log("search categories" + titleInputValue)
+
     });
   };
 
@@ -42,8 +41,10 @@ export default class BlogListPage extends Component {
         <div className="container">
           <section className={styles['blogs_filtertion']}>
             <div className="row">
-              <FilterCategories filterCategories={this.handelFilterCategories} />
-              <SearchCategories searchCatogery={this.HandelSearchCatogery} />
+              <FilterCategories
+                filterCategories={this.handelFilterCategories} />
+              <SearchCategories
+                searchCatogery={this.HandelSearchCatogery} />
             </div>
           </section>
           <div className="row">
