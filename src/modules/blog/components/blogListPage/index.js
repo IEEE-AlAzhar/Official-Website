@@ -23,6 +23,8 @@ export default class BlogListPage extends Component {
     });
   };
   handelSearchCategories = (titleInputValue) => {
+    console.log("search categories" + titleInputValue)
+
     SearchBlogs(titleInputValue.toLowerCase()).then((response) => {
       this.setState({ blogs: response.data });
       console.log("search categories" + titleInputValue)

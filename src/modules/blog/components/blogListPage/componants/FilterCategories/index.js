@@ -18,6 +18,7 @@ export default class FilterCategory extends Component {
     };
 
     render() {
+
         const { catogeriesNames } = this.state;
         return (
             <div className={`col-6 ${styles["filteredCategory"]}`}>
