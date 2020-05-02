@@ -44,7 +44,7 @@ export default class App extends Component {
             {routes.map((route, index) =>
               this.renderSingleRoute(index, route.path, route.component)
             )}
-            <Redirect to="/not-found" />
+            <Redirect from="*" to="/404" />
           </Switch>
         </Layout>
       </Router>

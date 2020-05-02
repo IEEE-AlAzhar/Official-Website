@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TeamServicesSection /> tests should renders correctly 1`] = `
+<div>
+  <section
+    class="team-service-section"
+  >
+    <h2
+      class="team-service-section_heading"
+    >
+      services
+    </h2>
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+        data-testid="services-container"
+      >
+        <div
+          class="col-lg-4 col-md-6 col-sm-12 overflow-hidden text-center"
+        >
+          <a
+            class="team-service-section_container"
+            href="/services/1"
+          >
+            <img
+              alt="Service Cover"
+              class="team-service-section_cover"
+              src="https://via.placeholder.com/500?text=Service+1"
+            />
+            <div
+              class="team-service-section_content"
+            >
+              <h3
+                class="team-service-section_title"
+              >
+                Service 1
+              </h3>
+              <p
+                class="team-service-section_description"
+              >
+                <span
+                  data-testid="service-description"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus
+                </span>
+                ...
+              </p>
+              <a
+                class="team-service-section_button"
+                data-testid="service-link"
+                href="/services/1"
+                tabindex="-1"
+              >
+                Read more about this service
+              </a>
+            </div>
+          </a>
+        </div>
+        <div
+          class="col-lg-4 col-md-6 col-sm-12 overflow-hidden text-center"
+        >
+          <a
+            class="team-service-section_container"
+            href="/services/2"
+          >
+            <img
+              alt="Service Cover"
+              class="team-service-section_cover"
+              src="https://via.placeholder.com/500?text=Service+2"
+            />
+            <div
+              class="team-service-section_content"
+            >
+              <h3
+                class="team-service-section_title"
+              >
+                Service 2
+              </h3>
+              <p
+                class="team-service-section_description"
+              >
+                <span
+                  data-testid="service-description"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus
+                </span>
+                ...
+              </p>
+              <a
+                class="team-service-section_button"
+                data-testid="service-link"
+                href="/services/2"
+                tabindex="-1"
+              >
+                Read more about this service
+              </a>
+            </div>
+          </a>
+        </div>
+        <div
+          class="col-lg-4 col-md-6 col-sm-12 overflow-hidden text-center"
+        >
+          <a
+            class="team-service-section_container"
+            href="/services/3"
+          >
+            <img
+              alt="Service Cover"
+              class="team-service-section_cover"
+              src="https://via.placeholder.com/500?text=Service+3"
+            />
+            <div
+              class="team-service-section_content"
+            >
+              <h3
+                class="team-service-section_title"
+              >
+                Service 3
+              </h3>
+              <p
+                class="team-service-section_description"
+              >
+                <span
+                  data-testid="service-description"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus
+                </span>
+                ...
+              </p>
+              <a
+                class="team-service-section_button"
+                data-testid="service-link"
+                href="/services/3"
+                tabindex="-1"
+              >
+                Read more about this service
+              </a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
