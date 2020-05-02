@@ -28,7 +28,6 @@ export default class SearchCatogeries extends Component {
                 >
                     <input
                         type="text"
-                        ref={input => this.search = input}
                         value={this.state.searchField}
                         onChange={(event) => this.onTextChange(event.target.value)}
                         className={` ${styles["searchCatogery-componant__input"]}`}

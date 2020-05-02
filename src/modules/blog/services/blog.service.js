@@ -10,7 +10,6 @@ export const filterBlogs = (categoryId) => {
 
 };
 export const SearchBlogs = (titleInputValue) => {
-  //return axios.post(`/search/${titleInputValue}`);
-  return axios.get("./data/blogs.json");
+  return axios.post(`/search?guery=${titleInputValue}`);
 
 };
