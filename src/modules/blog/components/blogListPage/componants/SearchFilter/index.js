@@ -5,15 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default class SearchCatogeries extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchField: "",
-        };
-    }
+    state = {
+        searchField: "",
+    };
     onTextChange = (value) => {
         console.log(value)
         this.setState({ searchField: value });
+
     };
     onFormSubmit = (e) => {
         e.preventDefault();
@@ -23,13 +21,15 @@ export default class SearchCatogeries extends Component {
     };
     render() {
         return (
-            <div className={`col-6 ${styles["searchCatogery_componant"]}`}>
+            <div className={`col-lg-6 col-md-6 col-sm-12" ${styles["searchCatogery_componant"]}`}>
                 <form
                     onSubmit={this.onFormSubmit}
                     className={styles["searchCatogery-componant__form"]}
                 >
                     <input
                         type="text"
+                        ref={input => this.search = input}
+                        value={this.state.searchField}
                         onChange={(event) => this.onTextChange(event.target.value)}
                         className={` ${styles["searchCatogery-componant__input"]}`}
                         placeholder="What are you looking for? "

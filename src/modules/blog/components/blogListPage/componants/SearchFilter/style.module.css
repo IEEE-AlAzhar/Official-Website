@@ -32,3 +32,8 @@
   padding-top: 1rem;
   font-size: 2.5rem;
 }
+@media (max-width: 991px) {
+  .searchCatogery_componant{
+    margin-bottom: 3rem;
+  }
+}

@@ -3,8 +3,8 @@ import BlogCard from "./../blogCard/index";
 import { Helmet } from "react-helmet";
 import styles from "./style.module.css";
 import { getBlogs } from "modules/blog/services/blog.service";
-import FilterCategories from "./componants/FilterCategories";
-import SearchCategories from "./componants/SearchCategories";
+import CategoriesFilter from "./componants/CategoriesFilter";
+import SearchFilter from "./componants/SearchFilter";
 import { filterBlogs } from "../../services/blog.service";
 import { SearchBlogs } from "../../services/blog.service"
 
@@ -26,11 +26,15 @@ export default class BlogListPage extends Component {
   };
   handelSearchCategories = (titleInputValue) => {
     console.log("search categories : " + titleInputValue);
-    SearchBlogs(titleInputValue.toLowerCase()).then((response) => {
-      this.setState({ blogs: response.data });
-
+    SearchBlogs(titleInputValue.toUpperCase()).then((response) => {
+      this.setState({
+        blogs: response.data
+      });
+      console.log(response.data[1].title === titleInputValue)
     });
   };
+
+
 
   render() {
     const { blogs } = this.state;
@@ -43,10 +47,16 @@ export default class BlogListPage extends Component {
         <div className="container">
           <section className={styles['blogs_filtertion']}>
             <div className="row">
-              <FilterCategories
-                filterCategories={this.handelFilterCategories} />
-              <SearchCategories
+              <CategoriesFilter
                 searchCatogeries={this.handelSearchCategories} />
+              {
+                blogs.length > 0 ? (
+                  <SearchFilter
+                    filterCategories={this.handelFilterCategories} />
+                ) : (
+                    <p className="text-center mt-5"> No Items ! </p>
+                  )
+              }
             </div>
           </section>
           <div className="row">

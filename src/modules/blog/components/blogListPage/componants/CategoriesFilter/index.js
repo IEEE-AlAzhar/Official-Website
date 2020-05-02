@@ -21,22 +21,24 @@ export default class FilterCategory extends Component {
 
         const { catogeriesNames } = this.state;
         return (
-            <div className={`col-6 ${styles["filteredCategory"]}`}>
+            <div className={`col-lg-6 col-md-6 col-sm-12" ${styles["Category_filtered"]}`}>
                 <form>
                     <select
                         className={styles["searchCatogery-componant__select"]}
                         onChange={this.handleChangeCategory}
                     >
                         <option>Choose a Category blogs</option>
-                        {catogeriesNames.map((category, index) => (
-                            <option
-                                className={styles["filtered"]}
-                                key={index}
-                                value={category.categoryName}
-                            >
-                                {category.categoryName.toUpperCase()}
-                            </option>
-                        ))}
+                        {
+                            catogeriesNames.map((category, index) => (
+                                <option
+                                    className={styles["filtered"]}
+                                    key={index}
+                                    value={category.categoryId}
+                                >
+                                    {category.categoryName.toUpperCase()}
+                                </option>)
+                            )
+                        }
                     </select>
                 </form>
             </div>
