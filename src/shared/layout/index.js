@@ -13,7 +13,6 @@ export default class Layout extends Component {
         <main id="mainContent" tabIndex="-1">
           {children}
         </main>
-        <button className="float-notification">New Event</button>
         <Footer />
       </>
     );

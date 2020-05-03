@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import styles from "./style.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faLinkedin,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { getBlogs } from "modules/blog/services/blog.service";
 export default class SingleBlogPage extends Component {
   state = {
@@ -18,7 +14,6 @@ export default class SingleBlogPage extends Component {
       );
       if (blog) {
         this.setState({ blog: blog });
-        console.log(this.state);
       } else {
         this.props.history.push("/not-found");
       }
@@ -30,13 +25,13 @@ export default class SingleBlogPage extends Component {
       title,
       categories,
       author,
-      authorFacebook,
+      authorFacebookProfile,
       body,
       createdAt,
     } = this.state.blog;
     return (
       <>
-        {this.state.status ? (
+        {this.state.blog ? (
           <div className="container">
             <header className="row justify-content-center">
               <div className=" col-lg-12 ">
@@ -77,26 +72,20 @@ export default class SingleBlogPage extends Component {
                     {author}
                   </li>
                   <br />
-                  <li className={styles[`blog-personaldetails__item`]}>
-                    <a href={authorFacebook} target="_blank">
-                      <FontAwesomeIcon
-                        icon={faFacebook}
-                        className={styles[`social-links`]}
-                      />
-                    </a>
-                    <a href="#" target="_blank">
-                      <FontAwesomeIcon
-                        icon={faLinkedin}
-                        className={styles[`social-links`]}
-                      />
-                    </a>
-                    <a href="#">
-                      <FontAwesomeIcon
-                        icon={faGithub}
-                        className={styles[`social-links`]}
-                      />
-                    </a>
-                  </li>
+                  {authorFacebookProfile !== "" ? (
+                    <li className={styles[`blog-personaldetails__item`]}>
+                      <a
+                        href={authorFacebookProfile}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FontAwesomeIcon
+                          icon={faFacebook}
+                          className={styles[`social-links`]}
+                        />
+                      </a>
+                    </li>
+                  ) : null}
                 </ul>
                 {window.innerWidth <= 1200 ? <hr /> : null}
               </div>

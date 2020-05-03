@@ -9,7 +9,7 @@ export default class TeamServicesSection extends Component {
       <section className={styles["team-service-section"]}>
         <h2 className={styles["team-service-section_heading"]}>services</h2>
         <div className="container">
-          <div className="row">
+          <div data-testid="services-container" className="row">
             {data.map((data, index) => {
               return (
                 <div
@@ -30,11 +30,14 @@ export default class TeamServicesSection extends Component {
                         {data.title}
                       </h3>
                       <p className={styles["team-service-section_description"]}>
-                        {data.description.split(" ").slice(0, 15).join(" ")}
+                        <span data-testid="service-description">
+                          {data.description.split(" ").slice(0, 15).join(" ")}
+                        </span>
                         ...
                       </p>
                       <Link
                         tabIndex="-1"
+                        data-testid="service-link"
                         to={`/services/${data.id}`}
                         className={styles["team-service-section_button"]}
                       >
