@@ -7,9 +7,14 @@
     
 }
 
+.dark-theme .blog-personaldetails__list{
+    list-style: none;
+    color:#f00;
+}
+
 .blog-personaldetails__list{
     list-style: none;
-    color:#1c7fd0;
+    color:var(--text-secondary);
 }
 
 .blog-personaldetails__item{

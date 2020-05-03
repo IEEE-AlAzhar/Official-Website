@@ -49,6 +49,9 @@ export default class SingleBlogPage extends Component {
               </div>
             </header>
             <section className="row">
+              <div className="mt-5 py-5 col-lg-10 col-md-12 col-sm-12">
+                <p>{body}</p>
+              </div>
               <div
                 className={`mt-5 py-5 col-lg-2 col-md-12 col-sm-12 justify-content-center ${
                   styles[`blog-personaldetails`]
@@ -83,14 +86,14 @@ export default class SingleBlogPage extends Component {
                           icon={faFacebook}
                           className={styles[`social-links`]}
                         />
+                        <span className="sr-only">
+                          Author's facebook profile
+                        </span>
                       </a>
                     </li>
                   ) : null}
                 </ul>
                 {window.innerWidth <= 1200 ? <hr /> : null}
-              </div>
-              <div className="mt-5 py-5 col-lg-10 col-md-12 col-sm-12">
-                <p>{body}</p>
               </div>
             </section>
           </div>
