@@ -9,10 +9,9 @@ export default class SearchCatogeries extends Component {
         searchField: "",
     };
     onTextChange = (value) => {
-        console.log(value)
         this.setState({ searchField: value });
-
     };
+
     onFormSubmit = (e) => {
         e.preventDefault();
         const { searchCatogeries } = this.props;
