@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import BlogCard from "./../blogCard/index";
 import { Helmet } from "react-helmet";
 import styles from "./style.module.css";
+import CategoriesFilter from "../CategoriesFilter";
+import SearchFilter from "../SearchFilter";
+import { filterBlogs } from "modules/blog/services/blog.service";
+import { SearchBlogs } from "modules/blog/services/blog.service";
 import { getBlogs } from "modules/blog/services/blog.service";
-import CategoriesFilter from "./componants/CategoriesFilter";
-import SearchFilter from "./componants/SearchFilter";
-import { filterBlogs } from "../../services/blog.service";
-import { SearchBlogs } from "../../services/blog.service"
 
 export default class BlogListPage extends Component {
   state = {
@@ -19,17 +19,16 @@ export default class BlogListPage extends Component {
   handelCategoriesFiltration = (categoryId) => {
     filterBlogs(categoryId).then((response) => {
       this.setState({ blogs: response.data });
-      console.log(categoryId)
+      console.log(categoryId);
     });
   };
   handelSearchFiltration = (titleInputValue) => {
     SearchBlogs(titleInputValue.toUpperCase()).then((response) => {
       this.setState({
-        blogs: response.data
+        blogs: response.data,
       });
     });
   };
-
 
   render() {
     const { blogs } = this.state;
@@ -40,12 +39,12 @@ export default class BlogListPage extends Component {
         </Helmet>
         <h1 className={`${styles.blogs__heading} text-center`}>Blogs</h1>
         <div className="container">
-          <section className={styles['blogs_filtertion']}>
+          <section className={styles["blogs_filtertion"]}>
             <div className="row">
-              <SearchFilter
-                searchCatogeries={this.handelSearchFiltration} />
+              <SearchFilter searchCatogeries={this.handelSearchFiltration} />
               <CategoriesFilter
-                filterCategories={this.handelCategoriesFiltration} />
+                filterCategories={this.handelCategoriesFiltration}
+              />
             </div>
           </section>
           <div className="row">
