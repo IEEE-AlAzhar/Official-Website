@@ -1,0 +1,46 @@
+.Categories_filtration__select {
+  width: 100%;
+  background-color: var(--layout-secondary);
+  border: none;
+  outline: none;
+  color:#fff;
+  padding: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+  appearance: none; 
+ }
+ .Categories_filtration__select  span {
+   font-weight: bold;
+   padding-top: 9px;
+  }
+ option:hover {
+  color: blue
+}
+.Categories_filtration__form {
+  position: relative; 
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden; 
+}
+.Categories_filtration__form::after { 
+  content: '\25BC'; 
+  position: absolute; 
+  top: 8px; 
+  right: 0; 
+  color: var(--layout-primary);
+  bottom: 0; 
+  font-size: 27px;
+  padding: 0 1em; 
+  background:var(--layout-secondary);
+  pointer-events: none; 
+} 
+.Categories_filtration__form:hover::after { 
+  color: #fff; 
+} 
+
+.Categories_filtration__form::after { 
+  transition: .25s all ease; 
+}

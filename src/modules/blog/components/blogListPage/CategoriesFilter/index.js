@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { getCatogeriesNames } from "../../../../services/blog.service";
+import { getCategoriesNames } from "../../../services/blog.service";
 
 import styles from "./style.module.css";
 
 export default class FilterCategory extends Component {
     state = {
-        catogeriesNames: [],
+        catogeriesName: [],
     };
     componentDidMount() {
-        getCatogeriesNames().then((response) => {
-            this.setState({ catogeriesNames: response.data });
+        getCategoriesNames().then((response) => {
+            this.setState({ catogeriesName: response.data });
         });
     }
     handleChangeCategory = (event) => {
@@ -18,20 +18,18 @@ export default class FilterCategory extends Component {
     };
 
     render() {
-
-        const { catogeriesNames } = this.state;
+        const { catogeriesName } = this.state;
         return (
-            <div className={`col-lg-6 col-md-6 col-sm-12" ${styles["Category_filtered"]}`}>
-                <form>
+            <div className={`col-lg-6 col-md-6 col-sm-12" `}>
+                <form className={styles['Categories_filtration__form']}>
                     <select
-                        className={styles["searchCatogery-componant__select"]}
+                        className={styles["Categories_filtration__select"]}
                         onChange={this.handleChangeCategory}
                     >
                         <option>Choose a Category blogs</option>
                         {
-                            catogeriesNames.map((category, index) => (
+                            catogeriesName.map((category, index) => (
                                 <option
-                                    className={styles["filtered"]}
                                     key={index}
                                     value={category.categoryId}
                                 >

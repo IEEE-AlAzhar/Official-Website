@@ -3,8 +3,8 @@ import BlogCard from "./../blogCard/index";
 import { Helmet } from "react-helmet";
 import styles from "./style.module.css";
 import { getBlogs } from "modules/blog/services/blog.service";
-import CategoriesFilter from "./componants/CategoriesFilter";
-import SearchFilter from "./componants/SearchFilter";
+import CategoriesFilter from "./CategoriesFilter";
+import SearchFilter from "./SearchFilter";
 import { filterBlogs } from "../../services/blog.service";
 import { SearchBlogs } from "../../services/blog.service"
 
@@ -19,11 +19,10 @@ export default class BlogListPage extends Component {
   handelCategoriesFiltration = (categoryId) => {
     filterBlogs(categoryId).then((response) => {
       this.setState({ blogs: response.data });
-      console.log(categoryId)
     });
   };
   handelSearchFiltration = (titleInputValue) => {
-    SearchBlogs(titleInputValue.toUpperCase()).then((response) => {
+    SearchBlogs(titleInputValue.toLowerCase()).then((response) => {
       this.setState({
         blogs: response.data
       });

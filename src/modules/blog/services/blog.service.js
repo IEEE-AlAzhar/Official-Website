@@ -1,6 +1,8 @@
 import axios from "axios";
 
-export const getCatogeriesNames = () => axios.get("/data/categories.json");
+export const getCategoriesNames = () => {
+  return axios.get("/data/categories.json");
+}
 
 export const getBlogs = () => {
   return axios.get("./data/blogs.json");
