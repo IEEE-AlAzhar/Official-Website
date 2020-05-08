@@ -3,6 +3,9 @@
   position: relative;
   display: flex;
  }
+ .search-Filtration__form:hover {
+   box-shadow: 8px 10px 18px -10px #000;
+  }
 .search-Filtration__input {
   width: 100%;
   background-color: var(--layout-secondary);

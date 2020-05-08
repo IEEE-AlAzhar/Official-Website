@@ -14,9 +14,9 @@ export default class SearchCatogeries extends Component {
 
     onFormSubmit = (e) => {
         e.preventDefault();
-        const { searchCatogeries } = this.props;
+        const { searchFiltration } = this.props;
         const { searchField } = this.state;
-        searchCatogeries(searchField);
+        searchFiltration(searchField);
     };
     render() {
         return (

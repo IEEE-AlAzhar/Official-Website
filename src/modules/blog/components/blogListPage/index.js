@@ -16,7 +16,7 @@ export default class BlogListPage extends Component {
   componentDidMount() {
     getBlogs().then(({ data: blogs }) => this.setState({ blogs }));
   }
-  handelCategoriesFiltration = (categoryId) => {
+  handelCategoryFiltration = (categoryId) => {
     filterBlogs(categoryId).then((response) => {
       this.setState({ blogs: response.data });
     });
@@ -42,9 +42,9 @@ export default class BlogListPage extends Component {
           <section className={styles['blogs_filtertion']}>
             <div className="row">
               <SearchFilter
-                searchCatogeries={this.handelSearchFiltration} />
+                searchFiltration={this.handelSearchFiltration} />
               <CategoriesFilter
-                filterCategories={this.handelCategoriesFiltration} />
+                CategoryFiltration={this.handelCategoryFiltration} />
             </div>
           </section>
           <div className="row">

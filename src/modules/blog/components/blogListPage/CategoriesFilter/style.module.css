@@ -11,13 +11,11 @@
   cursor: pointer;
   appearance: none; 
  }
- .Categories_filtration__select  span {
-   font-weight: bold;
-   padding-top: 9px;
-  }
- option:hover {
-  color: blue
-}
+ .Categories_filtration__select  * {
+  font-size: 1.5rem; 
+  background-color: var(--background-secondary) ;
+ }
+
 .Categories_filtration__form {
   position: relative; 
   width: 100%;
@@ -25,6 +23,11 @@
   display: flex;
   overflow: hidden; 
 }
+.Categories_filtration__form:hover {
+  box-shadow: 8px 10px 18px -10px #000;
+
+}
+
 .Categories_filtration__form::after { 
   content: '\25BC'; 
   position: absolute; 

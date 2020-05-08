@@ -13,8 +13,8 @@ export default class FilterCategory extends Component {
         });
     }
     handleChangeCategory = (event) => {
-        const { filterCategories } = this.props;
-        filterCategories(event.target.value);
+        const { CategoryFiltration } = this.props;
+        CategoryFiltration(event.target.value);
     };
 
     render() {
