@@ -81,3 +81,7 @@ p + p {
 .video-react-control-bar {
   font-size: 1rem;
 }
+
+.text-red {
+  color: tomato
+}

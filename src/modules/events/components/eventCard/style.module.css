@@ -1,10 +1,11 @@
 .event-card_content {
   background-color: var(--background-secondary);
   border-radius: 0.5rem;
-  transition: box-shadow 0.3s;
+  transition: all 0.3s;
 }
 .event-card_content:hover {
   box-shadow: 10px 10px 6px #000;
+  transform: scale(1.01);
 }
 
 .events-card_cover img {

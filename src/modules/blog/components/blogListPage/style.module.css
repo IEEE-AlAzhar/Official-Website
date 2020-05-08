@@ -1,5 +1,8 @@
 .blogs__heading {
-  padding-top: var(--section-heading-spacing);
+  margin: 9rem 0 var(--section-heading-spacing) 0;
+  text-align: center;
+
+
 }
 .blogs__list {
   padding-bottom: var(--section-y-spacing);

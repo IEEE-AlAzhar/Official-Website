@@ -8,6 +8,9 @@ import Form from "../form/index";
 import styles from "./style.module.css";
 
 class ContactPage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <>

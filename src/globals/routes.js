@@ -1,5 +1,6 @@
 import HomePage from "modules/static-pages/home/components/page";
 import AboutPage from "modules/static-pages/about/components/page";
+
 import SingleServicePage from "modules/teamServices/components/singleServicePage";
 
 import EventsListPage from "modules/events/components/eventsListPage";
@@ -20,5 +21,5 @@ export default [
   { path: "/blog", component: BlogListPage, label: "Blog" },
   { path: "/blog/:id/:title", component: SingleBlogPage },
   { path: "/contact-us", component: ContactPage, label: "Contact us" },
-  { path: "/not-found", component: NotFoundPage },
+  { path: "/404", component: NotFoundPage },
 ];

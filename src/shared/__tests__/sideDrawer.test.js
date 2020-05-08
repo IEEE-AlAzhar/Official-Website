@@ -8,7 +8,9 @@ import ThemeContext from "globals/contexts/theme.context";
 import routes from "globals/routes";
 
 import { BrowserRouter as Router } from "react-router-dom";
-import Header from "shared/header";
+import SideDrawer from "shared/sideDrawer";
+
+afterEach(() => cleanup());
 
 // To mock window.matchMedia fn
 Object.defineProperty(window, "matchMedia", {
@@ -25,56 +27,54 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
-afterEach(() => cleanup());
-
-describe("<Header /> tests", () => {
-  it("toggler button should open side drawer on click", () => {
+describe("<SideDrawer /> tests", () => {
+  it("should close side drawer on click", () => {
     let { getByTestId } = render(
       <ThemeContext>
         <Router>
-          <Header />
+          <SideDrawer />
         </Router>
       </ThemeContext>
     );
 
-    const openerBtn = getByTestId("side-drawer-toggler");
+    const closerBtn = getByTestId("drawer-closer");
     const sideDrawer = getByTestId("side-drawer-menu");
 
-    fireEvent.click(openerBtn);
+    fireEvent.click(closerBtn);
 
-    expect(sideDrawer).toHaveClass("side-drawer--opened");
+    expect(sideDrawer).not.toHaveClass("side-drawer--opened");
   });
 
   it("should have the correct number of links", () => {
     let { getByTestId } = render(
       <ThemeContext>
         <Router>
-          <Header />
+          <SideDrawer />
         </Router>
       </ThemeContext>
     );
-    const navbarList = getByTestId("navbar-list");
+    const navbarList = getByTestId("side-drawer-list");
     let routesWithLabel = routes.filter((route) => !!route.label);
 
     expect(navbarList.children.length).toEqual(routesWithLabel.length);
   });
 
-  it("should get the 'active' class on click", () => {
+  it("should be active on click", () => {
     let { getAllByTestId } = render(
       <ThemeContext>
         <Router>
-          <Header />
+          <SideDrawer />
         </Router>
       </ThemeContext>
     );
-    const navbarLinks = getAllByTestId("navbar-link");
+    const sideDrawerLinks = getAllByTestId("side-drawer-link");
 
-    fireEvent.click(navbarLinks[0]);
+    fireEvent.click(sideDrawerLinks[0]);
 
-    expect(navbarLinks[0]).toHaveClass("active");
+    expect(sideDrawerLinks[0]).toHaveClass("side-drawer__link--active");
 
-    fireEvent.click(navbarLinks[1]);
+    fireEvent.click(sideDrawerLinks[1]);
 
-    expect(navbarLinks[1]).toHaveClass("active");
+    expect(sideDrawerLinks[1]).toHaveClass("side-drawer__link--active");
   });
 });

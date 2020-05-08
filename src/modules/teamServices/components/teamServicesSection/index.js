@@ -9,13 +9,16 @@ export default class TeamServicesSection extends Component {
       <section className={styles["team-service-section"]}>
         <h2 className={styles["team-service-section_heading"]}>services</h2>
         <div className="container">
-          <div className="row">
+          <div data-testid="services-container" className="row">
             {data.map((data, index) => {
               return (
-                <div key={index} className="col-lg-4 col-md-6 col-sm-12">
-                  <div
+                <div
+                  key={index}
+                  className="col-lg-4 col-md-6 col-sm-12 overflow-hidden text-center"
+                >
+                  <Link
+                    to={`/services/${data.id}`}
                     className={styles["team-service-section_container"]}
-                    tabIndex="0"
                   >
                     <img
                       className={styles["team-service-section_cover"]}
@@ -27,16 +30,21 @@ export default class TeamServicesSection extends Component {
                         {data.title}
                       </h3>
                       <p className={styles["team-service-section_description"]}>
-                        {data.description.slice(0, 100)}...
+                        <span data-testid="service-description">
+                          {data.description.split(" ").slice(0, 15).join(" ")}
+                        </span>
+                        ...
                       </p>
                       <Link
+                        tabIndex="-1"
+                        data-testid="service-link"
+                        to={`/services/${data.id}`}
                         className={styles["team-service-section_button"]}
-                        to={"/service/" + data.id}
                       >
-                        discover the details
+                        Read more about this service
                       </Link>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               );
             })}

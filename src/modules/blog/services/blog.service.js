@@ -5,7 +5,7 @@ export const getCategoriesNames = () => {
 }
 
 export const getBlogs = () => {
-  return axios.get("./data/blogs.json");
+  return axios.get("../../data/blogs.json");
 };
 export const filterBlogs = (categoryId) => {
   return axios.post(`/filter/${categoryId}`);
