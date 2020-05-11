@@ -14,6 +14,7 @@
 .team-service-section_container {
   border-radius: 5px;
   overflow: hidden;
+  display: block;
 }
 .team-service-section_container {
   transition: all 0.3s ease-in-out;

@@ -8,9 +8,8 @@
   justify-items: center;
 }
 
-.IEEE_str_img__structureImg {
+.IEEE_str_img img {
   width: 100%;
-  height: auto;
 }
 
 .IEEE_Str_content__heading {

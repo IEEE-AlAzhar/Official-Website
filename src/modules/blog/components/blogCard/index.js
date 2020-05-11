@@ -32,7 +32,9 @@ const BlogCard = (props) => {
             </a>
           </li>
           <li className="px-md-0 px-3">
-            {new Date(`${createdAt}`).toGMTString().slice(5, 16)}{" "}
+            {new Date(`${createdAt.replace(/-/g, "/")}`)
+              .toUTCString()
+              .slice(5, 16)}{" "}
             <FontAwesomeIcon icon={faCalendarWeek} />
           </li>
         </ul>

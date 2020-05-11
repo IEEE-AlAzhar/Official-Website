@@ -6,6 +6,7 @@ const darkTheme = {
   "--text-primary": "#fff",
   "--text-secondary": "#1c7fd0",
   "--btn-hover": "#fff",
+  "--background-secondary": "#343a40",
 };
 
 const lightTheme = {
@@ -14,6 +15,7 @@ const lightTheme = {
   "--text-primary": "#242627",
   "--text-secondary": "#0a111a",
   "--btn-hover": "#024b88",
+  "--background-secondary": " #0a111a",
 };
 
 export const darkThemePonyfill = () =>
