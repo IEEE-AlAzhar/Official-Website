@@ -3,3 +3,8 @@ export const isEmailValid = (email) => {
 
   return EMAIL_REGEX.test(email);
 };
+
+export const isValidText = (text) => {
+  const SPECIAL_CHARS = /[`!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~]/;
+  return !SPECIAL_CHARS.test(text);
+};

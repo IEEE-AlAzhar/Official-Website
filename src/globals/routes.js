@@ -3,7 +3,7 @@ import AboutPage from "modules/static-pages/about/components/page";
 import SingleServicePage from "modules/teamServices/components/singleServicePage";
 
 import EventsListPage from "modules/events/components/eventsListPage";
-import SingleEventPage from "modules/events/components/singleEventPage/page";
+import SingleEventPage from "modules/events/components/singleEventPage";
 
 import BlogListPage from "modules/blog/components/blogListPage";
 import SingleBlogPage from "modules/blog/components/singleBlogPage";

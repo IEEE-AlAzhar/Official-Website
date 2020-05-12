@@ -1,46 +1,46 @@
 import React, { Component } from "react";
-import { getCatogeriesNames } from "modules/blog/services/blog.service";
+
+import CategoryService from "modules/blog/services/category.service";
 
 import styles from "./style.module.css";
 
 export default class FilterCategory extends Component {
   state = {
-    catogeriesNames: [],
+    categories: [],
   };
+
+  constructor(props) {
+    super(props);
+    this._categoryService = new CategoryService();
+  }
+
   componentDidMount() {
-    getCatogeriesNames().then((response) => {
-      this.setState({ catogeriesNames: response.data });
+    this._categoryService.list().then((response) => {
+      this.setState({ categories: response });
     });
   }
-  handleChangeCategory = (event) => {
+
+  handleChangeCategory = (categoryId) => {
     const { filterCategories } = this.props;
-    filterCategories(event.target.value);
+    filterCategories(categoryId);
   };
 
   render() {
-    const { catogeriesNames } = this.state;
+    const { categories } = this.state;
     return (
-      <div
-        className={`col-lg-6 col-md-6 col-sm-12" ${styles["Category_filtered"]}`}
-      >
-        <form>
-          <select
-            className={styles["searchCatogery-componant__select"]}
-            onChange={this.handleChangeCategory}
-          >
-            <option>Choose a Category blogs</option>
-            {catogeriesNames.map((category, index) => (
-              <option
-                className={styles["filtered"]}
-                key={index}
-                value={category.categoryId}
-              >
-                {category.categoryName.toUpperCase()}
-              </option>
-            ))}
-          </select>
-        </form>
-      </div>
+      <ul className={`list-unstyled d-flex flex-wrap my-5`}>
+        {categories.length > 0 &&
+          categories.map((category) => (
+            <li
+              key={category._id}
+              tabIndex="0"
+              className={styles.category}
+              onClick={this.handleChangeCategory.bind(this, category._id)}
+            >
+              {category.name}
+            </li>
+          ))}
+      </ul>
     );
   }
 }

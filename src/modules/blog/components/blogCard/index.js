@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCalendarWeek } from "@fortawesome/free-solid-svg-icons";
+import { parseDate } from "shared/services/date.service";
 
 const BlogCard = (props) => {
   const {
-    id,
-    author,
+    _id,
+    authorName,
     createdAt,
     title,
-    authorFacebookProfile,
+    authorProfileLink,
     cover,
-    body,
+    metaDescription,
   } = props.data;
 
   const titleSlugify = (title) => {
@@ -24,22 +25,21 @@ const BlogCard = (props) => {
         <ul className="list-unstyled pt-5 d-flex flex-row-reverse d-md-block">
           <li className="px-md-0 px-3">
             <a
-              href={authorFacebookProfile}
+              href={authorProfileLink}
               rel="noreferrer noopener"
               target="_blank"
             >
-              {author} <FontAwesomeIcon icon={faUser} />
+              {authorName} <FontAwesomeIcon icon={faUser} />
             </a>
           </li>
           <li className="px-md-0 px-3">
-            {new Date(`${createdAt}`).toGMTString().slice(5, 16)}{" "}
-            <FontAwesomeIcon icon={faCalendarWeek} />
+            {parseDate(createdAt)} <FontAwesomeIcon icon={faCalendarWeek} />
           </li>
         </ul>
       </section>
       <section className="col-md-9 d-flex">
         <div className={`card  ${styles["blog-card"]}`}>
-          <Link title={title} to={`/blog/${id}/${titleSlugify(`${title}`)}`}>
+          <Link title={title} to={`/blog/${_id}/${titleSlugify(`${title}`)}`}>
             <img
               src={cover}
               className={`${styles["blog-card__image"]} card-img-top `}
@@ -50,12 +50,12 @@ const BlogCard = (props) => {
             <h2>
               <Link
                 title={title}
-                to={`/blog/${id}/${titleSlugify(`${title}`)}`}
+                to={`/blog/${_id}/${titleSlugify(`${title}`)}`}
               >
                 {title}
               </Link>
             </h2>
-            <p className="card-text">{body.slice(0, 120).concat("....")}</p>
+            <p className="card-text">{metaDescription}</p>
           </div>
         </div>
       </section>

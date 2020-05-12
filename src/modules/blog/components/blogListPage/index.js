@@ -4,54 +4,68 @@ import { Helmet } from "react-helmet";
 import styles from "./style.module.css";
 import CategoriesFilter from "../CategoriesFilter";
 import SearchFilter from "../SearchFilter";
-import { filterBlogs } from "modules/blog/services/blog.service";
-import { SearchBlogs } from "modules/blog/services/blog.service";
-import { getBlogs } from "modules/blog/services/blog.service";
+
+import BlogService from "modules/blog/services/blog.service";
 
 export default class BlogListPage extends Component {
   state = {
     blogs: [],
+    isLoading: false,
   };
 
-  componentDidMount() {
-    getBlogs().then(({ data: blogs }) => this.setState({ blogs }));
+  constructor(props) {
+    super(props);
+    this._blogService = new BlogService();
   }
-  handelCategoriesFiltration = (categoryId) => {
-    filterBlogs(categoryId).then((response) => {
-      this.setState({ blogs: response.data });
-      console.log(categoryId);
+
+  componentDidMount() {
+    this.setState({ isLoading: true });
+    this._blogService.list().then((response) => {
+      this.setState({ blogs: response, isLoading: false });
+    });
+  }
+
+  handelFiltration = (categoryId) => {
+    this.setState({ isLoading: true });
+    this._blogService.filter(categoryId).then((response) => {
+      this.setState({ blogs: response, isLoading: false });
     });
   };
-  handelSearchFiltration = (titleInputValue) => {
-    SearchBlogs(titleInputValue.toUpperCase()).then((response) => {
+
+  handelSearch = (titleInputValue) => {
+    this.setState({ isLoading: true });
+    this._blogService.search(titleInputValue).then((response) => {
       this.setState({
-        blogs: response.data,
+        blogs: response,
+        isLoading: false,
       });
     });
   };
 
   render() {
-    const { blogs } = this.state;
+    const { blogs, isLoading } = this.state;
     return (
       <>
         <Helmet>
-          <title>Blogs</title>
+          <title>Blog | IEEE Al-Azhar Student Branch</title>
         </Helmet>
-        <h1 className={`${styles.blogs__heading} text-center`}>Blogs</h1>
+        <h1 className={`${styles.blogs__heading} text-center mb-5`}>Blog</h1>
         <div className="container">
-          <section className={styles["blogs_filtertion"]}>
-            <div className="row">
-              <SearchFilter searchCatogeries={this.handelSearchFiltration} />
-              <CategoriesFilter
-                filterCategories={this.handelCategoriesFiltration}
-              />
-            </div>
+          <section className={styles["blogs_filtration"]}>
+            <SearchFilter searchCategories={this.handelSearch} />
+            <CategoriesFilter filterCategories={this.handelFiltration} />
           </section>
           <div className="row">
             <section className={`col-lg-8 ${styles.blogs__list}`}>
-              {blogs.map((blog) => (
-                <BlogCard key={blog.id} data={blog} />
-              ))}
+              {isLoading ? (
+                <p className="text-center">Loading ...</p>
+              ) : blogs.length > 0 ? (
+                blogs.map((blog) => <BlogCard key={blog._id} data={blog} />)
+              ) : (
+                <p className="d-flex justify-content-center">
+                  No Articles found
+                </p>
+              )}
             </section>
           </div>
         </div>

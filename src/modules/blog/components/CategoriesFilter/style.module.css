@@ -1,16 +1,15 @@
-.searchCatogery-componant__select {
-  width: 100%;
-  background-color: var(--layout-secondary);
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  color:#fff;
-  padding: 1.1rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
+.category {
+  background-color: var(--background-secondary);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0.5rem;
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
+}
 
- }
-
- 
+.category:hover,
+.category:focus {
+  background-color: var(--btn-hover);
+  color: var(--layout-primary);
+  outline: 0;
+}

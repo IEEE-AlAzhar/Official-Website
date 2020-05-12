@@ -1,10 +1,12 @@
 .best-members_section {
   padding: var(--section-y-spacing) 0;
+  text-align: center;
 }
 .best-members img {
   display: block;
   margin: auto;
-  width: 50%;
+  max-width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   margin-bottom: 2rem;
   transition: all 0.3s ease;

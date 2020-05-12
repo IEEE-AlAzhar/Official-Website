@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 
 import { isEmailValid } from "shared/services/validation.service";
+import NewsLetterService from "shared/services/newsletter.service";
 
 import styles from "./style.module.css";
-import { sendEmail } from "shared/services/newsletter.service";
 
 export default class NewsletterForm extends Component {
   state = {
     email: "",
     msg: null,
   };
+
+  constructor(props) {
+    super(props);
+    this._newsLetterService = new NewsLetterService();
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -32,19 +37,31 @@ export default class NewsletterForm extends Component {
       });
     }
 
-    sendEmail(email)
+    this._newsLetterService
+      .create({ email })
       .then(() => {
         this.setState({
           msg: { type: "success", body: "Email sent successfully" },
         });
+
+        setTimeout(() => {
+          this.setState({
+            msg: null,
+          });
+        }, 3500);
       })
-      .catch(() => {
+      .catch((err) => {
         this.setState({
           msg: {
             type: "error",
-            body: "An error occurred, please try again later",
+            body: err.response.data.msg,
           },
         });
+        setTimeout(() => {
+          this.setState({
+            msg: null,
+          });
+        }, 3500);
       });
   };
 

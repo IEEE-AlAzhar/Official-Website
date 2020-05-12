@@ -12,7 +12,7 @@ class ContactPage extends Component {
     return (
       <>
         <Helmet>
-          <title>Contact Us</title>
+          <title>Contact Us | IEEE Al-Azhar Student Branch </title>
         </Helmet>
         <div className="text-center modal-dialog-centered px-3 py-2">
           <section

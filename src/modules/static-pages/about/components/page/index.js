@@ -8,6 +8,9 @@ import Structure from "./components/structure/index";
 import IEEEAZHARSection from "./components/IEEEAZHARSection/index";
 
 function AboutPage() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
