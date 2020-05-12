@@ -1,19 +1,16 @@
 import React, { Component } from "react";
-import sendMessage from "modules/contact/services/contact.service";
-import { isValidText } from "modules/contact/services/validation.service";
-import { isEmailValid } from "shared/services/validation.service";
+import MessageService from "modules/contact/services/contact.service";
+import { isEmailValid, isValidText } from "shared/services/validation.service";
 
 import styles from "./style.module.css";
 
 const initialState = {
-  firstName: "",
-  lastName: "",
+  name: "",
   phone: "",
   email: "",
   subject: "",
   message: "",
-  firstNameError: "",
-  lastNameError: "",
+  nameError: "",
   phoneError: "",
   emailError: "",
   subjectError: "",
@@ -26,29 +23,18 @@ class Form extends Component {
   constructor() {
     super();
     this.state = initialState;
+
+    this._messageService = new MessageService();
   }
 
   validate = () => {
-    const { firstName, lastName, phone, email, subject, message } = this.state;
-    let {
-      firstNameError,
-      lastNameError,
-      phoneError,
-      emailError,
-      subjectError,
-      messageError,
-    } = "";
+    const { name, phone, email, subject, message } = this.state;
+    let { nameError, phoneError, emailError, subjectError, messageError } = "";
 
-    if (!firstName) {
-      firstNameError = "Please enter your first name";
-    } else if (!isValidText(firstName)) {
-      firstNameError = "Only characters are allowed";
-    }
-
-    if (!lastName) {
-      lastNameError = "Please enter your last name";
-    } else if (!isValidText(lastName)) {
-      lastNameError = "Only characters are allowed";
+    if (!name) {
+      nameError = "Please enter your name";
+    } else if (!isValidText(name)) {
+      nameError = "Only characters are allowed";
     }
 
     if (!email) {
@@ -67,17 +53,9 @@ class Form extends Component {
       messageError = "Please enter your message";
     }
 
-    if (
-      firstNameError ||
-      lastNameError ||
-      phoneError ||
-      emailError ||
-      subjectError ||
-      messageError
-    ) {
+    if (nameError || phoneError || emailError || subjectError || messageError) {
       this.setState({
-        firstNameError,
-        lastNameError,
+        nameError,
         phoneError,
         emailError,
         subjectError,
@@ -91,17 +69,17 @@ class Form extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    const { firstName, lastName, phone, email, subject, message } = this.state;
+    const { name, phone, email, subject, message } = this.state;
     const isValid = this.validate();
     if (isValid) {
-      sendMessage({
-        firstName,
-        lastName,
-        phone,
-        email,
-        subject,
-        message,
-      })
+      this._messageService
+        .create({
+          name,
+          phone,
+          email,
+          subject,
+          message,
+        })
         .then(() => {
           this.setState({ sentSuccessfully: true });
         })
@@ -118,8 +96,7 @@ class Form extends Component {
 
   render() {
     const {
-      firstNameError,
-      lastNameError,
+      nameError,
       phoneError,
       emailError,
       subjectError,
@@ -165,59 +142,40 @@ class Form extends Component {
           <span className="col-md-6">
             <input
               onChange={this.inputChangeHandler}
-              name="firstName"
+              name="name"
               type="text"
               className="form-control rounded-pill"
-              placeholder="First name"
-              title="Only characters are allowed."
-              aria-label="First name"
+              placeholder="Name"
+              title="Only characters are allowed"
+              aria-label="name"
             />
             <aside className="text-left">
               <small
                 className={`text-danger ${styles["error-message"]}`}
                 aria-live="assertive"
               >
-                {firstNameError}
+                {nameError}
               </small>
             </aside>
           </span>
-          <span className="col-md-6 mt-3 mt-md-0">
+          <span className="col-md-6">
             <input
               onChange={this.inputChangeHandler}
-              name="lastName"
-              type="text"
-              className="form-control rounded-pill"
-              placeholder="Last name"
-              title="Only characters are allowed."
-              aria-label="Last Name"
+              name="phone"
+              type="tel"
+              className={`form-control rounded-pill ${styles.phone}`}
+              placeholder="Phone Number"
+              aria-label="Phone"
             />
             <aside className="text-left">
               <small
                 className={`text-danger ${styles["error-message"]}`}
                 aria-live="assertive"
               >
-                {lastNameError}
+                {phoneError}
               </small>
             </aside>
           </span>
-        </section>
-        <section className="form-group">
-          <input
-            onChange={this.inputChangeHandler}
-            name="phone"
-            type="number"
-            className={`form-control rounded-pill ${styles.phone}`}
-            placeholder="Phone Number"
-            aria-label="Phone"
-          />
-          <aside className="text-left">
-            <small
-              className={`text-danger ${styles["error-message"]}`}
-              aria-live="assertive"
-            >
-              {phoneError}
-            </small>
-          </aside>
         </section>
         <section className="form-group">
           <input

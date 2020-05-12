@@ -1,6 +1,8 @@
-import axios from "axios";
+import CrudService from "globals/core.service";
 
-const sendMessage = (message) =>
-  axios.post("https://ieee-azhar.herokuapp.com/api/v1/contact", message);
-
-export default sendMessage;
+export default class MessageService extends CrudService {
+  constructor() {
+    super();
+    this.initialize("/messages");
+  }
+}

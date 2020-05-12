@@ -1,5 +1,8 @@
-import axios from "axios";
+import CrudService from "globals/core.service";
 
-export const sendEmail = async (email) => {
-  return await axios.post("/newsletter", { email });
-};
+export default class NewsLetterService extends CrudService {
+  constructor() {
+    super();
+    this.initialize("/subscribers");
+  }
+}

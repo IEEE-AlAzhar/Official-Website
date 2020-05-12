@@ -7,6 +7,7 @@ import {
   faCalendarCheck,
   faCalendarTimes,
 } from "@fortawesome/free-solid-svg-icons";
+import { parseDate } from "shared/services/date.service";
 
 class EventCard extends Component {
   render() {
@@ -14,11 +15,11 @@ class EventCard extends Component {
     return (
       <section className={styles["event-card_content"]}>
         <figure className={styles["events-card_cover"]} key={event}>
-          <Link to={"/events/" + event.id}>
+          <Link to={"/events/" + event._id}>
             <img
               alt={`event ${event.title}`}
               src={event.cover}
-              key={event.id}
+              key={event._id}
             />
           </Link>
           <div className={styles["active-upcoming_event"]}>
@@ -27,14 +28,14 @@ class EventCard extends Component {
           <figcaption>
             <h3>
               <Link
-                to={"/events/" + event.id}
+                to={"/events/" + event._id}
                 className={styles["event-card_title"]}
               >
                 {event.title}
               </Link>
             </h3>
             <p className={styles["event-card_description"]}>
-              {event.description}
+              {event.metaDescription}
             </p>
           </figcaption>
         </figure>
@@ -45,7 +46,7 @@ class EventCard extends Component {
                 icon={faCalendarCheck}
                 className={styles["event-card_icon"]}
               />
-              <span> {event.startDate}</span>
+              <span> {parseDate(event.startDate)}</span>
             </div>
             <div className={styles["event-card-SubDescription_info"]}>
               {event.location && event.location.length ? (
@@ -62,7 +63,7 @@ class EventCard extends Component {
                     icon={faCalendarTimes}
                     className={styles["event-card_icon"]}
                   />
-                  <span>{event.endDate}</span>{" "}
+                  <span>{parseDate(event.endDate)}</span>{" "}
                 </>
               )}
             </div>
