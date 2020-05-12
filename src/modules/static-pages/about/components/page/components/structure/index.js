@@ -23,6 +23,7 @@ class Structure extends Component {
                     : IEEEStr2500
                 }
                 alt="IEEE Alazhar -structure-team"
+                className={styles.IEEE_str_img__structureImg}
               />
             </div>
           </div>
