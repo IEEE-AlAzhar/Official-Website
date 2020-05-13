@@ -2,20 +2,27 @@ import React, { Component } from "react";
 import styles from "./style.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { getBlogs } from "modules/blog/services/blog.service";
+import BlogService from "modules/blog/services/blog.service";
+import { parseDate } from "./../../../../shared/services/date.service";
+import { Helmet } from "react-helmet";
 export default class SingleBlogPage extends Component {
+  constructor(props) {
+    super();
+    this._blogService = new BlogService();
+  }
   state = {
     blog: {},
   };
+
   componentDidMount = () => {
-    getBlogs().then((res) => {
-      const blog = res.data.find(
-        (blog) => blog.id === this.props.match.params.id
-      );
-      if (blog) {
-        this.setState({ blog: blog });
+    const { match, history } = this.props;
+    const { id } = match.params;
+    this._blogService.getById(id).then((blog) => {
+      console.log(blog);
+      if (blog._id === id) {
+        this.setState({ blog });
       } else {
-        this.props.history.push("/not-found");
+        history.push("/404");
       }
     });
   };
@@ -24,33 +31,38 @@ export default class SingleBlogPage extends Component {
       cover,
       title,
       categories,
-      author,
-      authorFacebookProfile,
+      authorName,
+      authorProfileLink,
       body,
       createdAt,
+      metaDescription,
     } = this.state.blog;
     return (
       <>
+        <Helmet>
+          <title>{`${title} | IEEE Al-Azhar Student Branch`}</title>
+          <meta name="description" content={metaDescription} />
+        </Helmet>
         {this.state.blog ? (
           <div className="container">
             <header className="row justify-content-center">
-              <div className=" col-lg-12 ">
+              <div className="col-lg-12">
                 <h1 className={`text-center ${styles[`blog-title`]}`}>
                   {title}
                 </h1>
-                <p className={` text-center ${styles[`blog-created`]}`}>
-                  {createdAt}
+                <p className={`text-center ${styles[`blog-created`]}`}>
+                  {parseDate(createdAt)}
                 </p>
                 <img
                   src={cover}
                   alt="blog cover"
-                  className="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2"
+                  className={`col-lg-12 ${styles["blog-image"]}`}
                 />
               </div>
             </header>
             <section className="row">
               <div className="mt-5 py-5 col-lg-10 col-md-12 col-sm-12">
-                <p>{body}</p>
+                <p dangerouslySetInnerHTML={{ __html: body }}></p>
               </div>
               <div
                 className={`mt-5 py-5 col-lg-2 col-md-12 col-sm-12 justify-content-center ${
@@ -66,21 +78,22 @@ export default class SingleBlogPage extends Component {
                   <li className={styles[`blog-personaldetails__item`]}>
                     {this.state.blog.categories
                       ? categories.map((categorie) => {
-                          return categorie.categoryName + ",";
+                          return categorie.name + " ";
                         })
                       : null}
                   </li>
                   <br />
                   <li className={styles[`blog-personaldetails__item`]}>
-                    {author}
+                    {authorName}
                   </li>
                   <br />
-                  {authorFacebookProfile !== "" ? (
+                  {authorProfileLink && (
                     <li className={styles[`blog-personaldetails__item`]}>
                       <a
-                        href={authorFacebookProfile}
+                        href={authorProfileLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="profile-links"
                       >
                         <FontAwesomeIcon
                           icon={faFacebook}
@@ -91,7 +104,7 @@ export default class SingleBlogPage extends Component {
                         </span>
                       </a>
                     </li>
-                  ) : null}
+                  )}
                 </ul>
                 {window.innerWidth <= 1200 ? <hr /> : null}
               </div>
