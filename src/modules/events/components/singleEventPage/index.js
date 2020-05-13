@@ -62,6 +62,11 @@ class SingleEventPage extends Component {
             <Helmet>
               <title>{title} | IEEE Al-Azhar Student Branch </title>
               <meta name="description" content={metaDescription} />
+              <meta property="og:title" content={title} />
+              <meta property="og:url" content={window.location.origin} />
+              <meta property="og:type" content="website" />
+              <meta property="og:description" content={metaDescription} />
+              <meta property="og:image" content={cover} />
             </Helmet>
             <div className="text-center">
               <img

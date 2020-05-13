@@ -47,6 +47,11 @@ export default class SingleBlogPage extends Component {
             <Helmet>
               <title>{title}</title>
               <meta name="description" content={metaDescription} />
+              <meta property="og:title" content={title} />
+              <meta property="og:url" content={window.location.origin} />
+              <meta property="og:type" content="blog" />
+              <meta property="og:description" content={metaDescription} />
+              <meta property="og:image" content={cover} />
             </Helmet>
             <div className="container">
               <header className="row justify-content-center">

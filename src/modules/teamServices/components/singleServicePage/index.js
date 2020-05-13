@@ -29,6 +29,15 @@ export default class SingleServicePage extends Component {
             <Helmet>
               <title>{service.title}</title>
               <meta name="description" content={service.metaDescription} />
+              <meta name="description" content={service.metaDescription} />
+              <meta property="og:title" content={service.title} />
+              <meta property="og:url" content={window.location.origin} />
+              <meta property="og:type" content="website" />
+              <meta
+                property="og:description"
+                content={service.metaDescription}
+              />
+              <meta property="og:image" content={service.cover} />
             </Helmet>
             <div className="container">
               <header className={`${styles["single-service__header"]}`}>
