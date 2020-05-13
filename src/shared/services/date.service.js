@@ -1,3 +1,3 @@
 export const parseDate = (dateString) => {
-  return new Date(dateString).toGMTString().slice(5, 16);
+  return new Date(dateString).toUTCString().slice(5, 16);
 };
