@@ -85,3 +85,7 @@ p + p {
 .text-red {
   color: tomato;
 }
+
+.profile-links {
+  color: var(--text-primary);
+}
