@@ -7,7 +7,7 @@ class AboutHeader extends Component {
     return (
       <header className={styles.header_about}>
         <h1 className={styles.header_about__heading}> Know more about us </h1>
-        <AboutVideo />
+        <AboutVideo autoPlay={true} />
       </header>
     );
   }

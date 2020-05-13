@@ -1,5 +1,8 @@
-import axios from "axios";
+import CrudService from "globals/core.service";
 
-export const getBestMembers = async () => {
-  return await axios.get("./data/best-members.json");
-};
+export default class BestMembersService extends CrudService {
+  constructor() {
+    super();
+    this.initialize("/best-members");
+  }
+}

@@ -1,9 +1,8 @@
-import axios from "axios";
+import CrudService from "globals/core.service";
 
-export const getEvents = async () => {
-  let response = await axios.get("/data/events.json");
-
-  return response;
-};
-
-export const sendEventForm = (postTarget, data) => axios.post(postTarget, data);
+export default class EventsService extends CrudService {
+  constructor() {
+    super();
+    this.initialize("/events");
+  }
+}

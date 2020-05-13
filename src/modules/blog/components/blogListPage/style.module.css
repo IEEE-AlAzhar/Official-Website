@@ -7,3 +7,7 @@
 .blogs__list {
   padding-bottom: var(--section-y-spacing);
 }
+.blogs_filtertion {
+  padding-top: 1rem;
+  padding-bottom: var(--section-y-spacing);
+}

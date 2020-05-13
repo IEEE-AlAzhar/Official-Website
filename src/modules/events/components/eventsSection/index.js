@@ -1,37 +1,46 @@
 import React, { Component } from "react";
-import { getEvents } from "./../../services/events.service";
+import EventsService from "./../../services/events.service";
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 import EventCard from "../eventCard";
 
 class EventsSection extends Component {
   state = {
-    event: [],
+    events: [],
   };
+
+  constructor(props) {
+    super(props);
+    this._eventsServices = new EventsService();
+  }
+
   componentDidMount() {
-    getEvents().then((response) => {
-      this.setState({ event: response.data.slice(0, 3) });
+    this._eventsServices.list().then((response) => {
+      this.setState({
+        events: response,
+      });
     });
   }
+
   render() {
-    const { event } = this.state;
+    const { events } = this.state;
 
     return (
       <section className={styles["event_section"]}>
         <div className="container">
           <h2 className="section_heading">our events</h2>
-          <div className="row">
-            {event.length ? (
-              event.map((eventsCard) => (
+          <div className="row justify-content-center">
+            {events.length ? (
+              events.splice(0, 3).map((eventsCard) => (
                 <div
-                  key={eventsCard.id}
+                  key={eventsCard._id}
                   className="col-lg-4 col-md-6 col-sm-12"
                 >
                   <EventCard event={eventsCard} />
                 </div>
               ))
             ) : (
-              <div className="center"> loading.... </div>
+              <div className="text-center"> loading.... </div>
             )}
           </div>
           <div className="row">

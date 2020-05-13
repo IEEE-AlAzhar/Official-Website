@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { getBestMembers } from "./../../services/members.service";
+import BestMembersService from "./../../services/members.service";
 import styles from "./style.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,10 +14,15 @@ export class BestMembers extends Component {
     bestMembers: null,
   };
 
+  constructor(props) {
+    super(props);
+    this._bestMembersService = new BestMembersService();
+  }
+
   componentDidMount() {
-    getBestMembers().then((response) => {
+    this._bestMembersService.list().then((response) => {
       this.setState({
-        bestMembers: response.data,
+        bestMembers: response,
       });
     });
   }
@@ -50,11 +55,13 @@ export class BestMembers extends Component {
           {this.state.bestMembers ? (
             this.state.bestMembers.map((member) => {
               return (
-                <figure className={styles["best-members"]} key={member}>
+                <figure className={styles["best-members"]} key={member._id}>
                   <img
-                    alt={`One of ${member.committee}'s best members`}
-                    src={member.image}
-                    key={member.id}
+                    width="200"
+                    height="200"
+                    alt={`One of ${member.committee} committee best members`}
+                    title={`One of ${member.committee} committee best members`}
+                    src={member.image || "https://via.placeholder.com/400"}
                   />
                   <figcaption>
                     <h3 className={styles["best-members_name"]}>

@@ -1,0 +1,15 @@
+.category {
+  background-color: var(--background-secondary);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0.5rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.category:hover,
+.category:focus {
+  background-color: var(--btn-hover);
+  color: var(--layout-primary);
+  outline: 0;
+}
