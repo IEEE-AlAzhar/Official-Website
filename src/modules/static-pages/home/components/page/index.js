@@ -24,10 +24,7 @@ export default class HomePage extends Component {
             content="IEEE Al-Azhar is a student activity in Al-Azhar university that aims to teach students and train them on different fields"
           />
         </Helmet>
-        <Intro
-          title="IEEE AL-AZHAR"
-          subtitle="Our Mission: Raising the Name of Al-Azhar University"
-        />
+        <Intro title="IEEE AL-AZHAR" subtitle="To stay illuminating" />
         <About />
         <TeamServicesSection />
         <EventSection />

@@ -1,9 +1,10 @@
 [
   {
     "id": "1",
-    "title": "Service 1",
+    "title": "Workshops",
     "cover": "https://via.placeholder.com/500?text=Service+1",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus corporis deserunt sequi perspiciatis odio ab? Nam, voluptate dicta at unde nesciunt natus distinctio inventore!",
+    "metaDescription": "As the world evolves, technology changes ,what works today may not work tomorrow so it is better to stay up-to-date with new technologies and learn how to use them in your daily life .",
+    "description": "<p>As the world evolves, technology changes ,what works today may not work tomorrow so it is better to stay up-to-date with new technologies and learn how to use them in your daily life .</p><section class='my-5'><h2>Code baker</h2><p>It is a Training Program for undergraduate students to qualify them in some technical and non-technical tracks.</p><p>It is held at the end of the year in the summer and its goal is to qualify students from engineering teams and others to the requirements of the labor market.</p></section><section class='my-5'><h2>Juniors</h2><p>It is a program based on the \"project-based learning\" and the survey methodologies within the framework of the continuous development of the educational system.</p><p>This applied through a summer camp in the mid-year.</p></section><section class='my-5'><h2>Some examples of tracks of workshops:</h2><ol><li>Web development</li><li>Programming</li><li>Embedded Systems</li><li>Network</li><li>Security</li><li>Mobile development</li></ol><p>and others..</p><p>by the way if you don't use technology in your own world , it won't use you in its world.</p></section>",
     "gallery": [
       "https://via.placeholder.com/500?text=Image+1",
       "https://via.placeholder.com/500?text=Image+2",
@@ -13,21 +14,17 @@
   },
   {
     "id": "2",
-    "title": "Service 2",
+    "title": "Group",
+    "metaDescription": "IEEE Al-Azhar club group is made to share knowledge, experience even Geeks jokes can be posted or shared between all our members.",
     "cover": "https://via.placeholder.com/500?text=Service+2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus corporis deserunt sequi perspiciatis odio ab? Nam, voluptate dicta at unde nesciunt natus distinctio inventore!",
-    "gallery": [
-      "https://via.placeholder.com/500?text=Image+1",
-      "https://via.placeholder.com/500?text=Image+2",
-      "https://via.placeholder.com/500?text=Image+3",
-      "https://via.placeholder.com/500?text=Image+4"
-    ]
+    "description": "<p>IEEE Al-Azhar club group is made to share knowledge, experience even Geeks jokes can be posted or shared between all our members.</p><p><strong>This group is for:</strong>Software Engineers/Developers, Hardware engineers, not just Al-Azhar students, but anyone interested in these markets.</p>"
   },
   {
     "id": "3",
-    "title": "Service 3",
+    "title": "Competitions",
+    "metaDescription": "Raise awareness and emphasizing the importance of problem-solving skills as an essential skill in the software industry",
     "cover": "https://via.placeholder.com/500?text=Service+3",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, sed voluptate. Iste officia possimus necessitatibus corporis deserunt sequi perspiciatis odio ab? Nam, voluptate dicta at unde nesciunt natus distinctio inventore!",
+    "description": "<section><h2>Problem-solving</h2><p>Raise awareness and emphasizing the importance of problem-solving skills as an essential skill in the software industry, and preparing students of Al-Azhar University to participate in local and international programming competitions.</p></section><section><h2>Open-source</h2><p>Open source culture and concepts help students, and communities have a better learning experience being free to share their ideas and build on the work of others.</p><p>Learning and teaching \"the open source way\" will better prepare students for their careers.</p></section>",
     "gallery": [
       "https://via.placeholder.com/500?text=Image+1",
       "https://via.placeholder.com/500?text=Image+2",

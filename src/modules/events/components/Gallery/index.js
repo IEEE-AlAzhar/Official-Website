@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import Carousel from "react-multi-carousel";
 import styles from "./style.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 const responsive = {
   desktop: {
@@ -13,37 +8,13 @@ const responsive = {
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 991, min: 464 },
     items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
   },
-};
-
-const CustomRightArrow = ({ onClick, ...rest }) => {
-  return (
-    <button
-      className={`${styles["gallery-arrow"]} ${styles["gallery-arrow_right"]}`}
-      onClick={() => onClick()}
-    >
-      <FontAwesomeIcon icon={faChevronRight} />
-      <span className="sr-only"> Slide right controller </span>
-    </button>
-  );
-};
-
-const CustomLeftArrow = ({ onClick, ...rest }) => {
-  return (
-    <button
-      className={`${styles["gallery-arrow"]} ${styles["gallery-arrow_left"]}`}
-      onClick={() => onClick()}
-    >
-      <FontAwesomeIcon icon={faChevronLeft} />
-      <span className="sr-only"> Slide left controller </span>
-    </button>
-  );
 };
 
 class Gallery extends Component {
@@ -60,16 +31,14 @@ class Gallery extends Component {
           autoPlaySpeed={2500}
           keyBoardControl={true}
           transitionDuration={1000}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          itemClass="carousel-item-padding-40-px mb-3"
-          customRightArrow={<CustomRightArrow />}
-          customLeftArrow={<CustomLeftArrow />}
+          removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+          itemClass="carousel-item-padding-30-px mb-3 px-lg-3"
         >
           {images.map((img, index) => {
             return (
-              <figure key={index}>
+              <figure key={index} className={styles.image_container}>
                 <img
-                  className={styles["gallery-imgs"]}
+                  className={styles["gallery-img"]}
                   src={img}
                   alt="Event Gallery"
                 />

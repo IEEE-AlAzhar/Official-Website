@@ -89,8 +89,8 @@ class SingleEventPage extends Component {
                     className="my-5 text-left"
                     dangerouslySetInnerHTML={{ __html: description }}
                   />
-                  {images.length ? <Gallery images={images} /> : null}
                 </section>
+                {images.length ? <Gallery images={images} /> : null}
               </section>
             </div>
           </div>

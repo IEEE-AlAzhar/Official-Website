@@ -16,8 +16,9 @@ class EventsSection extends Component {
 
   componentDidMount() {
     this._eventsServices.list().then((response) => {
+      console.log(response);
       this.setState({
-        events: response,
+        events: response.slice(0, 3),
       });
     });
   }
@@ -31,7 +32,7 @@ class EventsSection extends Component {
           <h2 className="section_heading">our events</h2>
           <div className="row justify-content-center">
             {events.length ? (
-              events.splice(0, 3).map((eventsCard) => (
+              events.map((eventsCard) => (
                 <div
                   key={eventsCard._id}
                   className="col-lg-4 col-md-6 col-sm-12"

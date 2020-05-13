@@ -28,6 +28,7 @@ export default class SingleServicePage extends Component {
           <>
             <Helmet>
               <title>{service.title}</title>
+              <meta title="description" content={service.metaDescription} />
             </Helmet>
             <div className="container">
               <header className={`${styles["single-service__header"]}`}>
@@ -41,7 +42,10 @@ export default class SingleServicePage extends Component {
                 />
               </header>
               <section className={`${styles["single-service__content"]}`}>
-                <p className="mb-5">{service.description}</p>
+                <p
+                  className="mb-5"
+                  dangerouslySetInnerHTML={{ __html: service.description }}
+                />
                 {!service.gallery ? null : (
                   <div
                     id="carousel"

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Player, BigPlayButton } from "video-react";
-import poster from "assets/images/poster.png";
+import { Player, BigPlayButton, ControlBar } from "video-react";
+import poster from "assets/images/poster.jpg";
 import "video-react/dist/video-react.css";
 import video from "assets/video/intro.mp4";
 
@@ -15,6 +15,7 @@ export default class AboutVideo extends Component {
           preload="metadata"
           autoPlay={this.props.autoPlay}
         >
+          <ControlBar disableCompletely={true} />
           <BigPlayButton
             position="center"
             data-state="play"

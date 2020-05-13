@@ -29,9 +29,14 @@ export default class TeamServicesSection extends Component {
                       <h3 className={styles["team-service-section_title"]}>
                         {data.title}
                       </h3>
-                      <p className={styles["team-service-section_description"]}>
+                      <p
+                        className={`${styles["team-service-section_description"]} px-3`}
+                      >
                         <span data-testid="service-description">
-                          {data.description.split(" ").slice(0, 15).join(" ")}
+                          {data.metaDescription
+                            .split(" ")
+                            .slice(0, 20)
+                            .join(" ")}
                         </span>
                         ...
                       </p>

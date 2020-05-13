@@ -10,18 +10,17 @@ class PublicIEEESec extends Component {
           <div className={styles.content_pubIEEE}>
             <div className={styles.IEEEPubpara}>
               <p className={styles.IEEEPubpara__pupPragraph}>
-                Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac
-                odio mauris justo. Luctus arcu, urna praesent at id quisque ac.
-                Arcu es massa vestibulum malesuada, integer vivamus elit eu
-                mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet
-                suspendisse integer vivamus elit eu mauris hendrerit facilisi,
-                mi mattis pariatur aliquam pharetra eget.elitelitelitLorem ipsum
-                dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris
-                justo. Luctus arcu, urna praesent at id quisque ac. Arcu es
-                massa vestibulum malesuada, integer vivamus elit eu mauris eus,
-                cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse
-                integer vivamus elit eu mauris hendrerit facilisi, mi mattis
-                pariatur aliquam pharetra eget.elitelitelit
+                IEEE is the world’s largest technical professional organization
+                dedicated to advancing technology for the benefit of humanity.
+                IEEE and its members inspire a global community through its
+                highly cited publications, conferences, technology standards,
+                and professional and educational activities. IEEE has a dual
+                complementary regional and technical structure with
+                organizational units based on geography and technical focus. It
+                manages a separate organizational unit (IEEE-USA) which
+                recommends policies and implements programs specifically
+                intended to benefit the members, the profession, and the public
+                in the United States.
               </p>
             </div>
           </div>
