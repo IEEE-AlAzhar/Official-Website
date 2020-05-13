@@ -60,7 +60,6 @@ export class BestMembers extends Component {
                     width="200"
                     height="200"
                     alt={`One of ${member.committee} committee best members`}
-                    title={`One of ${member.committee} committee best members`}
                     src={member.image || "https://via.placeholder.com/400"}
                   />
                   <figcaption>

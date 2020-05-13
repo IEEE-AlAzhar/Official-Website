@@ -8,10 +8,16 @@
   z-index: -2;
   text-align: center;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
+.intro-header__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
 .intro-header_section .intro-header_overlay {
   background-color: #0a111a;
   opacity: 0.6;

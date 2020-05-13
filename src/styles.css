@@ -59,7 +59,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font-family);
-  color: var(--text-secondary)
+  color: var(--text-secondary);
 }
 
 .section_heading {
@@ -83,5 +83,9 @@ p + p {
 }
 
 .text-red {
-  color: tomato
+  color: tomato;
+}
+
+.profile-links {
+  color: var(--text-primary);
 }

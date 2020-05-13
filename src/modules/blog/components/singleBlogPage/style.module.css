@@ -1,26 +1,31 @@
-.blog-title{
-    font-size: 5rem;
-    padding-top: 6rem;
-}
-.blog-created{
-    padding-bottom: 6rem;
-    
+.blog-title {
+  font-size: 5rem;
+  padding-top: 6rem;
 }
 
-.dark-theme .blog-personaldetails__list{
-    list-style: none;
-    color:#f00;
+.blog-created {
+  padding-bottom: 6rem;
 }
 
-.blog-personaldetails__list{
-    list-style: none;
-    color:var(--text-secondary);
+.blog-image {
+  max-height: 400px;
+  object-fit: cover;
 }
 
-.blog-personaldetails__item{
-    display: inline;
+.dark-theme .blog-personaldetails__list {
+  list-style: none;
+  color: #f00;
 }
-.social-links{
-    padding: 5px;
-    font-size: 2rem;
+
+.blog-personaldetails__list {
+  list-style: none;
+  color: var(--text-secondary);
+}
+
+.blog-personaldetails__item {
+  display: inline;
+}
+.social-links {
+  padding: 5px;
+  font-size: 2rem;
 }

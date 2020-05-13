@@ -44,6 +44,7 @@ export default class SearchFilter extends Component {
               icon={faSearch}
               className={styles["searchCategory-component__icon"]}
             />
+            <span className="sr-only">Search button</span>
           </button>
         </form>
       </div>

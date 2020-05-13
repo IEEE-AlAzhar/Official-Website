@@ -20,7 +20,7 @@ const BlogCard = (props) => {
     return title.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "-and-");
   };
   return (
-    <article className={`row mt-5 ${styles.blog}`}>
+    <article className={`row mt-5`}>
       <section className="col-md-3 text-md-right text-left">
         <ul className="list-unstyled pt-5 d-flex flex-row-reverse d-md-block">
           <li className="px-md-0 px-3">
@@ -28,6 +28,7 @@ const BlogCard = (props) => {
               href={authorProfileLink}
               rel="noreferrer noopener"
               target="_blank"
+              className="profile-links"
             >
               {authorName} <FontAwesomeIcon icon={faUser} />
             </a>
@@ -38,20 +39,17 @@ const BlogCard = (props) => {
         </ul>
       </section>
       <section className="col-md-9 d-flex">
-        <div className={`card  ${styles["blog-card"]}`}>
-          <Link title={title} to={`/blog/${_id}/${titleSlugify(`${title}`)}`}>
+        <div className={`card border-0 ${styles["blog-card"]}`}>
+          <Link to={`/blog/${_id}/${titleSlugify(`${title}`)}`}>
             <img
               src={cover}
               className={`${styles["blog-card__image"]} card-img-top `}
-              alt={title}
+              alt={`${title}'s cover`}
             />
           </Link>
           <div className={`card-body ${styles["blog__info"]}`}>
             <h2>
-              <Link
-                title={title}
-                to={`/blog/${_id}/${titleSlugify(`${title}`)}`}
-              >
+              <Link to={`/blog/${_id}/${titleSlugify(`${title}`)}`}>
                 {title}
               </Link>
             </h2>

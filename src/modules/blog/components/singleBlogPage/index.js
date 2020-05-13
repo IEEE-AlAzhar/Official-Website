@@ -5,6 +5,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { Helmet } from "react-helmet";
 
 import BlogService from "modules/blog/services/blog.service";
+import { parseDate } from "shared/services/date.service";
 
 export default class SingleBlogPage extends Component {
   state = {
@@ -24,7 +25,7 @@ export default class SingleBlogPage extends Component {
       if (blog) {
         this.setState({ blog });
       } else {
-        history.push("/not-found");
+        history.push("/404");
       }
     });
   };
@@ -34,8 +35,8 @@ export default class SingleBlogPage extends Component {
       title,
       metaDescription,
       categories,
-      author,
-      authorFacebookProfile,
+      authorName,
+      authorProfileLink,
       body,
       createdAt,
     } = this.state.blog;
@@ -45,21 +46,21 @@ export default class SingleBlogPage extends Component {
           <>
             <Helmet>
               <title>{title}</title>
-              <meta title="description" content={metaDescription} />
+              <meta name="description" content={metaDescription} />
             </Helmet>
             <div className="container">
               <header className="row justify-content-center">
                 <div className=" col-lg-12 ">
-                  <h1 className={`text-center ${styles[`blog-title`]}`}>
+                  <h1 className={`text-center mb-3 ${styles[`blog-title`]}`}>
                     {title}
                   </h1>
                   <p className={` text-center ${styles[`blog-created`]}`}>
-                    {createdAt}
+                    {parseDate(createdAt)}
                   </p>
                   <img
                     src={cover}
                     alt="blog cover"
-                    className="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2"
+                    className={`col-lg-12 ${styles["blog-image"]}`}
                   />
                 </div>
               </header>
@@ -81,19 +82,19 @@ export default class SingleBlogPage extends Component {
                     <li className={styles[`blog-personaldetails__item`]}>
                       {categories
                         ? categories.map((category) => {
-                            return category.name + ",";
+                            return category.name + " ";
                           })
                         : null}
                     </li>
                     <br />
                     <li className={styles[`blog-personaldetails__item`]}>
-                      {author}
+                      {authorName}
                     </li>
                     <br />
-                    {authorFacebookProfile !== "" ? (
+                    {authorProfileLink && (
                       <li className={styles[`blog-personaldetails__item`]}>
                         <a
-                          href={authorFacebookProfile}
+                          href={authorProfileLink}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -106,7 +107,7 @@ export default class SingleBlogPage extends Component {
                           </span>
                         </a>
                       </li>
-                    ) : null}
+                    )}
                   </ul>
                   {window.innerWidth <= 1200 ? <hr /> : null}
                 </div>
