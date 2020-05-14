@@ -69,12 +69,12 @@ class SingleEventPage extends Component {
               <meta property="og:image" content={cover} />
             </Helmet>
             <div className="text-center">
-              <img
-                className={`w-100 ${styles["event-cover"]}`}
-                src={cover}
-                alt="Event Cover"
-              />
               <section className="container">
+                <img
+                  className={`w-100 ${styles["event-cover"]}`}
+                  src={cover}
+                  alt="Event Cover"
+                />
                 <header className="px-5 mx-5">
                   <h1 className="h2 my-5 section_heading">{title}</h1>
                 </header>

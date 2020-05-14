@@ -1,9 +1,25 @@
 import React, { Component } from "react";
 
 import { Helmet } from "react-helmet";
+import Carousel from "react-multi-carousel";
 
 import services from "../../store/services.json";
 import styles from "./style.module.css";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 991, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
 export default class SingleServicePage extends Component {
   state = {};
@@ -56,63 +72,29 @@ export default class SingleServicePage extends Component {
                   dangerouslySetInnerHTML={{ __html: service.description }}
                 />
                 {!service.gallery ? null : (
-                  <div
-                    id="carousel"
-                    className="carousel slide carousel-fade"
-                    data-ride="carousel"
-                    data-interval="3000"
+                  <Carousel
+                    swipeable={true}
+                    responsive={responsive}
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={2500}
+                    keyBoardControl={true}
+                    transitionDuration={1000}
+                    removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+                    itemClass="carousel-item-padding-30-px mb-3 px-lg-3"
                   >
-                    <ol className="carousel-indicators">
-                      {service.gallery.map((image, index) => (
-                        <li
-                          key={index}
-                          data-target="#carousel"
-                          data-slide-to={`${index}`}
-                          className={`${index === 0 ? "active" : ""}`}
-                        ></li>
-                      ))}
-                    </ol>
-                    <div className="carousel-inner">
-                      {service.gallery.map((image, index) => (
-                        <div
-                          key={index}
-                          className={`carousel-item ${
-                            index === 0 ? "active" : ""
-                          } ${styles.carousel__item}`}
-                        >
+                    {service.gallery.map((img, index) => {
+                      return (
+                        <figure key={index} className={styles.image_container}>
                           <img
-                            src={image}
-                            className={`d-block img-fluid ${styles.carousel__image}`}
-                            alt={`IEEE ${service.title} service`}
+                            className={styles["gallery-img"]}
+                            src={img}
+                            alt="Service Gallery"
                           />
-                        </div>
-                      ))}
-                    </div>
-                    <a
-                      className="carousel-control-prev"
-                      href="#carousel"
-                      role="button"
-                      data-slide="prev"
-                    >
-                      <span
-                        className={`${styles["carousel-control--focus"]} carousel-control-prev-icon`}
-                        aria-hidden="true"
-                      ></span>
-                      <span className="sr-only">Previous</span>
-                    </a>
-                    <a
-                      className="carousel-control-next"
-                      href="#carousel"
-                      role="button"
-                      data-slide="next"
-                    >
-                      <span
-                        className={`${styles["carousel-control--focus"]} carousel-control-next-icon`}
-                        aria-hidden="true"
-                      ></span>
-                      <span className="sr-only">Next</span>
-                    </a>
-                  </div>
+                        </figure>
+                      );
+                    })}
+                  </Carousel>
                 )}
               </section>
             </div>

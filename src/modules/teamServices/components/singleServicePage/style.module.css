@@ -17,27 +17,14 @@
   left: 0;
 }
 
-.carousel__image,
-.single-service__cover {
+.image_container {
+  height: 100%;
+  margin: 0 0.2rem;
+  border-radius: 10px;
+}
+
+.gallery-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-.carousel__item,
-.single-service__cover {
-  height: 45vh;
-}
-
-.single-service__content {
-  margin-top: var(--section-heading-spacing);
-  margin-bottom: var(--section-y-spacing);
-}
-
-.carousel-control--focus {
-  width: 35px;
-  height: 35px;
-  background-color: #000;
-  background-size: 60%;
-  border-radius: 5px;
+  border-radius: 10px;
 }

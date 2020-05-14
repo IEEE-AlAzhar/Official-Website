@@ -23,7 +23,7 @@ class EventDetails extends Component {
     } = this.props.details;
 
     return (
-      <section className="row">
+      <div className="row">
         <span className="col-md">
           <FontAwesomeIcon icon={faClock} size="1x" />
           <p className={`h6 m-0 p-0 ${styles["event-details_text"]}`}>
@@ -44,7 +44,7 @@ class EventDetails extends Component {
         {form && status === "upcoming" ? (
           <ApplyButton cover={cover} getPopupContent={this.getPopupContent} />
         ) : null}
-      </section>
+      </div>
     );
   }
 }
