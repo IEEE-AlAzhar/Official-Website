@@ -6,6 +6,7 @@ import CategoriesFilter from "../CategoriesFilter";
 import SearchFilter from "../SearchFilter";
 
 import BlogService from "modules/blog/services/blog.service";
+import Loading from "shared/loading";
 
 export default class BlogListPage extends Component {
   state = {
@@ -58,7 +59,7 @@ export default class BlogListPage extends Component {
           <div className="row">
             <section className={`col-lg-8 ${styles.blogs__list}`}>
               {isLoading ? (
-                <p className="text-center">Loading ...</p>
+                <Loading title="Loading Events ..." />
               ) : blogs.length > 0 ? (
                 blogs.map((blog) => <BlogCard key={blog._id} data={blog} />)
               ) : (

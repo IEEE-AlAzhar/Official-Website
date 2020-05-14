@@ -21,6 +21,7 @@
     "prettier": "^2.0.2",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
+    "react-content-loader": "^5.0.4",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-multi-carousel": "^2.5.3",

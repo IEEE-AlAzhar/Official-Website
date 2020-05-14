@@ -6,10 +6,12 @@ import { Helmet } from "react-helmet";
 
 import BlogService from "modules/blog/services/blog.service";
 import { parseDate } from "shared/services/date.service";
+import Loading from "shared/loading";
 
 export default class SingleBlogPage extends Component {
   state = {
     blog: {},
+    isLoading: false,
   };
 
   constructor(props) {
@@ -21,9 +23,10 @@ export default class SingleBlogPage extends Component {
     window.scrollTo(0, 0);
 
     const { match, history } = this.props;
+    this.setState({ isLoading: true });
     this._blogService.getById(match.params.id).then((blog) => {
       if (blog) {
-        this.setState({ blog });
+        this.setState({ blog, isLoading: false });
       } else {
         history.push("/404");
       }
@@ -42,7 +45,7 @@ export default class SingleBlogPage extends Component {
     } = this.state.blog;
     return (
       <>
-        {this.state.blog ? (
+        {!this.state.isLoading ? (
           <>
             <Helmet>
               <title>{title}</title>
@@ -59,7 +62,7 @@ export default class SingleBlogPage extends Component {
                   <h1 className={`text-center mb-3 ${styles[`blog-title`]}`}>
                     {title}
                   </h1>
-                  <p className={` text-center ${styles[`blog-created`]}`}>
+                  <p className={`text-center ${styles[`blog-created`]}`}>
                     {parseDate(createdAt)}
                   </p>
                   <img
@@ -119,7 +122,11 @@ export default class SingleBlogPage extends Component {
               </section>
             </div>
           </>
-        ) : null}
+        ) : (
+          <div className="container">
+            <Loading />
+          </div>
+        )}
       </>
     );
   }

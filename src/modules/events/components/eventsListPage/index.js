@@ -6,10 +6,13 @@ import { Helmet } from "react-helmet";
 
 import EventsService from "../../services/events.service";
 import EventCard from "../eventCard";
+import Loading from "shared/loading";
+
 export default class EventsListPage extends Component {
   state = {
     upcomingEvents: null,
     pastEvents: null,
+    isLoading: false,
   };
 
   constructor(props) {
@@ -21,6 +24,7 @@ export default class EventsListPage extends Component {
     window.scrollTo(0, 0);
     let upcomingEvents = [];
     let pastEvents = [];
+    this.setState({ isLoading: true });
     this._eventsServices.list().then((response) => {
       response.map((event) => {
         if (event.status === "upcoming") upcomingEvents.push(event);
@@ -31,10 +35,12 @@ export default class EventsListPage extends Component {
       return this.setState({
         upcomingEvents,
         pastEvents,
+        isLoading: false,
       });
     });
   }
   render() {
+    let { isLoading, upcomingEvents, pastEvents } = this.state;
     return (
       <>
         <Helmet>
@@ -43,13 +49,13 @@ export default class EventsListPage extends Component {
         <h1 className={styles[`events-heading`]}>Our Events</h1>
 
         <div className="container">
-          {this.state.upcomingEvents && this.state.upcomingEvents.length ? (
+          {upcomingEvents && upcomingEvents.length ? (
             <>
               <section className="events-upcoming row pb-5 justify-content-center">
                 <h2 className={`${styles[`events-heading__upcoming`]} mb-3`}>
                   Upcoming Events
                 </h2>
-                {this.state.upcomingEvents.map((event) => {
+                {upcomingEvents.map((event) => {
                   return (
                     <div
                       className="col-lg-4 col-md-6 col-sm-12  mt-4"
@@ -64,7 +70,7 @@ export default class EventsListPage extends Component {
                 <h2 className={`${styles[`events-heading__past`]} mb-3`}>
                   Past Events
                 </h2>
-                {this.state.pastEvents.map((event) => {
+                {pastEvents.map((event) => {
                   return (
                     <div
                       className="col-lg-4 col-md-6 col-sm-12  mt-4"
@@ -78,8 +84,8 @@ export default class EventsListPage extends Component {
             </>
           ) : (
             <div className="row pb-5">
-              {this.state.pastEvents &&
-                this.state.pastEvents.map((event) => (
+              {pastEvents &&
+                pastEvents.map((event) => (
                   <div
                     className="col-lg-4 col-md-6 col-sm-12  mt-4"
                     key={event._id}
@@ -87,6 +93,11 @@ export default class EventsListPage extends Component {
                     <EventCard event={event} />
                   </div>
                 ))}
+            </div>
+          )}
+          {isLoading && (
+            <div className="container">
+              <Loading title="Loading Events ..." />
             </div>
           )}
         </div>

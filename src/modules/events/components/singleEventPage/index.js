@@ -8,6 +8,7 @@ import EventDetails from "../EventDetails/";
 import EventsService from "modules/events/services/events.service";
 
 import styles from "./style.module.css";
+import Loading from "shared/loading";
 
 class SingleEventPage extends Component {
   state = {
@@ -54,9 +55,9 @@ class SingleEventPage extends Component {
     return (
       <>
         {!title ? (
-          <section className="my-5 py-5">
-            <h1 className="text-center my-5 py-5">Loading...</h1>
-          </section>
+          <div className="container my-5">
+            <Loading title="Loading Event ..." />
+          </div>
         ) : (
           <div>
             <Helmet>
