@@ -29,17 +29,27 @@ export default class FilterCategory extends Component {
     const { categories } = this.state;
     return (
       <ul className={`list-unstyled d-flex flex-wrap my-5`}>
-        {categories.length > 0 &&
-          categories.map((category) => (
+        {categories.length > 0 && (
+          <>
             <li
-              key={category._id}
               tabIndex="0"
               className={styles.category}
-              onClick={this.handleChangeCategory.bind(this, category._id)}
+              onClick={this.handleChangeCategory.bind(this, "all")}
             >
-              {category.name}
+              All
             </li>
-          ))}
+            {categories.map((category) => (
+              <li
+                key={category._id}
+                tabIndex="0"
+                className={styles.category}
+                onClick={this.handleChangeCategory.bind(this, category._id)}
+              >
+                {category.name}
+              </li>
+            ))}
+          </>
+        )}
       </ul>
     );
   }
