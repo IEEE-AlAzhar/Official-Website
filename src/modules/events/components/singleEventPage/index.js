@@ -59,7 +59,7 @@ class SingleEventPage extends Component {
             <Loading title="Loading Event ..." />
           </div>
         ) : (
-          <div>
+          <div className="mt-5">
             <Helmet>
               <title>{title} | IEEE Al-Azhar Student Branch </title>
               <meta name="description" content={metaDescription} />
@@ -69,14 +69,14 @@ class SingleEventPage extends Component {
               <meta property="og:description" content={metaDescription} />
               <meta property="og:image" content={cover} />
             </Helmet>
-            <div className="text-center">
+            <div className="text-center mt-5 pt-5">
               <section className="container">
                 <img
                   className={`w-100 ${styles["event-cover"]}`}
                   src={cover}
                   alt="Event Cover"
                 />
-                <header className="px-5 mx-5">
+                <header className="mx-5">
                   <h1 className="h2 my-5 section_heading">{title}</h1>
                 </header>
                 <EventDetails

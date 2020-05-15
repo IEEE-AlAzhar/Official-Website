@@ -85,11 +85,11 @@ export default class EventsListPage extends Component {
               </section>
             </>
           ) : (
-            <div className="row pb-5 justify-content-center">
+            <div className="row pb-5 mb-5 justify-content-center">
               {pastEvents && pastEvents.length > 0
                 ? pastEvents.map((event) => (
                     <div
-                      className="col-lg-4 col-md-6 col-sm-12  mt-4"
+                      className="col-lg-4 col-md-6 col-sm-12 mt-4"
                       key={event._id}
                     >
                       <EventCard event={event} />

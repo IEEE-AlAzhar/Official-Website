@@ -16,11 +16,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  padding: 0 0.5rem;
 }
 
 .intro-header_section .intro-header_overlay {
   background-color: #0a111a;
-  opacity: 0.6;
+  opacity: 0.85;
   position: absolute;
   top: 0;
   left: 0;
@@ -32,6 +33,16 @@
   font-size: 3rem;
   color: #fff;
 }
+
 .intro-header_section .intro-header_subtitle {
   font-size: var(--heading-2-font-size);
+}
+@media (max-width: 400px) {
+  .intro-header_section .intro-header_heading {
+    font-size: 2.2rem;
+  }
+
+  .intro-header_section .intro-header_subtitle {
+    font-size: 1.5rem;
+  }
 }

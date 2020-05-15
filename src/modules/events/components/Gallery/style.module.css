@@ -10,11 +10,11 @@
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .gallery-img {
     width: 10rem;
   }
-}
+} */
 
 .gallery-arrow {
   background-color: transparent;

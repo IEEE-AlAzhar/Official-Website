@@ -12,6 +12,12 @@
   transition: transform 0.4s ease-out;
 }
 
+@media(max-width: 500px) {
+  .side-drawer {
+    width: 80%;
+  }
+}
+
 .side-drawer--opened {
   transform: translateX(0);
 }

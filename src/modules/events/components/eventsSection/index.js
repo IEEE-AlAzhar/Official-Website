@@ -35,7 +35,7 @@ class EventsSection extends Component {
               events.map((eventsCard) => (
                 <div
                   key={eventsCard._id}
-                  className="col-lg-4 col-md-6 col-sm-12"
+                  className="col-lg-4 col-md-6 col-sm-12 my-4"
                 >
                   <EventCard event={eventsCard} />
                 </div>
