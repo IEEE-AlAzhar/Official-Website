@@ -8,6 +8,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import Loading from "shared/loading";
 
 export class BestMembers extends Component {
   state = {
@@ -44,16 +45,16 @@ export class BestMembers extends Component {
     };
 
     return (
-      <section className={styles["best-members_section"]}>
+      <section className={`${styles["best-members_section"]}`}>
         <h2 className="section_heading">our best members</h2>
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          customRightArrow={<CustomRightArrow />}
-          customLeftArrow={<CustomLeftArrow />}
-        >
-          {this.state.bestMembers ? (
-            this.state.bestMembers.map((member) => {
+        {this.state.bestMembers ? (
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            customRightArrow={<CustomRightArrow />}
+            customLeftArrow={<CustomLeftArrow />}
+          >
+            {this.state.bestMembers.map((member) => {
               return (
                 <figure className={styles["best-members"]} key={member._id}>
                   <img
@@ -72,11 +73,13 @@ export class BestMembers extends Component {
                   </figcaption>
                 </figure>
               );
-            })
-          ) : (
-            <p>Loading ...</p>
-          )}
-        </Carousel>
+            })}
+          </Carousel>
+        ) : (
+          <div className="container w-50 text-center">
+            <Loading title="Loading Best Members ..." />
+          </div>
+        )}
       </section>
     );
   }

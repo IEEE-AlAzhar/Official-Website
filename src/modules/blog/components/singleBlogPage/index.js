@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import styles from "./style.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { Helmet } from "react-helmet";
 
 import BlogService from "modules/blog/services/blog.service";
@@ -43,6 +41,8 @@ export default class SingleBlogPage extends Component {
       body,
       createdAt,
     } = this.state.blog;
+    let categoriesString =
+      categories && categories.map((category) => category.name).join(", ");
     return (
       <>
         {!this.state.isLoading ? (
@@ -64,6 +64,18 @@ export default class SingleBlogPage extends Component {
                   </h1>
                   <p className={`text-center ${styles[`blog-created`]}`}>
                     {parseDate(createdAt)}
+                  </p>
+                  <p className={`text-center ${styles[`blog-author`]}`}>
+                    By{" "}
+                    {authorProfileLink && (
+                      <a
+                        href={authorProfileLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {authorName}
+                      </a>
+                    )}
                   </p>
                   <img
                     src={cover}
@@ -88,34 +100,8 @@ export default class SingleBlogPage extends Component {
                     }`}
                   >
                     <li className={styles[`blog-personaldetails__item`]}>
-                      {categories
-                        ? categories.map((category) => {
-                            return category.name + " ";
-                          })
-                        : null}
+                      {categoriesString}
                     </li>
-                    <br />
-                    <li className={styles[`blog-personaldetails__item`]}>
-                      {authorName}
-                    </li>
-                    <br />
-                    {authorProfileLink && (
-                      <li className={styles[`blog-personaldetails__item`]}>
-                        <a
-                          href={authorProfileLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FontAwesomeIcon
-                            icon={faFacebook}
-                            className={styles[`social-links`]}
-                          />
-                          <span className="sr-only">
-                            Author's facebook profile
-                          </span>
-                        </a>
-                      </li>
-                    )}
                   </ul>
                   {window.innerWidth <= 1200 ? <hr /> : null}
                 </div>

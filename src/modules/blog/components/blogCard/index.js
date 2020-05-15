@@ -9,6 +9,7 @@ const BlogCard = (props) => {
   const {
     _id,
     authorName,
+    lang,
     createdAt,
     title,
     authorProfileLink,
@@ -38,8 +39,12 @@ const BlogCard = (props) => {
           </li>
         </ul>
       </section>
-      <section className="col-md-9 d-flex">
-        <div className={`card border-0 ${styles["blog-card"]}`}>
+      <section className={`col-md-9 d-flex justify-content-right`}>
+        <div
+          className={`card border-0 ${lang === "Arabic" && "text-right"} ${
+            styles["blog-card"]
+          }`}
+        >
           <Link to={`/blog/${_id}/${titleSlugify(`${title}`)}`}>
             <img
               src={cover}
@@ -53,7 +58,9 @@ const BlogCard = (props) => {
                 {title}
               </Link>
             </h2>
-            <p className="card-text">{metaDescription}</p>
+            <p className="card-text">
+              {metaDescription.split(" ").slice(0, 30).join(" ")}
+            </p>
           </div>
         </div>
       </section>

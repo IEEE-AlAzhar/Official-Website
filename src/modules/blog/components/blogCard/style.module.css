@@ -1,6 +1,6 @@
 .blog-card__image {
   display: block;
-  height: 220px;
+  max-height: 350px;
   object-fit: cover;
 }
 

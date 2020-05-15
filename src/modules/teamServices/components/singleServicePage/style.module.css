@@ -17,6 +17,12 @@
   left: 0;
 }
 
+.single-service__cover {
+  width: 100%;
+  max-height: 32rem;
+  margin-bottom: 3rem;
+}
+
 .image_container {
   height: 100%;
   margin: 0 0.2rem;

@@ -70,29 +70,32 @@ export default class EventsListPage extends Component {
                 <h2 className={`${styles[`events-heading__past`]} mb-3`}>
                   Past Events
                 </h2>
-                {pastEvents.map((event) => {
-                  return (
+                {pastEvents.length > 0
+                  ? pastEvents.map((event) => {
+                      return (
+                        <div
+                          className="col-lg-4 col-md-6 col-sm-12  mt-4"
+                          key={event._id}
+                        >
+                          <EventCard event={event} />
+                        </div>
+                      );
+                    })
+                  : !isLoading && <p className="text-center">No Events Yet</p>}
+              </section>
+            </>
+          ) : (
+            <div className="row pb-5 justify-content-center">
+              {pastEvents && pastEvents.length > 0
+                ? pastEvents.map((event) => (
                     <div
                       className="col-lg-4 col-md-6 col-sm-12  mt-4"
                       key={event._id}
                     >
                       <EventCard event={event} />
                     </div>
-                  );
-                })}
-              </section>
-            </>
-          ) : (
-            <div className="row pb-5">
-              {pastEvents &&
-                pastEvents.map((event) => (
-                  <div
-                    className="col-lg-4 col-md-6 col-sm-12  mt-4"
-                    key={event._id}
-                  >
-                    <EventCard event={event} />
-                  </div>
-                ))}
+                  ))
+                : !isLoading && <p className="text-center">No Events Yet</p>}
             </div>
           )}
           {isLoading && (

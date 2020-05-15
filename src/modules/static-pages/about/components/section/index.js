@@ -12,17 +12,22 @@ export default class About extends Component {
           <h2 className="section_heading">About Us</h2>
           <div className="row">
             <div className="col-lg-6">
-              <AboutVideo />
+              <div className={styles.about__video}>
+                <AboutVideo />
+              </div>
             </div>
             <div className="col-lg-6">
               <div className={styles["about-home_Info"]}>
                 <p className={styles["about-home_lead"]}>
-                  Was founded in 2012 its dependent to "IEEE EGYPT SECTION"
-                  which exists in all universities in Egypt.Our Mission: Raising
-                  the Name of Al-Azhar University. Providing the required
-                  scientific and practical conditions to prepare a successful
-                  engineer from the students , so they become able to compete in
-                  the labor market.
+                  IEEE Al-Azhar University Student Branch is a student activity
+                  continued to IEEE Egypt Section, located in Al-Azhar
+                  University in Cairo and est. 2011 We provide free courses and
+                  trainings for students (especially engineering students) to
+                  bridge the gap between the scientific and practical sides The
+                  internal structure of the team includes a number of committees
+                  which are academic like technical and some other operational
+                  committees like HR, PR & FR, Marketing, Multimedia, DCR and
+                  Logistics
                 </p>
                 <Link to="/about-us" className={styles["about-home_button"]}>
                   Know more about us

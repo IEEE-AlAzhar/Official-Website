@@ -4,6 +4,14 @@
   background-color: var(--layout-primary);
 }
 
+.about-home_section .about__video {
+  height: 100%;
+}
+
+.about-home_section .about__video > div {
+  height: 100%;
+}
+
 @media (max-width: 991px) {
   .about-home_section .about-home_Info {
     padding-top: 3rem;

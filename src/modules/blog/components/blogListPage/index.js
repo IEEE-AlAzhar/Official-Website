@@ -20,6 +20,7 @@ export default class BlogListPage extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.setState({ isLoading: true });
     this._blogService.list().then((response) => {
       this.setState({ blogs: response, isLoading: false });

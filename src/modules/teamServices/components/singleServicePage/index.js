@@ -66,7 +66,7 @@ export default class SingleServicePage extends Component {
                   alt={`${service.title} cover`}
                 />
               </header>
-              <section className={`${styles["single-service__content"]}`}>
+              <section className={`${styles["single-service__content"]} py-5`}>
                 <p
                   className="mb-5"
                   dangerouslySetInnerHTML={{ __html: service.description }}

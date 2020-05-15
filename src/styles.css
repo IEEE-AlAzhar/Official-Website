@@ -78,6 +78,10 @@ p + p {
   margin-top: 2rem;
 }
 
+.video-react.video-react-fluid {
+  height: 100%
+}
+
 .video-react-control-bar {
   font-size: 1rem;
 }

@@ -3,7 +3,7 @@
   padding-top: 6rem;
 }
 
-.blog-created {
+.blog-author {
   padding-bottom: 6rem;
 }
 
@@ -24,6 +24,7 @@
 
 .blog-personaldetails__item {
   display: inline;
+  font-weight: bold;
 }
 .social-links {
   padding: 5px;

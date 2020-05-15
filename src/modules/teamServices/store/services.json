@@ -2,34 +2,36 @@
   {
     "id": "1",
     "title": "Workshops",
-    "cover": "https://via.placeholder.com/500?text=Service+1",
+    "cover": "https://res.cloudinary.com/dykflps8g/image/upload/v1589512751/web_2_qvbfie.jpg",
     "metaDescription": "As the world evolves, technology changes ,what works today may not work tomorrow so it is better to stay up-to-date with new technologies and learn how to use them in your daily life .",
     "description": "<p>As the world evolves, technology changes ,what works today may not work tomorrow so it is better to stay up-to-date with new technologies and learn how to use them in your daily life .</p><section class='my-5'><h2>Code baker</h2><p>It is a Training Program for undergraduate students to qualify them in some technical and non-technical tracks.</p><p>It is held at the end of the year in the summer and its goal is to qualify students from engineering teams and others to the requirements of the labor market.</p></section><section class='my-5'><h2>Juniors</h2><p>It is a program based on the \"project-based learning\" and the survey methodologies within the framework of the continuous development of the educational system.</p><p>This applied through a summer camp in the mid-year.</p></section><section class='my-5'><h2>Some examples of tracks of workshops:</h2><ol><li>Web development</li><li>Programming</li><li>Embedded Systems</li><li>Network</li><li>Security</li><li>Mobile development</li></ol><p>and others..</p><p>by the way if you don't use technology in your own world , it won't use you in its world.</p></section>",
     "gallery": [
-      "https://via.placeholder.com/500?text=Image+1",
-      "https://via.placeholder.com/500?text=Image+2",
-      "https://via.placeholder.com/500?text=Image+3",
-      "https://via.placeholder.com/500?text=Image+4"
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589464083/Statics/%D9%A2%D9%A0%D9%A1%D9%A9%D9%A0%D9%A3%D9%A1%D9%A0_%D9%A1%D9%A6%D9%A1%D9%A4%D9%A2%D9%A8_ojxzwd.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589463994/Statics/%D9%A2%D9%A0%D9%A1%D9%A9%D9%A0%D9%A2%D9%A2%D9%A3_%D9%A1%D9%A7%D9%A3%D9%A1%D9%A3%D9%A6_plzd2d.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589463965/Statics/%D9%A2%D9%A0%D9%A1%D9%A9%D9%A0%D9%A2%D9%A2%D9%A3_%D9%A1%D9%A7%D9%A3%D9%A5%D9%A4%D9%A7_z9vsut.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/v1589469638/Statics/%D9%A2%D9%A0%D9%A1%D9%A9%D9%A0%D9%A2%D9%A2%D9%A3_%D9%A1%D9%A7%D9%A3%D9%A8%D9%A0%D9%A4_ned2jg.jpg"
     ]
   },
   {
     "id": "2",
-    "title": "Group",
+    "title": "IEEE Club",
     "metaDescription": "IEEE Al-Azhar club group is made to share knowledge, experience even Geeks jokes can be posted or shared between all our members.",
-    "cover": "https://via.placeholder.com/500?text=Service+2",
+    "cover": "https://res.cloudinary.com/dykflps8g/image/upload/v1589512737/web_3_hpfrvq.jpg",
     "description": "<p>IEEE Al-Azhar club group is made to share knowledge, experience even Geeks jokes can be posted or shared between all our members.</p><p><strong>This group is for:</strong>Software Engineers/Developers, Hardware engineers, not just Al-Azhar students, but anyone interested in these markets.</p>"
   },
   {
     "id": "3",
     "title": "Competitions",
     "metaDescription": "Raise awareness and emphasizing the importance of problem-solving skills as an essential skill in the software industry",
-    "cover": "https://via.placeholder.com/500?text=Service+3",
+    "cover": "https://res.cloudinary.com/dykflps8g/image/upload/v1589512728/web_4_f1i1yk.jpg",
     "description": "<section><h2>Problem-solving</h2><p>Raise awareness and emphasizing the importance of problem-solving skills as an essential skill in the software industry, and preparing students of Al-Azhar University to participate in local and international programming competitions.</p></section><section><h2>Open-source</h2><p>Open source culture and concepts help students, and communities have a better learning experience being free to share their ideas and build on the work of others.</p><p>Learning and teaching \"the open source way\" will better prepare students for their careers.</p></section>",
     "gallery": [
-      "https://via.placeholder.com/500?text=Image+1",
-      "https://via.placeholder.com/500?text=Image+2",
-      "https://via.placeholder.com/500?text=Image+3",
-      "https://via.placeholder.com/500?text=Image+4"
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589480663/Statics/3_yethtl.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589480625/Statics/12_ca96pz.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589480584/Statics/15_tgzae6.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589480511/Statics/16_e5cddr.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589475652/Statics/22_t2hwsb.jpg",
+      "https://res.cloudinary.com/dykflps8g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1589475621/Statics/26_ze2mv0.jpg"
     ]
   }
 ]

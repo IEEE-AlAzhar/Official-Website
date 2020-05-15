@@ -24,18 +24,14 @@ class IEEESection extends Component {
             </div>
             <div className={styles.IEEEAZApara}>
               <p className={styles.IEEEAZApara__Azaparagraph}>
-                Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac
-                odio mauris justo. Luctus arcu, urna praesent at id quisque ac.
-                Arcu es massa vestibulum malesuada, integer vivamus elit eu
-                mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet
-                suspendisse integer vivamus elit eu mauris hendrerit facilisi,
-                mi mattis pariatur aliquam pharetra eget.elitelitelitLorem ipsum
-                dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris
-                justo. Luctus arcu, urna praesent at id quisque ac. Arcu es
-                massa vestibulum malesuada, integer vivamus elit eu mauris eus,
-                cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse
-                integer vivamus elit eu mauris hendrerit facilisi, mi mattis
-                pariatur aliquam pharetra eget.elitelitelit
+                IEEE Al-Azhar University Student Branch is a student activity
+                continued to IEEE Egypt Section, located in Al-Azhar University
+                in Cairo and est. 2011 We provide free courses and trainings for
+                students (especially engineering students) to bridge the gap
+                between the scientific and practical sides The internal
+                structure of the team includes a number of committees which are
+                academic like technical and some other operational committees
+                like HR, PR & FR, Marketing, Multimedia, DCR and Logistics
               </p>
             </div>
           </div>
