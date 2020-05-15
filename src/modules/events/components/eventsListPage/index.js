@@ -51,7 +51,7 @@ export default class EventsListPage extends Component {
         <div className="container">
           {upcomingEvents && upcomingEvents.length ? (
             <>
-              <section className="events-upcoming row pb-5 justify-content-center">
+              <section className="events-upcoming row pb-5 mb-5 justify-content-center">
                 <h2 className={`${styles[`events-heading__upcoming`]} mb-3`}>
                   Upcoming Events
                 </h2>
