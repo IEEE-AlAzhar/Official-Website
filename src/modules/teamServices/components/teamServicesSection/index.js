@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import data from "../../store/services.json";
 import styles from "./style.module.css";
 import { Link } from "react-router-dom";
+import LazyImage from "shared/lazy-image";
 
 export default class TeamServicesSection extends Component {
   render() {
@@ -20,7 +21,7 @@ export default class TeamServicesSection extends Component {
                     to={`/services/${data.id}`}
                     className={styles["team-service-section_container"]}
                   >
-                    <img
+                    <LazyImage
                       className={styles["team-service-section_cover"]}
                       src={data.cover}
                       alt={`${data.title}'s cover`}

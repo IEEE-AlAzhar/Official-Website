@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { parseDate } from "shared/services/date.service";
 import { isArabic } from "shared/services/language.service";
+import LazyImage from "shared/lazy-image";
 
 class EventCard extends Component {
   render() {
@@ -18,7 +19,7 @@ class EventCard extends Component {
       <section className={styles["event-card_content"]}>
         <figure className={styles["events-card_cover"]} key={event}>
           <Link to={"/events/" + event._id}>
-            <img
+            <LazyImage
               alt={`event ${event.title}`}
               src={event.cover}
               key={event._id}

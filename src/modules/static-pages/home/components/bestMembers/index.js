@@ -9,6 +9,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Loading from "shared/loading";
+import LazyImage from "shared/lazy-image";
 
 export class BestMembers extends Component {
   state = {
@@ -57,7 +58,7 @@ export class BestMembers extends Component {
             {this.state.bestMembers.map((member) => {
               return (
                 <figure className={styles["best-members"]} key={member._id}>
-                  <img
+                  <LazyImage
                     width="200"
                     height="200"
                     alt={`One of ${member.committee} committee best members`}
