@@ -9,6 +9,7 @@ import EventsService from "modules/events/services/events.service";
 
 import styles from "./style.module.css";
 import Loading from "shared/loading";
+import { isArabic } from "shared/services/language.service";
 
 class SingleEventPage extends Component {
   state = {
@@ -51,6 +52,7 @@ class SingleEventPage extends Component {
       location,
       form,
     } = this.state.event;
+    let isDescArabic = isArabic(description);
 
     return (
       <>
@@ -92,7 +94,9 @@ class SingleEventPage extends Component {
                 />
                 <section>
                   <article
-                    className="my-5 text-left"
+                    className={`my-5 text-left ${
+                      isDescArabic && "letter-spacing-none"
+                    }`}
                     dangerouslySetInnerHTML={{ __html: description }}
                   />
                 </section>

@@ -21,7 +21,6 @@
   overflow: hidden;
   margin: 1rem;
   text-overflow: ellipsis;
-  line-height: 1em;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;

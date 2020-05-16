@@ -16,7 +16,6 @@ class EventsSection extends Component {
 
   componentDidMount() {
     this._eventsServices.list().then((response) => {
-      console.log(response);
       this.setState({
         events: response.slice(0, 3),
       });

@@ -78,6 +78,11 @@ p + p {
   margin-top: 2rem;
 }
 
+.letter-spacing-none,
+.letter-spacing-none p {
+  letter-spacing: 0;
+}
+
 .video-react.video-react-fluid {
   height: 100%
 }

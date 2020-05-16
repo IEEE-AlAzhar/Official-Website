@@ -8,10 +8,12 @@ import {
   faCalendarTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { parseDate } from "shared/services/date.service";
+import { isArabic } from "shared/services/language.service";
 
 class EventCard extends Component {
   render() {
     const { event } = this.props;
+    let isDescArabic = isArabic(event.metaDescription);
     return (
       <section className={styles["event-card_content"]}>
         <figure className={styles["events-card_cover"]} key={event}>
@@ -34,7 +36,11 @@ class EventCard extends Component {
                 {event.title}
               </Link>
             </h3>
-            <p className={styles["event-card_description"]}>
+            <p
+              className={`${styles["event-card_description"]} ${
+                isDescArabic && "letter-spacing-none"
+              }`}
+            >
               {event.metaDescription}
             </p>
           </figcaption>
