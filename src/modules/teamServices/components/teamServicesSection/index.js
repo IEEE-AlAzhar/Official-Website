@@ -21,7 +21,7 @@ export default class TeamServicesSection extends Component {
                     to={`/services/${data.id}`}
                     className={styles["team-service-section_container"]}
                   >
-                    <img
+                    <LazyImage
                       className={styles["team-service-section_cover"]}
                       src={data.cover}
                       alt={`${data.title}'s cover`}
