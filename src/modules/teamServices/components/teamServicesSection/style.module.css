@@ -9,7 +9,7 @@
   z-index: -1;
   position: relative;
   max-width: 100%;
-  height: 22rem;
+  /* height: 22rem; */
 }
 .team-service-section_container {
   border-radius: 5px;
@@ -33,6 +33,7 @@
   color: white;
   padding: 2rem 0;
 }
+
 .team-service-section_container:hover .team-service-section_content,
 .team-service-section_container:focus .team-service-section_content {
   top: 0;

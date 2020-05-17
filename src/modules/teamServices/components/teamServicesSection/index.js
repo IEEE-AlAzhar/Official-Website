@@ -34,7 +34,7 @@ export default class TeamServicesSection extends Component {
                         <span data-testid="service-description">
                           {data.metaDescription
                             .split(" ")
-                            .slice(0, 20)
+                            .slice(0, 8)
                             .join(" ")}
                         </span>
                         ...
