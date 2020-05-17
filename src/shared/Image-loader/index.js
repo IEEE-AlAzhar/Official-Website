@@ -20,7 +20,15 @@ class ImageLoader extends Component {
   };
 
   render() {
-    let { className, loadedClassName, loadingClassName } = this.props;
+    let {
+      className,
+      loadedClassName,
+      loadingClassName,
+      src,
+      alt,
+      width,
+      height,
+    } = this.props;
 
     className = `${className} ${
       this.state.loaded ? loadedClassName : loadingClassName
@@ -28,9 +36,10 @@ class ImageLoader extends Component {
 
     return (
       <img
-        {...this.props}
-        src={this.props.src}
-        alt={this.props.alt}
+        width={width}
+        height={height}
+        src={src}
+        alt={alt}
         className={className}
         onLoad={this.onLoad}
       />

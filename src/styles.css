@@ -98,3 +98,8 @@ p + p {
 .profile-links {
   color: var(--text-primary);
 }
+
+.LazyLoad {
+  min-height: 100px;
+  min-width: 200px
+}
