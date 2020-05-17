@@ -9,8 +9,8 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Loading from "shared/loading";
-// import LazyImage from "shared/lazy-image";
-import placeholder from "assets/images/placeholder.png";
+import { Image, Transformation } from "cloudinary-react";
+import { getImageUrlParts } from "shared/services/image.service";
 
 export class BestMembers extends Component {
   state = {
@@ -57,14 +57,26 @@ export class BestMembers extends Component {
             customLeftArrow={<CustomLeftArrow />}
           >
             {this.state.bestMembers.map((member) => {
+              let { cloudName, publicId, version } = getImageUrlParts(
+                member.image
+              );
               return (
                 <figure className={styles["best-members"]} key={member._id}>
-                  <img
-                    width="200"
-                    height="200"
+                  <Image
+                    publicId={publicId}
+                    version={version}
+                    cloud_name={cloudName}
+                    secure="true"
                     alt={`One of ${member.committee} committee best members`}
-                    src={member.image || placeholder}
-                  />
+                  >
+                    <Transformation
+                      height="200"
+                      width="200"
+                      crop="fill"
+                      gravity="north"
+                    />
+                    <Transformation radius="100" />
+                  </Image>
                   <figcaption>
                     <h3 className={styles["best-members_name"]}>
                       {member.name}
