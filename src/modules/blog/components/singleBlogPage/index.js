@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import BlogService from "modules/blog/services/blog.service";
 import { parseDate } from "shared/services/date.service";
 import Loading from "shared/loading";
+import { isArabic } from "shared/services/language.service";
 
 export default class SingleBlogPage extends Component {
   state = {
@@ -43,6 +44,7 @@ export default class SingleBlogPage extends Component {
     } = this.state.blog;
     let categoriesString =
       categories && categories.map((category) => category.name).join(", ");
+    let isDescArabic = isArabic(metaDescription);
     return (
       <>
         {!this.state.isLoading ? (
@@ -86,7 +88,10 @@ export default class SingleBlogPage extends Component {
               </header>
               <section className="row">
                 <div className="mt-5 py-5 col-lg-10 col-md-12 col-sm-12">
-                  <p dangerouslySetInnerHTML={{ __html: body }} />
+                  <p
+                    className={isDescArabic && "letter-spacing-none"}
+                    dangerouslySetInnerHTML={{ __html: body }}
+                  />
                 </div>
                 <div
                   className={`mt-5 py-5 col-lg-2 col-md-12 col-sm-12 justify-content-center ${

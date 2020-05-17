@@ -4,6 +4,7 @@ import styles from "./style.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCalendarWeek } from "@fortawesome/free-solid-svg-icons";
 import { parseDate } from "shared/services/date.service";
+import { isArabic } from "shared/services/language.service";
 
 const BlogCard = (props) => {
   const {
@@ -16,6 +17,7 @@ const BlogCard = (props) => {
     cover,
     metaDescription,
   } = props.data;
+  let isDescArabic = isArabic(metaDescription);
 
   const titleSlugify = (title) => {
     return title.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "-and-");
@@ -58,7 +60,7 @@ const BlogCard = (props) => {
                 {title}
               </Link>
             </h2>
-            <p className="card-text">
+            <p className={`${isDescArabic && "letter-spacing-none"} card-text`}>
               {metaDescription.split(" ").slice(0, 30).join(" ")}
             </p>
           </div>

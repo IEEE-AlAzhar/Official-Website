@@ -52,7 +52,7 @@ class SingleEventPage extends Component {
       location,
       form,
     } = this.state.event;
-    let isDescArabic = isArabic(description);
+    let isDescArabic = isArabic(metaDescription);
 
     return (
       <>
