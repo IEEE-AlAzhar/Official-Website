@@ -50,7 +50,7 @@ class SingleEventPage extends Component {
       startDate,
       endDate,
       location,
-      form,
+      formLink,
     } = this.state.event;
     let isDescArabic = isArabic(metaDescription);
 
@@ -86,7 +86,7 @@ class SingleEventPage extends Component {
                     startDate,
                     endDate,
                     location,
-                    form,
+                    formLink,
                     cover,
                     title,
                     status,

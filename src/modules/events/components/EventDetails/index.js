@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ApplyButton from "../ApplyButton/ApplyButton";
 import PopupContent from "../PopupContent/PopupContent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faClock } from "@fortawesome/free-solid-svg-icons";
@@ -18,8 +17,7 @@ class EventDetails extends Component {
       endDate,
       status,
       location,
-      form,
-      cover,
+      formLink,
     } = this.props.details;
 
     return (
@@ -41,8 +39,17 @@ class EventDetails extends Component {
             <p className={`h5 ${styles["event-details_text"]}`}>{location}</p>
           </span>
         ) : null}
-        {form && status === "upcoming" ? (
-          <ApplyButton cover={cover} getPopupContent={this.getPopupContent} />
+        {formLink && status === "upcoming" ? (
+          <span className="col-lg my-3">
+            <a
+              href={formLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`rounded-pill ${styles["apply-btn"]}`}
+            >
+              Apply Now!
+            </a>
+          </span>
         ) : null}
       </div>
     );
