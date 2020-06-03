@@ -1,6 +1,6 @@
 # IEEE Al-Azhar Official Website
 
-The source code of `IEEE Al-Azhar` student activity's website. The website built to provide some of organization's services and represent information about it with simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
+The source code of `IEEE Al-Azhar` student branch's website. The website built to provide some of organization's services and represent information about it with accessibility, performance and simplicity in mind. Also it provides an opportunity for students to collaborate and contribute to enhance their programming and train to contribute to open source community.
 
 ![IEEE Logo](./src/assets/images/logo.png)
 
@@ -10,6 +10,7 @@ The source code of `IEEE Al-Azhar` student activity's website. The website built
 1. [Usage](#use)
 1. [Dependencies](#dependencies)
 1. [Structure](#structure)
+1. [Run the tests](#tests)
 1. [Contribution](#contribution)
 1. [License](#license)
 
@@ -49,143 +50,197 @@ This app uses some dependencies:
 
 1. [react-video](https://video-react.js.org/) - to make an interactive video.
 
+1. [react-lazy-load](https://www.npmjs.com/package/react-lazy-load) - to lazy load images to improve performance.
+
+1. [react-content-loader](https://www.npmjs.com/package/react-content-loader) - to render facebook like loading components.
+
+1. [cloudinary-react](https://github.com/cloudinary/cloudinary-react) - to resize images and get it in the appropriate size to improve performance.
+
 ## Structure
 
-The folder structure of the application. The app is modular, every module encapsulates its own components and services. Each module contains `components` folder which has the presentational components and also pages, also the module contains the `services` folder if it's dynamic which has all the services that integrate with the `API`.
+The folder structure of the application. The app is modular, every module encapsulates its own components and services. Each module contains `components` folder which has the presentational components and also pages, also the module contains the `services` folder if it's dynamic which has all the services that integrate with the `API`. Beside that there's the `__tests__` folder that contains the tests of all the components inside that module.
 
 ```
 .
 ├── CONTRIBUTING.md
-├── jsconfig.json
+├── jsconfig.json - contains configurations of the app
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
 ├── public
-|   └──data
-|      └── best-members.json
 ├── README.md
 ├── src
-│   ├── App.js
-│   ├── assets
-│   │   ├── fonts
-│   │   ├── images
-│   │   └── video
-│   ├── globals
-│   │   ├── contexts
-│   │   │   └── theme.context.js
-│   │   └── routes.js
-│   ├── index.js
-│   ├── modules
-│   │   ├── blog
-│   │   │   ├── components
-│   │   │   │   ├── blogCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── blogListPage
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleBlogPage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       └── blog.service.js
-│   │   ├── contact
-│   │   │   ├── components
-│   │   │   │   ├── form
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── icon
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── page
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       ├── contact.service.js
-│   │   │       └── validation.service.js
-│   │   ├── events
-│   │   │   ├── components
-│   │   │   │   ├── eventCard
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   ├── eventsListPage
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   └── style.module.css
-│   │   │   │   └── singleEventPage
-│   │   │   │       ├── index.js
-│   │   │   │       └── style.module.css
-│   │   │   └── services
-│   │   │       └── events.service.js
-│   │   ├── static-pages
-│   │   │   ├── about
-│   │   │   │   └── components
-│   │   │   │       ├── page
-│   │   │   │       │   ├── components
-│   │   │   │       │   │   ├── header
-│   │   │   │       │   │   │   ├── index.js
-│   │   │   │       │   │   │   └── style.module.css
-│   │   │   │       │   │   ├── IEEEAZHARSection
-│   │   │   │       │   │   │   ├── index.js
-│   │   │   │       │   │   │   └── style.module.css
-│   │   │   │       │   │   ├── IEEESection
-│   │   │   │       │   │   │   ├── index.js
-│   │   │   │       │   │   │   └── style.module.css
-│   │   │   │       │   │   └── structure
-│   │   │   │       │   │       ├── index.js
-│   │   │   │       │   │       └── style.module.css
-│   │   │   │       │   ├── index.js
-│   │   │   │       │   └── style.module.css
-│   │   │   │       ├── section
-│   │   │   │       │   ├── index.js
-│   │   │   │       │   └── style.module.css
-│   │   │   │       └── video
-│   │   │   │           └── index.js
-│   │   │   └── home
-│   │   │       ├── components
-│   │   │       │   ├── bestMembers
-│   │   │       │   │   ├── index.js
-│   │   │       │   │   └── style.module.css
-│   │   │       │   ├── intro
-│   │   │       │   │   ├── index.js
-│   │   │       │   │   └── style.module.css
-│   │   │       │   └── page
-│   │   │       │       ├── index.js
-│   │   │       │       └── style.module.css
-│   │   │       └── services
-│   │   │           └── members.service.js
-│   │   └── teamServices
-│   │       ├── components
-│   │       │   ├── serviceCard
-│   │       │   │   ├── index.js
-│   │       │   │   └── style.module.css
-│   │       │   ├── servicesList
-│   │       │   │   ├── index.js
-│   │       │   │   └── style.module.css
-│   │       │   └── singleServicePage
-│   │       │       ├── index.js
-│   │       │       └── style.module.css
-│   │       └── store
-│   │           └── services.json
-│   ├── serviceWorker.js
-│   ├── shared
-│   │   ├── footer
-│   │   │   ├── index.js
-│   │   │   └── style.module.css
-│   │   ├── header
-│   │   │   ├── index.js
-│   │   │   └── style.css
-│   │   ├── layout
-│   │   │   ├── index.js
-│   │   │   └── style.css
-│   │   ├── newsletterForm
-│   │   │   ├── index.js
-│   │   │   └── style.module.css
-│   │   └── services
-│   │       ├── newsletter.service.js
-│   │       └── validation.service.js
-│   └── styles.css
-├── style-guide.md
-└── yarn.lock
+│   ├── App.js - contains the setup of the routes
+│   ├── assets - all the static files like images, videos and fonts
+│   ├── globals
+│   │   ├── contexts - contexts of React context API
+│   │   │   └── theme.context.js - the context that controls the switching between light and dark theme
+│   │   ├── core.service.js - the core service of the crud operations (the base class)
+│   │   ├── cssVarsPonyfill.js - support css variables usage
+│   │   └── routes.js - the routes of the app to be used in APP.js
+│   ├── index.js - the entry point of the app
+│   ├── modules - all the business logic of the app (components, services, ...etc)
+│   │   ├── blog
+│   │   │   ├── components
+│   │   │   │   ├── blogCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── blogListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── CategoriesFilter
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── SearchFilter
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleBlogPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   ├── services
+│   │   │   │   ├── blog.service.js
+│   │   │   │   └── category.service.js
+│   │   │   └── __tests__
+│   │   ├── contact
+│   │   │   ├── components
+│   │   │   │   ├── form
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── icon
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── page
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   ├── services
+│   │   │   │   └── contact.service.js
+│   │   │   └── __tests__
+│   │   ├── events
+│   │   │   ├── components
+│   │   │   │   ├── ApplyButton
+│   │   │   │   │   ├── ApplyButton.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── eventCard
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── EventDetails
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── eventsListPage
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── eventsSection
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── Gallery
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   ├── PopupContent
+│   │   │   │   │   ├── PopupContent.js
+│   │   │   │   │   └── style.module.css
+│   │   │   │   └── singleEventPage
+│   │   │   │       ├── index.js
+│   │   │   │       └── style.module.css
+│   │   │   ├── services
+│   │   │   │   └── events.service.js
+│   │   │   └── __tests__
+│   │   ├── static-pages
+│   │   │   ├── about
+│   │   │   │   └── components
+│   │   │   │       ├── page
+│   │   │   │       │   ├── components
+│   │   │   │       │   │   ├── header
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEEAZHARSection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   ├── IEEESection
+│   │   │   │       │   │   │   ├── index.js
+│   │   │   │       │   │   │   └── style.module.css
+│   │   │   │       │   │   └── structure
+│   │   │   │       │   │       ├── index.js
+│   │   │   │       │   │       └── style.module.css
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── style.module.css
+│   │   │   │       ├── section
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── style.module.css
+│   │   │   │       └── video
+│   │   │   │           └── index.js
+│   │   │   └── home
+│   │   │       ├── components
+│   │   │       │   ├── bestMembers
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   ├── intro
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── style.module.css
+│   │   │       │   └── page
+│   │   │       │       ├── index.js
+│   │   │       │       └── style.module.css
+│   │   │       ├── services
+│   │   │       │   └── members.service.js
+│   │   │       └── __tests__
+│   │   └── teamServices
+│   │       ├── components
+│   │       │   ├── singleServicePage
+│   │       │   │   ├── index.js
+│   │       │   │   └── style.module.css
+│   │       │   └── teamServicesSection
+│   │       │       ├── index.js
+│   │       │       └── style.module.css
+│   │       ├── store
+│   │       │   └── services.json
+│   │       └── __tests__
+│   │           ├── singleServiceSection.test.js
+│   │           └── __snapshots__
+│   ├── serviceWorker.js
+│   ├── shared
+│   │   ├── footer
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   ├── header
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── Image-loader
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── Input.js
+│   │   ├── layout
+│   │   │   ├── index.js
+│   │   │   └── style.css
+│   │   ├── lazy-image
+│   │   │   └── index.js
+│   │   ├── loading
+│   │   │   └── index.js
+│   │   ├── newsletterForm
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   ├── notFoundPage
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   ├── services
+│   │   │   ├── date.service.js
+│   │   │   ├── image.service.js
+│   │   │   ├── language.service.js
+│   │   │   ├── newsletter.service.js
+│   │   │   └── validation.service.js
+│   │   ├── sideDrawer
+│   │   │   ├── index.js
+│   │   │   └── style.module.css
+│   │   ├── __tests__
+│   │   │   ├── footer.test.js
+│   │   │   ├── header.test.js
+│   │   │   ├── newsLetter.test.js
+│   │   │   ├── sideDrawer.test.js
+│   │   │   └── themeBtn.test.js
+│   │   └── theme-button
+│   │       ├── index.js
+│   │       └── style.css
+│   └── styles.css
+├── style-guide.md - contains our code convention and its style and the css colors, fonts, spaces, ...etc
+└── TODOs.md
 ```
 
 ## Contribution

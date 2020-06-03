@@ -18,6 +18,7 @@ If you're new to open source, read [this article](https://dvmhmdsd.me/blog/open-
 1. Take care about `semantics` rules.
 1. Take care about `accessibility` rules.
 1. The names of functions, variables, components and css classes should be descriptive.
+1. The function should one and only one thing.
 1. No unnecessary comments.
 1. The maximum numbers of arguments is 3, it's preferred to minimize the number of arguments.
 1. No global css classes names.
