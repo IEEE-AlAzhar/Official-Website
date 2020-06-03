@@ -243,6 +243,10 @@ The folder structure of the application. The app is modular, every module encaps
 └── TODOs.md
 ```
 
+## Run the tests
+
+To run all the tests: `$ npm run test` and solve the broken tests.
+
 ## Contribution
 
 Follow the guides mentioned in the [CONTRIBUTING.md](CONTRIBUTING.md)
