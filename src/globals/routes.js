@@ -18,7 +18,7 @@ export default [
   { path: "/services/:id", component: SingleServicePage },
   { path: "/events", component: EventsListPage, label: "Events" },
   { path: "/events/:id", component: SingleEventPage },
-  { path: "/blog", component: BlogListPage, label: "Blogs" },
+  { path: "/blog", component: BlogListPage, label: "Blog" },
   { path: "/blog/:id/:title", component: SingleBlogPage },
   { path: "/contact-us", component: ContactPage, label: "Contact Us" },
   { path: "/404", component: NotFoundPage },
