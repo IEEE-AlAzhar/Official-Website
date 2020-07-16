@@ -25,9 +25,6 @@ class EventCard extends Component {
               key={event._id}
             />
           </Link>
-          <div className={styles["active-upcoming_event"]}>
-            {event.status === "upcoming" ? <span>Upcoming</span> : ""}
-          </div>
           <figcaption>
             <h3>
               <Link

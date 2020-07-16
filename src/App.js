@@ -38,16 +38,18 @@ export default class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Layout>
-          <Switch>
-            {routes.map((route, index) =>
-              this.renderSingleRoute(index, route.path, route.component)
-            )}
-            <Redirect from="*" to="/404" />
-          </Switch>
-        </Layout>
-      </Router>
+      <>
+        <Router>
+          <Layout>
+            <Switch>
+              {routes.map((route, index) =>
+                this.renderSingleRoute(index, route.path, route.component)
+              )}
+              <Redirect from="*" to="/404" />
+            </Switch>
+          </Layout>
+        </Router>
+      </>
     );
   }
 }
