@@ -9,7 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@langleyfoxall/react-dynamic-form-builder": "^1.2.0-rc.8",
-    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.26.1",
@@ -29,7 +29,7 @@
     "react-multi-carousel": "^2.5.3",
     "react-responsive-modal": "^5.0.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^5.0.0",
     "video-react": "^0.14.1"
   },
   "lint-staged": {
