@@ -49,7 +49,7 @@ export default class BlogListPage extends Component {
     return (
       <>
         <Helmet>
-          <title>Blogs | IEEE Al-Azhar Student Branch</title>
+          <title>Blog | IEEE Al-Azhar Student Branch</title>
         </Helmet>
         <h1 className={`${styles.blogs__heading} text-center mb-5`}>Blog</h1>
         <div className="container">
