@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://ieee-website-dashboard.herokuapp.com/api",
+  baseURL: process.env.REACT_APP_BASE_URL,
 });
 
 export default class CrudService {
